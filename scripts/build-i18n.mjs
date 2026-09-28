@@ -195,6 +195,13 @@ function applyI18n(root, dict) {
       el.set_content(dict[key]);
     }
   });
+  // data-i18n-attr="key:attr[,key2:attr2]" — translate alt / aria-label / title at build time too
+  root.querySelectorAll('[data-i18n-attr]').forEach(el => {
+    el.getAttribute('data-i18n-attr').split(',').forEach(pair => {
+      const [key, attr] = pair.split(':').map(s => s && s.trim());
+      if (key && attr && dict[key] !== undefined) el.setAttribute(attr, dict[key]);
+    });
+  });
 }
 
 function updateMeta(root, dict, prefix, lang, page) {

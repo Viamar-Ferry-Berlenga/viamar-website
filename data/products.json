@@ -24,10 +24,30 @@
       "desc_en": "Just need to get to Berlenga — one-way ticket from Peniche. Return whenever you like with another operator.",
       "desc_es": "Solo necesitas llegar a Berlenga — billete de ida desde Peniche. Vuelve cuando quieras con otra operadora.",
       "desc_fr": "Vous voulez simplement rejoindre Berlenga — billet aller depuis Peniche. Repartez quand vous voulez avec un autre opérateur.",
-      "features": ["Peniche → Berlenga", "45 min de travessia", "Bilhete digital QR"],
-      "features_en": ["Peniche → Berlenga", "45-min boat ride", "Digital QR ticket"],
-      "features_es": ["Peniche → Berlenga", "45 min de travesía", "Billete digital QR"],
-      "features_fr": ["Peniche → Berlenga", "45 min de traversée", "Billet numérique QR"],
+      "features": [
+        "Peniche → Berlenga",
+        "45 min de travessia",
+        "Embarque na Marina de Peniche",
+        "Bilhete digital QR"
+      ],
+      "features_en": [
+        "Peniche → Berlenga",
+        "45-min boat ride",
+        "Boarding at Peniche Marina",
+        "Digital QR ticket"
+      ],
+      "features_es": [
+        "Peniche → Berlenga",
+        "45 min de travesía",
+        "Embarque en la Marina de Peniche",
+        "Billete digital QR"
+      ],
+      "features_fr": [
+        "Peniche → Berlenga",
+        "45 min de traversée",
+        "Embarquement à la Marina de Peniche",
+        "Billet numérique QR"
+      ],
       "price_adult": 9.95,
       "price_child": null,
       "featured": false,
@@ -52,10 +72,30 @@
       "desc_en": "Already on Berlenga and need to get back to Peniche. Book your return seat.",
       "desc_es": "Ya estás en Berlenga y necesitas regresar a Peniche. Reserva tu plaza de regreso.",
       "desc_fr": "Vous êtes déjà à Berlenga et devez rentrer à Peniche. Réservez votre place de retour.",
-      "features": ["Berlenga → Peniche", "45 min de travessia", "Bilhete digital QR"],
-      "features_en": ["Berlenga → Peniche", "45-min boat ride", "Digital QR ticket"],
-      "features_es": ["Berlenga → Peniche", "45 min de travesía", "Billete digital QR"],
-      "features_fr": ["Berlenga → Peniche", "45 min de traversée", "Billet numérique QR"],
+      "features": [
+        "Berlenga → Peniche",
+        "45 min de travessia",
+        "Embarque na Berlenga",
+        "Bilhete digital QR"
+      ],
+      "features_en": [
+        "Berlenga → Peniche",
+        "45-min boat ride",
+        "Boarding on Berlenga",
+        "Digital QR ticket"
+      ],
+      "features_es": [
+        "Berlenga → Peniche",
+        "45 min de travesía",
+        "Embarque en la Berlenga",
+        "Billete digital QR"
+      ],
+      "features_fr": [
+        "Berlenga → Peniche",
+        "45 min de traversée",
+        "Embarquement sur la Berlenga",
+        "Billet numérique QR"
+      ],
       "price_adult": 9.95,
       "price_child": null,
       "featured": false,
@@ -80,12 +120,32 @@
       "desc_en": "Roundtrip — a free day on the island to explore the beaches, cliffs and the historic Fortress.",
       "desc_es": "Travesía de ida y vuelta — un día libre en la isla para explorar las playas, acantilados y la Fortaleza histórica.",
       "desc_fr": "Aller-retour — une journée libre sur l'île pour explorer les plages, les falaises et la Forteresse historique.",
-      "features": ["Peniche → Berlenga → Peniche", "45 min de travessia cada sentido", "Dia livre na ilha (5 horas)", "Bilhete digital QR"],
-      "features_en": ["Peniche → Berlenga → Peniche", "45-min boat ride each way", "Free day on the island (5 hours)", "Digital QR ticket"],
-      "features_es": ["Peniche → Berlenga → Peniche", "45 min de travesía cada trayecto", "Día libre en la isla (5 horas)", "Billete digital QR"],
-      "features_fr": ["Peniche → Berlenga → Peniche", "45 min de traversée chaque sens", "Journée libre sur l'île (5 heures)", "Billet numérique QR"],
-      "price_adult": 19.90,
-      "price_child": 11.90,
+      "features": [
+        "Peniche → Berlenga → Peniche",
+        "45 min de travessia cada sentido",
+        "Dia livre na ilha (5 horas)",
+        "Bilhete digital QR"
+      ],
+      "features_en": [
+        "Peniche → Berlenga → Peniche",
+        "45-min boat ride each way",
+        "Free day on the island (5 hours)",
+        "Digital QR ticket"
+      ],
+      "features_es": [
+        "Peniche → Berlenga → Peniche",
+        "45 min de travesía cada trayecto",
+        "Día libre en la isla (5 horas)",
+        "Billete digital QR"
+      ],
+      "features_fr": [
+        "Peniche → Berlenga → Peniche",
+        "45 min de traversée chaque sens",
+        "Journée libre sur l'île (5 heures)",
+        "Billet numérique QR"
+      ],
+      "price_adult": 19.9,
+      "price_child": 11.9,
       "featured": true,
       "fh_pk": 377881,
       "fh_flow": "738388"
@@ -108,11 +168,35 @@
       "desc_en": "Glass-bottom boat tour through Berlenga's sea caves — spectacular for families and divers. Add it at checkout when booking your trip.",
       "desc_es": "Paseo en barco de fondo de cristal por las grutas marinas de Berlenga — espectacular para familias y buceadores. Añádelo en el checkout de tu reserva.",
       "desc_fr": "Excursion en bateau à fond de verre dans les grottes marines de Berlenga — spectaculaire pour les familles et les plongeurs. Ajoutez-le au checkout de votre réservation.",
-      "features": ["Barco de fundo de vidro", "25 min de passeio", "Grutas marinhas únicas", "Partida da ilha", "Para todas as idades"],
-      "features_en": ["Glass-bottom boat", "25-min tour", "Unique sea caves", "Departing from the island", "All ages welcome"],
-      "features_es": ["Barco de fondo de cristal", "25 min de paseo", "Grutas marinas únicas", "Salida desde la isla", "Para todas las edades"],
-      "features_fr": ["Bateau à fond de verre", "25 min d'excursion", "Grottes marines uniques", "Départ depuis l'île", "Pour tous les âges"],
-      "price_adult": 10.00,
+      "features": [
+        "Barco de fundo de vidro",
+        "25 min de passeio",
+        "Embarque na Berlenga",
+        "Grutas marinhas únicas",
+        "Para todas as idades"
+      ],
+      "features_en": [
+        "Glass-bottom boat",
+        "25-min tour",
+        "Boarding on Berlenga",
+        "Unique sea caves",
+        "All ages welcome"
+      ],
+      "features_es": [
+        "Barco de fondo de cristal",
+        "25 min de paseo",
+        "Embarque en la Berlenga",
+        "Grutas marinas únicas",
+        "Para todas las edades"
+      ],
+      "features_fr": [
+        "Bateau à fond de verre",
+        "25 min d'excursion",
+        "Embarquement sur la Berlenga",
+        "Grottes marines uniques",
+        "Pour tous les âges"
+      ],
+      "price_adult": 10.0,
       "price_child": null,
       "coming_soon": false,
       "featured": false,
@@ -165,7 +249,7 @@
         "Faune marine et falaises",
         "Billet numérique QR"
       ],
-      "price_adult": 12.00,
+      "price_adult": 12.0,
       "price_child": null,
       "coming_soon": true,
       "featured": false,

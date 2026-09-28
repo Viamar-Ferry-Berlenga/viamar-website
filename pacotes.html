@@ -220,26 +220,34 @@
       padding: 4px 11px 4px 9px; border-radius: 100px;
     }
     .pkg-disclaimer svg { width: 13px; height: 13px; flex-shrink: 0; }
-    /* Footer row */
-    .pkg-footer { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; padding-top: 4px; }
-    .pkg-price-info { display: flex; flex-direction: column; gap: 1px; }
-    .pkg-from { font-size: 11px; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: .06em; }
-    .pkg-amount { font-size: 30px; font-weight: 900; color: #fff; line-height: 1; }
-    .pkg-card.featured .pkg-amount { font-size: 36px; }
-    .pkg-unit { font-size: 12px; color: rgba(255,255,255,0.45); font-weight: 400; }
+    /* Footer row — price column left, compact CTA right, bottoms aligned */
+    .pkg-footer { display: flex; align-items: flex-end; justify-content: space-between; gap: 14px; padding-top: 6px; }
+    .pkg-price-info { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+    .pkg-from { font-size: 10.5px; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: .08em; }
+    .pkg-amount { font-size: 28px; font-weight: 900; color: #fff; line-height: 1; letter-spacing: -.01em; white-space: nowrap; }
+    .pkg-card.featured .pkg-amount { font-size: 34px; }
+    .pkg-unit { font-size: 12px; color: rgba(255,255,255,0.45); font-weight: 500; line-height: 1.2; }
 
     /* CTA button */
     .btn-reserve {
-      flex-shrink: 0; padding: 12px 22px;
+      flex: none; display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+      height: 40px; padding: 0 16px;
       background: var(--gold); color: var(--navy);
+      border: 1px solid var(--gold);
       border-radius: 10px; font-weight: 800; font-size: 13px;
       text-decoration: none; text-align: center;
       transition: background .2s, transform .15s;
-      white-space: nowrap; letter-spacing: .02em;
+      white-space: nowrap; letter-spacing: .01em;
     }
-    .btn-reserve:hover { background: var(--gold-h); transform: scale(1.03); }
+    .btn-reserve .arr { font-weight: 700; transition: transform .2s; }
+    .btn-reserve:hover .arr { transform: translateX(2px); }
+    /* Add-on (Grutas): not a separate booking — quieter outline button */
+    .btn-reserve.btn-addon { background: transparent; color: var(--gold); border-color: rgba(245,158,11,0.55); }
+    .btn-reserve.btn-addon:hover { background: rgba(245,158,11,0.12); }
+    .btn-reserve:hover { background: var(--gold-h); border-color: var(--gold-h); transform: translateY(-1px); }
+    .btn-reserve.btn-addon:hover { background: rgba(245,158,11,0.12); border-color: var(--gold); }
     .btn-soon {
-      flex-shrink: 0; padding: 12px 22px;
+      flex: none; display: inline-flex; align-items: center; height: 40px; padding: 0 16px;
       border: 1.5px dashed rgba(255,255,255,0.32); border-radius: 10px;
       font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
       color: rgba(255,255,255,0.5); cursor: default; white-space: nowrap;
@@ -567,7 +575,7 @@
 
   
   <div class="mobile-menu" id="mobileMenu">
-    <button class="mobile-menu-close" id="menuClose" aria-label="Fechar menu">
+    <button class="mobile-menu-close" id="menuClose" aria-label="Fechar menu" data-i18n-attr="a11y.close_menu:aria-label">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
     </button>
     <ul class="mobile-menu-links">
@@ -581,7 +589,7 @@
     <div class="mobile-menu-cta">
       <a href="https://fareharbor.com/embeds/book/viamar-berlenga/items/?full-items=yes&flow=738388">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"></path></svg>
-        Reservar travessia
+        <span data-i18n="cta_mm">Reservar travessia</span>
       </a>
     </div>
     <div class="mobile-menu-bottom">
@@ -789,17 +797,20 @@
             ? (lang === 'pt' ? item.page_url : '/' + lang + item.page_url)
             : bookingFor(item);
           const priceUnit = item.price_child
-            ? tx('pkg.per_adult', '/ adult')
-            : tx('pkg.per_person', '/ person');
+            ? tx('pkg.per_adult', 'per adult')
+            : tx('pkg.per_person', 'per person');
           const priceBlock = !item.price_adult
             ? ``
             : `<div class="pkg-price-info">
                 <div class="pkg-from">${tx('pkg.from', 'From')}</div>
-                <div><span class="pkg-amount">${fmtPrice(item.price_adult)}</span><span class="pkg-unit"> ${esc(priceUnit)}</span></div>
+                <div class="pkg-amount">${fmtPrice(item.price_adult)}</div>
+                <div class="pkg-unit">${esc(priceUnit)}</div>
               </div>`;
           const ctaBlock = item.coming_soon
             ? `<span class="btn-soon">${soonText}</span>`
-            : `<a href="${esc(itemUrl)}" class="btn-reserve">${btnText} →</a>`;
+            : item.cta_key === 'pkg.addon'
+              ? `<a href="${esc(itemUrl)}" class="btn-reserve btn-addon"><span aria-hidden="true">+</span>${btnText}</a>`
+              : `<a href="${esc(itemUrl)}" class="btn-reserve">${btnText}<span class="arr" aria-hidden="true">→</span></a>`;
           const bgPos = item.img_position || 'center 25%';
           const bgDiv = `<div class="pkg-card-img"${item.image ? ` style="background-image:url('${esc(item.image)}');background-position:${esc(bgPos)}"` : ''}></div>`;
           const feat1 = features[0] || '';
