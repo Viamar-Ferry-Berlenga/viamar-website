@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="UTF-8" />
+<title>Viamar · Grutas / Caves — Expositor A4 (Light)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f5ede0;
+    --paper-2:#ece2cf;
+    --ink:#0e1a2e;
+    --ink-soft:#3a4256;
+    --muted:#7a7062;
+    --gold:#b78a3a;
+    --gold-h:#8f6a26;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:#cfc7b6;font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased}
+  body{display:flex;justify-content:center;align-items:flex-start;padding:32px;min-height:100vh}
+  @page{ size:A4; margin:0; }
+
+  .a4{
+    width:210mm;
+    height:297mm;
+    background:var(--paper);
+    color:var(--ink);
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 30px 80px rgba(0,0,0,.35), 0 8px 24px rgba(0,0,0,.25);
+    font-family:'Inter',sans-serif;
+  }
+
+  /* Subtle paper grain */
+  .grain{
+    position:absolute; inset:0; pointer-events:none;
+    background-image:
+      radial-gradient(rgba(60,40,20,.05) 1px, transparent 1px),
+      radial-gradient(rgba(60,40,20,.04) 1px, transparent 1px);
+    background-size:3px 3px, 5px 5px;
+    mix-blend-mode:multiply;
+    opacity:.6;
+  }
+
+  /* Frame */
+  .frame{
+    position:absolute; inset:9mm;
+    border:0.3mm solid rgba(14,26,46,.18);
+    pointer-events:none;
+  }
+  .frame::before,.frame::after{
+    content:""; position:absolute;
+    width:6mm; height:6mm;
+    border:0.6mm solid var(--gold);
+  }
+  .frame::before{top:-1px; left:-1px; border-right:none; border-bottom:none}
+  .frame::after {bottom:-1px; right:-1px; border-left:none; border-top:none}
+
+  /* Top bar */
+  .top{
+    position:absolute; top:14mm; left:16mm; right:16mm;
+    display:flex; justify-content:space-between; align-items:center;
+    font-size:7.5pt; letter-spacing:.32em; text-transform:uppercase;
+    color:var(--muted);
+  }
+  .top .brand{display:flex; align-items:center; gap:8px; color:var(--ink); font-weight:700}
+  .top .brand .dot{width:6px; height:6px; background:var(--gold); border-radius:50%}
+  .top .meta{color:var(--muted)}
+
+  /* Kicker pill */
+  .kicker{
+    position:absolute; top:30mm; left:50%; transform:translateX(-50%);
+    display:inline-flex; align-items:center; gap:14px;
+    font-size:7.5pt; letter-spacing:.4em; text-transform:uppercase;
+    color:var(--gold); font-weight:700;
+  }
+  .kicker .bar{width:22px; height:1px; background:var(--gold)}
+
+  /* Headline */
+  .headline{
+    position:absolute; top:38mm; left:16mm; right:16mm;
+    text-align:center;
+    font-family:'Playfair Display', serif;
+    color:var(--ink);
+    line-height:.92;
+  }
+  .headline .l1{
+    display:block;
+    font-weight:900;
+    font-size:78pt;
+    letter-spacing:-2px;
+  }
+  .headline .l2{
+    display:block;
+    margin-top:6px;
+    font-style:italic;
+    font-weight:400;
+    font-size:24pt;
+    color:var(--gold);
+    letter-spacing:0;
+  }
+
+  /* Tagline bilingual */
+  .tag{
+    position:absolute; top:84mm; left:16mm; right:16mm;
+    text-align:center;
+    font-size:10pt;
+    color:var(--ink-soft);
+    line-height:1.5;
+    font-weight:400;
+    max-width:160mm; margin:0 auto;
+  }
+  .tag .pt{font-style:normal}
+  .tag .sep{
+    display:inline-block; width:1px; height:10px;
+    background:var(--gold); vertical-align:middle;
+    margin:0 12px;
+  }
+  .tag .en{font-style:italic; color:var(--muted)}
+
+  /* Photos row */
+  .photos{
+    position:absolute; top:104mm; left:16mm; right:16mm;
+    display:grid; grid-template-columns:1fr 1fr; gap:6mm;
+    height:118mm;
+  }
+  .photo{
+    position:relative;
+    background:#d8cfbe;
+    overflow:hidden;
+    border:0.3mm solid rgba(14,26,46,.12);
+  }
+  .photo img{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit:cover;
+    display:block;
+    filter:saturate(.95) contrast(1.02);
+  }
+  .photo .cap{
+    position:absolute; left:8px; bottom:8px;
+    padding:4px 8px;
+    background:rgba(245,237,224,.92);
+    color:var(--ink); font-size:7pt;
+    letter-spacing:.28em; text-transform:uppercase;
+    font-weight:700;
+  }
+  .photo .cap .gold{color:var(--gold)}
+
+  /* Stats — minimal info */
+  .stats{
+    position:absolute; top:232mm; left:16mm; right:16mm;
+    display:grid; grid-template-columns:1fr auto 1fr; gap:0;
+    align-items:center;
+  }
+  .stat{ text-align:center; padding:6px 4px; }
+  .stat .v{
+    font-family:'Playfair Display', serif;
+    font-weight:900;
+    font-size:54pt;
+    color:var(--ink);
+    line-height:1;
+    letter-spacing:-2px;
+  }
+  .stat .v .gold{color:var(--gold)}
+  .stat .v .small{
+    font-family:'Playfair Display', serif;
+    font-weight:400; font-style:italic;
+    font-size:22pt;
+    margin-left:2px; color:var(--ink-soft);
+  }
+  .stat .l{
+    margin-top:6px;
+    font-size:7.5pt; letter-spacing:.32em; text-transform:uppercase;
+    color:var(--muted);
+  }
+  .stat .l .en{display:block; margin-top:2px; font-style:italic; color:var(--gold); letter-spacing:.22em}
+  .stat-sep{
+    width:1px; height:48mm;
+    background:linear-gradient(180deg, transparent, rgba(14,26,46,.25), transparent);
+  }
+
+  /* Footer */
+  .footer{
+    position:absolute; bottom:14mm; left:16mm; right:16mm;
+    display:flex; justify-content:space-between; align-items:flex-end;
+    font-size:7.5pt; color:var(--muted);
+    letter-spacing:.22em; text-transform:uppercase;
+  }
+  .footer .left .big{
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    font-size:13pt;
+    color:var(--ink);
+    text-transform:none;
+    letter-spacing:0;
+    margin-bottom:4px;
+  }
+  .footer .left .big .en{
+    display:block; font-size:9pt; color:var(--gold); font-style:italic;
+  }
+  .footer .right{text-align:right}
+  .footer .right .url{
+    font-family:'Playfair Display', serif;
+    font-style:italic;
+    font-size:12pt; color:var(--ink);
+    text-transform:none; letter-spacing:0;
+    margin-bottom:3px;
+  }
+  .footer .right .row{margin-bottom:3px}
+
+  /* Side label */
+  .side-label{
+    position:absolute;
+    top:60mm; right:9mm;
+    transform-origin:top right;
+    transform:rotate(90deg) translateX(100%);
+    font-size:7pt; letter-spacing:.6em; text-transform:uppercase;
+    color:var(--gold);
+    font-weight:600;
+  }
+
+  /* Decorative gold bracket above stats */
+  .bracket{
+    position:absolute; top:222mm; left:50%; transform:translateX(-50%);
+    display:flex; align-items:center; gap:10px;
+    color:var(--gold); font-size:6.5pt; letter-spacing:.5em; text-transform:uppercase;
+    font-weight:700;
+  }
+  .bracket .l, .bracket .r{
+    width:50mm; height:1px; background:linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  @media print{
+    body{background:#fff; padding:0}
+    .a4{box-shadow:none}
+  }
+</style>
+</head>
+<body>
+  <div class="a4">
+    <div class="grain"></div>
+    <div class="frame"></div>
+
+    <div class="top">
+      <div class="brand"><span class="dot"></span>VIAMAR · DESDE 1958 / SINCE 1958</div>
+      <div class="meta">ÉPOCA · SEASON 2026</div>
+    </div>
+
+    <div class="side-label">PASSEIO ÀS GRUTAS · CAVE TOUR</div>
+
+    <div class="kicker">
+      <span class="bar"></span>
+      <span>Add-on · Ilha da Berlenga · Berlenga Island</span>
+      <span class="bar"></span>
+    </div>
+
+    <h1 class="headline">
+      <span class="l1">Grutas</span>
+      <span class="l2">The Caves of Berlenga</span>
+    </h1>
+
+    <p class="tag">
+      <span class="pt">Volta de barco às cavernas marítimas — fundo de vidro, sem mergulhar.</span>
+      <span class="sep"></span>
+      <span class="en">A boat tour through the sea caves — glass bottom, no diving required.</span>
+    </p>
+
+    <div class="photos">
+      <div class="photo">
+        <img src="../img/IMG_1122.jpg" alt="Gruta da Berlenga — entrada do arco entre falésias" />
+        <div class="cap"><span class="gold">·</span> A GRUTA · THE CAVE</div>
+      </div>
+      <div class="photo">
+        <img src="../img/grutas.webp" alt="Barco amarelo Passeios às Grutas no cais da Berlenga" />
+        <div class="cap"><span class="gold">·</span> O BARCO · THE BOAT</div>
+      </div>
+    </div>
+
+    <div class="bracket">
+      <span class="l"></span>
+      <span>Detalhes · Details</span>
+      <span class="r"></span>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="v"><span class="gold">€</span>10</div>
+        <div class="l">por pessoa<span class="en">per person</span></div>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat">
+        <div class="v">30<span class="small">min</span></div>
+        <div class="l">duração<span class="en">duration</span></div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="left">
+        <div class="big">Mais de 60 anos no mar.<span class="en">Over 60 years at sea.</span></div>
+        <div>VIAMAR FERRY · PENICHE — BERLENGA</div>
+      </div>
+      <div class="right">
+        <div class="url">viamar-berlenga.com</div>
+        <div class="row">Reserva a bordo · Book on board</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

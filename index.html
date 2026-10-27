@@ -1571,6 +1571,27 @@
   
 
   
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
   <link rel="alternate" hreflang="pt-PT" href="https://viamar-berlenga.com/" >
   <link rel="alternate" hreflang="en" href="https://viamar-berlenga.com/en/" >
   <link rel="alternate" hreflang="es" href="https://viamar-berlenga.com/es/" >
@@ -2998,6 +3019,98 @@
 
   <script defer src="https://fareharbor.com/embeds/api/v1/?autolightframe=yes"></script>
 
+
+
+  
+  <style>
+  /* ─────────── popup fim de época · a peça 1:1 ─────────── */
+  .obg{
+    border:0; padding:0; box-sizing:border-box;
+    position:fixed; inset:0; margin:auto;              /* centrado nos dois eixos */
+    width:min(620px, calc(100vw - 32px)); max-width:none;
+    height:max-content; max-height:calc(100dvh - 32px); overflow:auto;
+    background:#050b14; color:#f2ede3; border-radius:18px; overflow:hidden;
+    box-shadow:0 40px 100px rgba(0,0,0,.65);
+    font-family:'Inter',system-ui,sans-serif;
+  }
+  .obg::backdrop{ background:rgba(5,11,20,.74); backdrop-filter:blur(6px); }
+  .obg[open]{ animation:obg-in .5s cubic-bezier(.16,.84,.34,1) both; }
+  @keyframes obg-in{ from{ opacity:0; transform:scale(.965) } to{ opacity:1; transform:none } }
+
+  /* a peça, em proporção exacta */
+  .obg picture{ display:block; }
+  .obg-art{ display:block; width:100%; height:auto; aspect-ratio:1/1; object-fit:cover; background:#050b14; }
+
+  .obg-body{ padding:24px 30px 28px; text-align:center; }
+  .obg-body p{ margin:0 0 20px; font-size:15px; line-height:1.62; color:#93a7bd; }
+  .obg-body strong{ color:#f2ede3; font-weight:600; }
+  .obg-cta{ display:inline-block; background:#f59e0b; color:#07111f; text-decoration:none;
+    font-weight:800; font-size:14.5px; letter-spacing:.01em; padding:14px 32px; border-radius:999px;
+    transition:background .15s, transform .15s; }
+  .obg-cta:hover{ background:#d97706; transform:translateY(-1px); }
+  .obg-cta:focus-visible{ outline:2px solid #f2ede3; outline-offset:3px; }
+
+  .obg-x{ position:absolute; top:14px; right:14px; width:36px; height:36px; z-index:3;
+    display:grid; place-items:center; border:0; border-radius:50%; cursor:pointer;
+    background:rgba(5,11,20,.5); color:#f2ede3; font-size:20px; line-height:1;
+    -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); transition:background .15s; }
+  .obg-x:hover{ background:rgba(5,11,20,.85); }
+  .obg-x:focus{ outline:none; }
+  .obg-x:focus-visible{ outline:2px solid #f59e0b; outline-offset:2px; }
+
+  @media (max-width:480px){
+    .obg-body{ padding:20px 22px 24px; }
+    .obg-body p{ font-size:14px; margin-bottom:18px; }
+  }
+  @media (prefers-reduced-motion:reduce){ .obg[open]{ animation:none } }
+  </style>
+
+
+  <dialog class="obg" id="obg-modal" aria-label="Fim da época 2026">
+    <button class="obg-x" type="button" data-obg-close
+            aria-label="Fechar" data-i18n-attr="obg_close:aria-label">&times;</button>
+
+    <picture>
+      <source srcset="/img/epoca-2026-tiras.webp" type="image/webp">
+      <img class="obg-art" src="/img/epoca-2026-tiras.jpg" width="1000" height="1000"
+           data-i18n-attr="obg_alt:alt"
+           alt="A época de 2026 na Berlenga em tiras verticais, de Maio a Setembro. Cinco meses, uma só imagem.">
+    </picture>
+
+    <div class="obg-body">
+      <p data-i18n="obg_body">A época de 2026 chegou ao fim. Obrigado a quem atravessou connosco.<br>
+         A próxima começa em <strong>Maio de 2027</strong>.</p>
+      <a class="obg-cta" data-i18n="cta_book"
+         href="https://fareharbor.com/embeds/book/viamar-berlenga/items/?full-items=yes&flow=738388">Reservar para 2027</a>
+    </div>
+  </dialog>
+
+
+  <script>
+  (function () {
+    var OBG_KEY = 'viamar_obrigado_2026';   /* mudar a chave volta a mostrar a quem já fechou */
+    var d = document.getElementById('obg-modal');
+    if (!d || !d.showModal) return;
+    try { if (sessionStorage.getItem(OBG_KEY)) return; } catch (e) {}
+
+    function close() {
+      try { sessionStorage.setItem(OBG_KEY, '1'); } catch (e) {}
+      if (d.open) d.close();
+    }
+    d.addEventListener('click', function (e) {
+      if (e.target.closest('.obg-cta')) {     /* o CTA segue para a reserva */
+        try { sessionStorage.setItem(OBG_KEY, '1'); } catch (err) {}
+        return;
+      }
+      if (e.target.closest('[data-obg-close]')) { e.preventDefault(); close(); return; }
+      if (e.target === d) close();            /* clique fora fecha */
+    });
+    d.addEventListener('close', close);
+
+    setTimeout(function () { if (!d.open) d.showModal(); }, 900);
+  })();
+  </script>
+  
 
 </body>
 </html>

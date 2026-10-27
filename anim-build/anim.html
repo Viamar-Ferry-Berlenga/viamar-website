@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Viamar Logo Animation</title>
+<style>
+  html, body { margin:0; padding:0; background: transparent; }
+  body { display:flex; align-items:center; justify-content:center; min-height:100vh; }
+  canvas { display:block; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1080" height="1080"></canvas>
+<script>
+(async () => {
+  const W = 1080, H = 1080, FPS = 30, DUR = 6;
+  const N = FPS * DUR;
+
+  const canvas = document.getElementById('c');
+  const ctx = canvas.getContext('2d', { alpha: true });
+  ctx.imageSmoothingEnabled = true;
+  ctx.imageSmoothingQuality = 'high';
+
+  const logo = new Image();
+  await new Promise((resolve, reject) => {
+    logo.onload = resolve;
+    logo.onerror = reject;
+    logo.src = '../logo-viamar.png';
+  });
+
+  const aspect = logo.naturalWidth / logo.naturalHeight;
+  const LOGO_W = 720;
+  const LOGO_H = LOGO_W / aspect;
+  const cx = W / 2;
+  const cy = H / 2;
+
+  // Pre-rasterize at 1.5x target size with high-quality smoothing so animation
+  // draws sample from a sharp buffer rather than re-upscaling the 258px source every frame.
+  const PRESCALE = 1.5;
+  const BW = Math.round(LOGO_W * PRESCALE);
+  const BH = Math.round(LOGO_H * PRESCALE);
+  const buf = document.createElement('canvas');
+  buf.width = BW; buf.height = BH;
+  const bctx = buf.getContext('2d');
+  bctx.imageSmoothingEnabled = true;
+  bctx.imageSmoothingQuality = 'high';
+  bctx.drawImage(logo, 0, 0, BW, BH);
+
+  const sweep = document.createElement('canvas');
+  sweep.width = W; sweep.height = H;
+  const sctx = sweep.getContext('2d');
+  sctx.imageSmoothingEnabled = true;
+  sctx.imageSmoothingQuality = 'high';
+
+  const tau = Math.PI * 2;
+  const easeInOutSine = u => -(Math.cos(Math.PI * u) - 1) / 2;
+
+  function drawFrame(t) {
+    ctx.clearRect(0, 0, W, H);
+
+    const bob = 6 * Math.sin(tau * t / 3);
+    const scale = 1 + 0.015 * Math.sin(tau * t / 6);
+    const haloOp = 0.10 + 0.10 * (0.5 + 0.5 * Math.sin(tau * t / 3 - Math.PI / 2));
+    const sweepU = (t % 4) / 4;
+    const sweepEased = easeInOutSine(sweepU);
+    const sweepCx = -260 + (W + 520) * sweepEased;
+    const sweepActive = Math.sin(Math.PI * sweepU);
+
+    const w = LOGO_W * scale;
+    const h = LOGO_H * scale;
+    const x = cx - w / 2;
+    const y = cy - h / 2 + bob;
+
+    ctx.save();
+    ctx.globalAlpha = haloOp;
+    ctx.filter = 'blur(26px)';
+    ctx.drawImage(buf, x, y, w, h);
+    ctx.restore();
+
+    ctx.drawImage(buf, x, y, w, h);
+
+    if (sweepActive > 0.02) {
+      sctx.clearRect(0, 0, W, H);
+      const sweepWidth = 220;
+      const peak = 0.55 * sweepActive;
+      const grad = sctx.createLinearGradient(
+        sweepCx - sweepWidth, 0,
+        sweepCx + sweepWidth, 0
+      );
+      grad.addColorStop(0.00, 'rgba(255,250,230,0)');
+      grad.addColorStop(0.42, 'rgba(255,250,230,0)');
+      grad.addColorStop(0.50, `rgba(255,250,230,${peak})`);
+      grad.addColorStop(0.58, 'rgba(255,250,230,0)');
+      grad.addColorStop(1.00, 'rgba(255,250,230,0)');
+      sctx.fillStyle = grad;
+      sctx.fillRect(0, 0, W, H);
+      sctx.globalCompositeOperation = 'destination-in';
+      sctx.drawImage(buf, x, y, w, h);
+      sctx.globalCompositeOperation = 'source-over';
+
+      ctx.globalCompositeOperation = 'screen';
+      ctx.drawImage(sweep, 0, 0);
+      ctx.globalCompositeOperation = 'source-over';
+    }
+  }
+
+  window.drawFrame = drawFrame;
+  window.framesData = [];
+  window.framesReady = false;
+
+  const frames = [];
+  for (let i = 0; i < N; i++) {
+    const t = i / FPS;
+    drawFrame(t);
+    frames.push(canvas.toDataURL('image/png'));
+    if (i % 30 === 0) await new Promise(r => setTimeout(r, 0));
+  }
+  window.framesData = frames;
+  window.framesReady = true;
+  document.title = 'READY ' + frames.length;
+})();
+</script>
+</body>
+</html>
