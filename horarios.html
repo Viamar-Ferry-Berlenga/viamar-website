@@ -315,6 +315,13 @@
   
 
   
+  
+  
+  
+  
+  
+
+  
   <link rel="alternate" hreflang="pt-PT" href="https://viamar-berlenga.com/horarios.html" >
   <link rel="alternate" hreflang="en" href="https://viamar-berlenga.com/en/horarios.html" >
   <link rel="alternate" hreflang="es" href="https://viamar-berlenga.com/es/horarios.html" >
@@ -390,6 +397,10 @@
         </tbody>
       </table>
     </div></div>
+    <div class="hp-cta-row" style="margin-top:26px">
+      <a class="hp-cta" href="https://fareharbor.com/embeds/book/viamar-berlenga/items/?full-items=yes&amp;flow=738388" data-i18n="hp.cta2">Escolher data e reservar →</a>
+      <span class="hp-cta-note" data-i18n="hp.cta_note2">Cancelamento gratuito até 24 horas antes.</span>
+    </div>
     <p class="hp-foot" data-i18n="hp.s2.foot"><strong>Bilhete simples</strong> (só ida ou só regresso): desde 11,90 € por adulto e 8,00 € por criança, até 25,00 € nas semanas de pico. O bilhete de regresso embarca já na Ilha da Berlenga.<br>Ao reservar online, o FareHarbor acrescenta uma taxa de uso digital de cerca de 6%, que não é preço do bilhete. No quiosque da Marina de Peniche paga o valor da tabela, mediante disponibilidade.</p>
   </section>
 
@@ -454,6 +465,19 @@
       tick();
       window.addEventListener('scroll', tick, { passive: true });
     })();
+  </script>
+  <script>
+    // Google Ads + Meta — mousedown+capture dispara antes de o FareHarbor
+    // interceptar o clique com o autolightframe (mesmo padrão das outras páginas).
+    document.addEventListener('mousedown', function (e) {
+      if (e.target.closest('a[href*="fareharbor.com/embeds/book"]')) {
+        if (typeof gtag === 'function') gtag('event', 'conversion', { send_to: 'AW-10891382542/sIVNCPq6ifIaEI6etcko' });
+        if (typeof fbq === 'function') {
+          fbq('track', 'InitiateCheckout');
+          fbq('track', 'Lead', { content_name: 'Horários e Preços — FareHarbor CTA', content_category: 'booking_intent' });
+        }
+      }
+    }, true);
   </script>
 </body>
 </html>
