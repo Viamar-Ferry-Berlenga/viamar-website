@@ -19,7 +19,7 @@ import { fileURLToPath } from 'node:url';
 import { parse } from 'node-html-parser';
 
 const ROOT = process.cwd();
-const PAGES = ['index.html', 'pacotes.html', 'mergulho.html', 'historia.html', 'ilha.html', 'faqs.html', 'termos.html'];
+const PAGES = ['index.html', 'pacotes.html', 'horarios.html', 'mergulho.html', 'historia.html', 'ilha.html', 'faqs.html', 'termos.html'];
 const TARGET_LANGS = ['en', 'es', 'fr']; // PT canonical lives at root
 // Pages still built and reachable by direct link, but kept out of the sitemap
 const SITEMAP_EXCLUDE = new Set(['mergulho.html']);
@@ -29,6 +29,7 @@ const BASE_URL = 'https://viamar-berlenga.com';
 const PAGE_META = {
   'index.html':    { prefix: 'meta.index',    priority: '1.0', changefreq: 'weekly'  },
   'pacotes.html':  { prefix: 'meta.pacotes',  priority: '0.9', changefreq: 'weekly'  },
+  'horarios.html': { prefix: 'meta.horarios', priority: '0.9', changefreq: 'weekly'  },
   'mergulho.html': { prefix: 'meta.mergulho', priority: '0.7', changefreq: 'monthly' },
   'ilha.html':     { prefix: 'meta.ilha',     priority: '0.8', changefreq: 'monthly' },
   'historia.html': { prefix: 'meta.historia', priority: '0.8', changefreq: 'monthly' },
@@ -296,6 +297,9 @@ async function buildForLang(page, lang) {
   //    videos, posters, srcset, style url(...) and data-img to the root.
   rewriteAssetPaths(root, lang);
 
+  // 6. Structured data in the page's own language
+  localizeJsonLd(root, lang, page);
+
   // 5. Output
   const outDir = join(ROOT, lang);
   if (!existsSync(outDir)) await mkdir(outDir, { recursive: true });
@@ -316,6 +320,88 @@ async function refreshPt(page) {
   setCanonical(root, 'pt', page);
   replaceHreflang(root, page);
   await writeFile(join(ROOT, page), root.toString(), 'utf8');
+}
+
+
+// ── JSON-LD per language ────────────────────────────────────────────────────
+// The PT source carries the structured data in Portuguese. Serving that
+// verbatim on /en/, /es/ and /fr/ means the markup contradicts the page it
+// sits on, so Google reads structured data in the wrong language. We rewrite
+// it: the FAQPage is regenerated from the same faq.* keys the page renders,
+// descriptions come from the target meta.* keys, and inLanguage is set.
+const LANG_TAG = { pt: 'pt-PT', en: 'en', es: 'es', fr: 'fr' };
+
+function stripHtml(html) {
+  return String(html)
+    .replace(/<li>/g, ' • ')
+    .replace(/<\/li>/g, '')
+    .replace(/<br\s*\/?>/g, ' ')
+    .replace(/<[^>]+>/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function localizeJsonLd(root, lang, page) {
+  const dict = dicts[lang];
+  const ptDict = dicts.pt;
+  const meta = PAGE_META[page];
+  // PT value → key, so any PT string inside the JSON-LD can be translated
+  const byPtValue = new Map();
+  for (const [k, v] of Object.entries(ptDict)) {
+    if (typeof v === 'string' && v.length > 12) byPtValue.set(stripHtml(v), k);
+  }
+
+  root.querySelectorAll('script[type="application/ld+json"]').forEach(node => {
+    let data;
+    try { data = JSON.parse(node.textContent); } catch { return; }
+
+    const walk = (obj) => {
+      if (Array.isArray(obj)) return obj.forEach(walk);
+      if (!obj || typeof obj !== 'object') return;
+
+      if (obj['@type'] === 'FAQPage' && Array.isArray(obj.mainEntity)) {
+        const out = [];
+        for (let i = 1; i <= 40; i++) {
+          const q = dict[`faq.q${i}`], a = dict[`faq.a${i}`];
+          if (!q || !a) continue;
+          out.push({
+            '@type': 'Question',
+            name: stripHtml(q),
+            acceptedAnswer: { '@type': 'Answer', text: stripHtml(a) }
+          });
+        }
+        if (out.length) obj.mainEntity = out;
+      }
+
+      if (typeof obj.inLanguage === 'string') obj.inLanguage = LANG_TAG[lang];
+      if (obj['@type'] === 'WebPage' || obj['@type'] === 'FAQPage') obj.inLanguage = LANG_TAG[lang];
+
+      // Bespoke JSON-LD descriptions have their own dict keys per @type
+      const DESC_KEY = {
+        Organization: 'jsonld.org_desc',
+        LocalBusiness: 'jsonld.business_desc',
+        TouristAttraction: 'jsonld.island_desc',
+        TouristDestination: 'jsonld.island_desc'
+      };
+      const dk = DESC_KEY[obj['@type']];
+      if (dk && dict[dk]) obj.description = dict[dk];
+
+      for (const field of ['name', 'description', 'headline', 'text']) {
+        if (typeof obj[field] !== 'string') continue;
+        const key = byPtValue.get(stripHtml(obj[field]));
+        if (key && dict[key]) obj[field] = stripHtml(dict[key]);
+      }
+
+      // Page-level description falls back to the translated meta description
+      if (meta && obj['@type'] === 'WebPage' && dict[`${meta.prefix}.description`]) {
+        obj.description = dict[`${meta.prefix}.description`];
+      }
+
+      Object.values(obj).forEach(walk);
+    };
+    walk(data);
+    node.set_content(JSON.stringify(data, null, 2));
+  });
 }
 
 // ── Sitemap ─────────────────────────────────────────────────────────────────

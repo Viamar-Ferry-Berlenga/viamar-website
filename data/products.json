@@ -1,8 +1,8 @@
 {
   "_meta": {
-    "updated": "2026-05-27",
+    "updated": "2026-10-28",
     "source": "FareHarbor — viamar-berlenga (sync manual via dashboard)",
-    "note": "Preços base sem taxa FareHarbor. Época baixa até 19 de Junho 2026: Adulto idavolta €19,90 + criança €11,90 (IVA 6% incluído). Embed FH mostra €21,03 adulto (inclui taxa de reserva FH ~5,7%). booking_url sem parâmetro language= — o client substitui pelo idioma do utilizador."
+    "note": "Preços base com IVA 6% incluído — referência do bilhete, sem a taxa de uso digital do FareHarbor (~6%). Ida e volta adulto desde 19,90 (varia com a época); bilhete simples desde 12,00. booking_url sem parâmetro language= — o client substitui pelo idioma do utilizador."
   },
   "booking_url": "https://fareharbor.com/embeds/book/viamar-berlenga/?full-items=yes&flow=738388&u=0add1569-0a96-4a96-bd93-bfeafd85b4a5&from-ssl=yes&back=https%3A%2F%2Fviamar-berlenga.com%2F",
   "items": [
@@ -48,7 +48,7 @@
         "Embarquement à la Marina de Peniche",
         "Billet numérique QR"
       ],
-      "price_adult": 9.95,
+      "price_adult": 12.0,
       "price_child": null,
       "featured": false,
       "fh_pk": 377884,
@@ -96,7 +96,7 @@
         "Embarquement sur la Berlenga",
         "Billet numérique QR"
       ],
-      "price_adult": 9.95,
+      "price_adult": 12.0,
       "price_child": null,
       "featured": false,
       "fh_pk": 377906,
@@ -110,7 +110,7 @@
       "badge_fr": "5 Heures sur l'Île",
       "badge_type": "pop",
       "icon": "anchor",
-      "image": "/img/IMG_1019.jpg",
+      "image": "/img/IMG_1019.webp",
       "img_position": "center bottom",
       "name": "Visita à Ilha da Berlenga",
       "name_en": "Berlenga Island Visit",

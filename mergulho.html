@@ -26,12 +26,36 @@
     fbq('track', 'PageView');
     fbq('track', 'ViewContent', { content_name: 'Experiência de Mergulho', content_category: 'product_detail' });
   </script>
-  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=956111340728300&ev=PageView&noscript=1" /></noscript>
+  <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=956111340728300&ev=PageView&noscript=1"></noscript>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" >
   <title>Experiência de Mergulho na Berlenga | Viamar × Haliotis</title>
   <meta name="description" content="Batismo de mergulho nas Berlengas com a Haliotis, em parceria com a Viamar. Reserva a travessia e inscreve-te no mergulho em dois passos simples.">
   <link rel="canonical" href="https://viamar-berlenga.com/mergulho.html">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" >
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://viamar-berlenga.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Mergulho na Berlenga", "item": "https://viamar-berlenga.com/mergulho.html" }
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "name": "Experiência de Mergulho na Berlenga — Viamar × Haliotis",
+        "url": "https://viamar-berlenga.com/mergulho.html",
+        "description": "Batismo de mergulho nas águas da Ilha da Berlenga com a Haliotis, em parceria com a Viamar. Reserva a travessia e inscreve-te no mergulho em dois passos.",
+        "inLanguage": "pt-PT",
+        "isPartOf": { "@id": "https://viamar-berlenga.com/#organization" }
+      }
+    ]
+  }
+  </script>
 
   <meta property="og:type" content="website" >
   <meta property="og:title" content="Experiência de Mergulho na Berlenga — Viamar × Haliotis">
@@ -41,7 +65,9 @@
   <meta property="og:image:height" content="630" >
   <meta property="og:url" content="https://viamar-berlenga.com/mergulho.html">
   <link rel="preconnect" href="https://fonts.googleapis.com" >
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&display=swap" rel="stylesheet" >
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&display=swap" >
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&display=swap" rel="stylesheet" media="print" onload="this.media='all'" >
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&display=swap" rel="stylesheet" ></noscript>
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" >
   <link rel="apple-touch-icon" href="/logo-viamar.png" >
@@ -51,7 +77,7 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --navy:   #07111f;
-      --aqua:   #06b6d4;
+      --aqua:   #06b6d4; --aqua-ink: #04798d;
       --gold:   #f59e0b;
       --gold-h: #d97706;
       --orange: #f97316;
@@ -79,7 +105,7 @@
     .nav-link-item:hover, .nav-link-item.active { color: #fff; }
     .nav-right { display: flex; align-items: center; gap: 16px; }
     .nav-lang { display: flex; align-items: center; gap: 4px; }
-    .lang-btn { background: none; border: none; cursor: pointer; font-size: 12px; font-weight: 700; letter-spacing: 1px; color: rgba(255,255,255,0.3); padding: 3px 6px; border-radius: 4px; transition: color .15s; font-family: inherit; }
+    .lang-btn { background: none; border: none; cursor: pointer; font-size: 12px; font-weight: 700; letter-spacing: 1px; color: rgba(255,255,255,0.46); padding: 3px 6px; border-radius: 4px; transition: color .15s; font-family: inherit; }
     .lang-btn.active { color: #fff; background: rgba(255,255,255,0.12); }
     .lang-sep { color: rgba(255,255,255,0.15); font-size: 11px; }
     .nav-cta { background: var(--gold); color: var(--navy); padding: 10px 20px; border-radius: 8px; font-weight: 700; font-size: 13.5px; text-decoration: none; white-space: nowrap; transition: background .2s; }
@@ -105,7 +131,7 @@
     .mobile-menu-links { list-style: none; display: flex; flex-direction: column; gap: 0; }
     .mobile-menu-links li a { display: block; font-size: 28px; font-weight: 700; font-family: 'Playfair Display', serif; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.06); text-decoration: none; color: #fff; transition: color .15s; }
     .mobile-menu-links li a:hover { color: var(--gold); }
-    .mobile-menu-links li.mm-small a { font-size: 13px; font-weight: 500; font-family: 'Inter', sans-serif; color: rgba(255,255,255,0.35); padding: 12px 0; }
+    .mobile-menu-links li.mm-small a { font-size: 13px; font-weight: 500; font-family: 'Inter', sans-serif; color: rgba(255,255,255,0.46); padding: 12px 0; }
     .mobile-menu-links li.mm-small a:hover { color: rgba(255,255,255,0.7); }
     .mobile-menu-cta { margin-top: 28px; }
     .mobile-menu-cta a { display: flex; align-items: center; justify-content: center; gap: 10px; background: var(--gold); color: var(--navy); font-weight: 800; font-size: 16px; padding: 18px 24px; border-radius: 12px; text-decoration: none; }
@@ -133,7 +159,7 @@
       padding: 104px 40px 88px;
       background:
         linear-gradient(180deg, rgba(7,17,31,0.55) 0%, rgba(7,17,31,0.86) 70%, var(--navy) 100%),
-        url('img/mergulho-haliotis.jpg') center 42% / cover no-repeat;
+        url('img/mergulho-haliotis.webp') center 42% / cover no-repeat;
       border-bottom: 1px solid rgba(255,255,255,0.06);
     }
     .merg-hero-inner { max-width: 920px; margin: 0 auto; text-align: center; }
@@ -258,19 +284,19 @@
     .site-footer { background: #030a14; border-top: 1px solid rgba(255,255,255,0.07); }
     .ft-inner { max-width: 1100px; margin: 0 auto; padding: 56px 40px 40px; display: grid; grid-template-columns: 1.7fr 1fr 1.3fr 1fr; gap: 40px; }
     .ft-logo { height: 36px; width: auto; display: block; margin-bottom: 16px; }
-    .ft-tagline { font-size: 13px; color: rgba(255,255,255,0.38); line-height: 1.65; max-width: 220px; margin-bottom: 20px; }
+    .ft-tagline { font-size: 13px; color: rgba(255,255,255,0.46); line-height: 1.65; max-width: 220px; margin-bottom: 20px; }
     .ft-social { display: flex; gap: 14px; }
-    .ft-social a { color: rgba(255,255,255,0.38); transition: color .2s; display: flex; align-items: center; }
+    .ft-social a { color: rgba(255,255,255,0.46); transition: color .2s; display: flex; align-items: center; }
     .ft-social a:hover { color: #fff; }
-    .ft-col-label { font-size: 10px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 14px; display: block; }
+    .ft-col-label { font-size: 10px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.46); margin-bottom: 14px; display: block; }
     .ft-col { display: flex; flex-direction: column; }
-    .ft-col a, .ft-col address { font-size: 13px; color: rgba(255,255,255,0.5); text-decoration: none; font-style: normal; padding: 4px 0; line-height: 1.55; transition: color .15s; }
+    .ft-col a, .ft-col address { font-size: 13px; color: rgba(255,255,255,0.62); text-decoration: none; font-style: normal; padding: 4px 0; line-height: 1.55; transition: color .15s; }
     .ft-col a:hover { color: rgba(255,255,255,0.88); }
     .ft-bottom-wrap { border-top: 1px solid rgba(255,255,255,0.05); }
     .ft-bottom { max-width: 1100px; margin: 0 auto; padding: 18px 40px; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
-    .ft-bottom p { font-size: 12px; color: rgba(255,255,255,0.22); line-height: 1.7; }
-    .ft-bottom a { color: rgba(255,255,255,0.35); text-decoration: none; }
-    .ft-atlas { font-weight: 800; letter-spacing: 1px; color: rgba(255,255,255,0.45) !important; transition: color .2s; }
+    .ft-bottom p { font-size: 12px; color: rgba(255,255,255,0.46); line-height: 1.7; }
+    .ft-bottom a { color: rgba(255,255,255,0.46); text-decoration: none; }
+    .ft-atlas { font-weight: 800; letter-spacing: 1px; color: rgba(255,255,255,0.46) !important; transition: color .2s; }
     .ft-atlas:hover { color: rgba(255,255,255,0.85) !important; }
 
     /* ── Responsive ── */
@@ -397,6 +423,146 @@
   
 
   
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
   <link rel="alternate" hreflang="pt-PT" href="https://viamar-berlenga.com/mergulho.html" >
   <link rel="alternate" hreflang="en" href="https://viamar-berlenga.com/en/mergulho.html" >
   <link rel="alternate" hreflang="es" href="https://viamar-berlenga.com/es/mergulho.html" >
@@ -407,10 +573,11 @@
 
   <nav>
     <div class="nav-logo">
-      <a href="/"><img src="/logo-viamar.png" alt="Viamar Ferry Berlenga" ></a>
+      <a href="/"><img src="/logo-viamar.png" alt="Viamar Ferry Berlenga" width="258" height="84" decoding="async"></a>
     </div>
     <ul class="nav-links">
       <li><a href="/pacotes.html" class="nav-link-item active" data-i18n="nav_pack">Bilhetes</a></li>
+      <li><a href="/horarios.html" class="nav-link-item" data-i18n="nav.horarios">Horários e Preços</a></li>
       <li><a href="/historia.html" class="nav-link-item" data-i18n="nav_hist">História</a></li>
       <li><a href="/ilha.html" class="nav-link-item" data-i18n="nav_island">A Ilha</a></li>
       <li><a href="https://berlengaspass.icnf.pt" target="_blank" rel="noopener" class="nav-link-item" data-i18n="nav.berlengaspass">BerlengasPass</a></li>
@@ -478,9 +645,9 @@
   <header class="merg-hero">
     <div class="merg-hero-inner">
       <div class="merg-partners">
-        <img src="/logo-viamar.png" alt="Viamar" >
+        <img src="/logo-viamar.png" alt="Viamar" width="258" height="84" loading="lazy" decoding="async">
         <span class="pp-x">&times;</span>
-        <img class="pp-haliotis" src="/img/haliotis-logo.svg" alt="Haliotis" >
+        <img class="pp-haliotis" src="/img/haliotis-logo.svg" alt="Haliotis" width="196" height="196" loading="lazy" decoding="async">
       </div>
       <h1 class="merg-h1" data-i18n="merg.h1">Experiência de <em>Mergulho</em> na Berlenga</h1>
       <p class="merg-sub" data-i18n="merg.sub">Um batismo de mergulho nas águas cristalinas da Berlenga, com instrutores certificados PADI. Reserva em dois passos simples.</p>
@@ -576,7 +743,7 @@
   <footer class="site-footer">
     <div class="ft-inner">
       <div class="ft-brand">
-        <img src="/logo-viamar.png" alt="Viamar Ferry Berlenga" class="ft-logo" >
+        <img src="/logo-viamar.png" alt="Viamar Ferry Berlenga" width="258" height="84" class="ft-logo" loading="lazy" decoding="async">
         <p class="ft-tagline" data-i18n="ft.tagline">Travessias marítimas entre Peniche e a Ilha da Berlenga desde 1958. Operador licenciado IMT.</p>
         <div class="ft-social">
           <a href="https://www.instagram.com/viamar_berlenga/" target="_blank" rel="noopener" aria-label="Instagram">
