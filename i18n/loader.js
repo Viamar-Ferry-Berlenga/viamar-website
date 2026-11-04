@@ -29,7 +29,7 @@
   var REDIRECT_GUARD = 'viamar_redirected';
 
   // Pages we recognise as canonical entry points
-  var KNOWN_PAGES = ['index.html', 'pacotes.html', 'horarios.html', 'mergulho.html', 'historia.html', 'ilha.html', 'faqs.html', 'termos.html', 'grutas.html', 'travessia.html'];
+  var KNOWN_PAGES = ['index.html', 'pacotes.html', 'horarios.html', 'historia.html', 'ilha.html', 'faqs.html', 'termos.html', 'grutas.html', 'travessia.html'];
 
   function normalize(lang) {
     if (!lang) return null;

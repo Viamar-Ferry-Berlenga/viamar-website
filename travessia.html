@@ -66,193 +66,117 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&display=swap" rel="stylesheet" media="print" onload="this.media='all'" >
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&display=swap" rel="stylesheet" ></noscript>
 
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="preload" as="image" href="/img/v/peniche-800.webp" imagesrcset="/img/v/peniche-800.webp 800w, /img/v/peniche-1400.webp 1400w" imagesizes="100vw" fetchpriority="high">
   <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#07111f;--deep:#030a14;--aqua:#06b6d4;--aqua-ink:#04798d;--gold:#f59e0b;--off:#f0f4f8;--ease:cubic-bezier(.22,1,.36,1)}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Inter',sans-serif;background:var(--navy);color:rgba(255,255,255,.7);overflow-x:hidden;line-height:1.6}
+img{display:block;max-width:100%}
+a{color:inherit}
+.grain{position:fixed;inset:0;z-index:999;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");opacity:.35}
+#nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:64px;transition:background .3s,backdrop-filter .3s}
+#nav.solid{background:rgba(7,17,31,.92);backdrop-filter:blur(12px)}
+.nav-back-btn{font-size:13px;font-weight:600;color:rgba(255,255,255,.8);text-decoration:none;letter-spacing:.02em;display:flex;align-items:center;gap:6px;transition:color .2s}
+.nav-back-btn:hover{color:#fff}
+.nav-lang{display:flex;align-items:center;gap:4px}
+.lang-btn{background:none;border:none;cursor:pointer;font-size:11px;font-weight:700;letter-spacing:.08em;color:rgba(255,255,255,.62);padding:6px 6px;border-radius:4px;transition:color .15s,background .15s;font-family:'Inter',sans-serif}
+.lang-btn:hover{color:#fff}
+.lang-btn.active{color:#fff;background:rgba(255,255,255,.14)}
+.lang-sep{color:rgba(255,255,255,.2);font-size:11px}
+/* tipografia */
+.disp{font-family:'Playfair Display',serif;font-weight:900;color:#fff;letter-spacing:-.02em}
+.kick{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.2em;color:var(--aqua);margin-bottom:14px}
+.h2{font-family:'Playfair Display',serif;font-weight:900;color:#fff;font-size:clamp(34px,8.4vw,72px);line-height:1.02;letter-spacing:-.025em}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--navy);font-weight:800;font-size:15px;padding:17px 32px;border-radius:100px;text-decoration:none;transition:transform .18s,box-shadow .18s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(245,158,11,.32)}
+.btn-note{font-size:13px;color:rgba(255,255,255,.7)}
+/* revelar ao rolar (só com JS e movimento permitido) */
+.sc .rv{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.sc .rv.in{opacity:1;transform:none}
+.sc .rv.d1{transition-delay:.08s}.sc .rv.d2{transition-delay:.16s}
+/* rodapé */
+footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:28px 40px;border-top:1px solid rgba(255,255,255,.07);background:var(--deep)}
+.f-logo img{height:28px;opacity:.7;width:auto}
+.f-copy{font-size:12px;color:rgba(255,255,255,.56)}
+.f-legal{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.f-legal a{font-size:12px;color:rgba(255,255,255,.62);text-decoration:none;transition:color .2s}
+.f-legal a:hover{color:#fff}
+@media(max-width:700px){#nav{padding:0 20px}footer{padding:24px 20px 28px;flex-direction:column;align-items:flex-start}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
-  :root {
-    --navy:  #07111f;
-    --aqua:  #06b6d4; --aqua-ink: #04798d;
-    --gold:  #f59e0b;
-  }
-
-  html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; background: var(--navy); color: rgba(255,255,255,0.6); overflow-x: hidden; }
-
-  /* ── grain ── */
-  .grain {
-    position: fixed; inset: 0; z-index: 999; pointer-events: none;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-    opacity: 0.35;
-  }
-
-  /* ── nav ── */
-  #nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 0 40px; height: 64px;
-    transition: background .3s, backdrop-filter .3s;
-  }
-  #nav.solid { background: rgba(7,17,31,0.92); backdrop-filter: blur(12px); }
-  .nav-back-btn {
-    font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.7);
-    text-decoration: none; letter-spacing: 0.02em;
-    display: flex; align-items: center; gap: 6px;
-    transition: color .2s;
-  }
-  .nav-back-btn:hover { color: #fff; }
-  .nav-lang { display: flex; align-items: center; gap: 4px; }
-  .lang-btn {
-    background: none; border: none; cursor: pointer;
-    font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
-    color: rgba(255,255,255,0.46); padding: 4px 6px; border-radius: 4px;
-    transition: color .15s, background .15s; font-family: 'Inter', sans-serif;
-  }
-  .lang-btn:hover { color: rgba(255,255,255,0.8); }
-  .lang-btn.active { color: #fff; background: rgba(255,255,255,0.12); }
-  .lang-sep { color: rgba(255,255,255,0.15); font-size: 11px; }
-
-  /* ── page header ── */
-  .pg-header {
-    position: relative;
-    padding: 160px 40px 88px;
-    text-align: center;
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-    background: url('img/photo2.webp') center/cover no-repeat;
-    overflow: hidden;
-  }
-  .pg-header::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: linear-gradient(to bottom, rgba(7,17,31,0.50) 0%, rgba(7,17,31,0.80) 100%);
-  }
-  .pg-header > * { position: relative; z-index: 1; }
-  .pg-tag {
-    display: block;
-    font-size: 11px; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 2px; color: var(--aqua); margin-bottom: 14px;
-  }
-  .pg-h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(32px, 5vw, 54px);
-    font-weight: 900; color: #fff;
-    line-height: 1.1; letter-spacing: -0.02em;
-  }
-  .pg-sub {
-    margin-top: 16px;
-    font-size: 15px; color: rgba(255,255,255,0.55);
-    max-width: 480px; margin-left: auto; margin-right: auto;
-    line-height: 1.7;
-  }
-
-  /* ── FAQ accordion ── */
-  .faq-wrap { max-width: 800px; margin: 0 auto; padding: 64px 40px 80px; }
-  .faq-item { border-bottom: 1px solid rgba(255,255,255,0.07); }
-  .faq-item:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
-  .faq-q {
-    width: 100%; background: none; border: none; text-align: left;
-    display: flex; align-items: center; justify-content: space-between; gap: 16px;
-    padding: 22px 0; cursor: pointer; color: rgba(255,255,255,0.8);
-    font-size: 15px; font-weight: 600; line-height: 1.4; font-family: 'Inter', sans-serif;
-    transition: color .2s;
-  }
-  .faq-q:hover, .faq-q[aria-expanded="true"] { color: #fff; }
-  .faq-icon {
-    flex-shrink: 0; width: 20px; height: 20px; color: var(--aqua);
-    transition: transform 0.32s cubic-bezier(0.4,0,0.2,1);
-  }
-  .faq-q[aria-expanded="true"] .faq-icon { transform: rotate(180deg); }
-  .faq-a { overflow: hidden; max-height: 0; visibility: hidden; transition: max-height 0.38s cubic-bezier(0.4,0,0.2,1), visibility 0s linear 0.38s; }
-  .faq-a.open { max-height: 1400px; visibility: visible; transition: max-height 0.38s cubic-bezier(0.4,0,0.2,1), visibility 0s; }
-  .faq-a-inner { padding-bottom: 22px; font-size: 14px; line-height: 1.8; color: rgba(255,255,255,0.5); }
-  .faq-a-inner p { margin: 0 0 10px; }
-  .faq-a-inner p:last-child { margin-bottom: 0; }
-  .faq-a-inner ul { margin: 4px 0 0; padding-left: 18px; }
-  .faq-a-inner li { margin-bottom: 5px; }
-  .faq-a-inner a { color: var(--aqua); text-decoration: none; }
-  .faq-a-inner a:hover { text-decoration: underline; }
-
-  /* ── footer ── */
-  footer {
-    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
-    gap: 12px; padding: 28px 40px;
-    border-top: 1px solid rgba(255,255,255,0.07);
-    background: #030a14;
-  }
-  .f-logo img { height: 28px; opacity: 0.7; display: block; width: auto}
-  .f-copy { font-size: 12px; color: rgba(255,255,255,0.46); }
-  .f-legal { display: flex; align-items: center; gap: 16px; }
-  .f-legal a { font-size: 12px; color: rgba(255,255,255,0.56); text-decoration: none; transition: color .2s; }
-  .f-legal a:hover { color: rgba(255,255,255,0.8); }
-  .f-back {
-    font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.5);
-    text-decoration: none; transition: color .2s;
-  }
-  .f-back:hover { color: #fff; }
-
-  @media (max-width: 600px) {
-    #nav { padding: 0 20px; }
-    .pg-header { padding: 110px 24px 48px; }
-    .faq-wrap { padding: 48px 20px 64px; }
-    .faq-q { font-size: 14px; padding: 18px 0; }
-    footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
-  }
-  </style>
-<style>
-  /* ── Horários e preços ─────────────────────────────────────── */
-  .hp-wrap { max-width: 920px; margin: 0 auto; padding: 0 24px 90px; }
-  .hp-lede { font-size: 17px; line-height: 1.75; color: rgba(255,255,255,0.72); max-width: 62ch; margin: 0 auto 10px; }
-  .hp-lede strong { color: #fff; font-weight: 600; }
-  .hp-sec { margin-top: 56px; }
-  .hp-sec > h2 {
-    font-family: 'Playfair Display', serif; font-weight: 900; color: #fff;
-    font-size: clamp(22px, 3.6vw, 30px); line-height: 1.15; letter-spacing: -0.02em; margin: 0 0 8px;
-  }
-  .hp-sub { font-size: 14.5px; line-height: 1.7; color: rgba(255,255,255,0.62); max-width: 62ch; margin: 0 0 22px; }
-  .hp-table-scroll { overflow-x: auto; border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; background: rgba(255,255,255,0.025); }
-  .hp-table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: 14px; font-variant-numeric: tabular-nums; }
-  .hp-table th, .hp-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.08); white-space: nowrap; }
-  .hp-table thead th {
-    font-size: 10.5px; font-weight: 800; letter-spacing: 0.11em; text-transform: uppercase;
-    color: rgba(255,255,255,0.56); background: rgba(255,255,255,0.045); position: sticky; top: 0;
-  }
-  .hp-table tbody tr:last-child td { border-bottom: none; }
-  .hp-table td { color: rgba(255,255,255,0.78); }
-  .hp-table td.hp-period { color: #fff; font-weight: 600; white-space: normal; min-width: 170px; }
-  .hp-table td.n { text-align: right; }
-  .hp-table .hp-stay { color: var(--aqua); font-weight: 700; }
-  .hp-table .hp-low { color: var(--gold); font-weight: 700; }
-  .hp-table tr.hp-peak td { background: rgba(245,158,11,0.055); }
-  .hp-season {
-    display: inline-block; font-size: 10px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
-    padding: 2px 8px; border-radius: 99px; margin-left: 8px; vertical-align: 1px;
-    background: rgba(6,182,212,0.16); color: #7fdced;
-  }
-  .hp-season.mid  { background: rgba(255,255,255,0.1);  color: rgba(255,255,255,0.72); }
-  .hp-season.high { background: rgba(245,158,11,0.16);  color: #f5c069; }
-  .hp-foot { font-size: 12.5px; line-height: 1.65; color: rgba(255,255,255,0.56); margin: 12px 0 0; }
-  .hp-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin-top: 20px; }
-  .hp-card { border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 18px 20px; background: rgba(255,255,255,0.025); min-width: 0; }
-  .hp-card h3 { font-size: 14px; font-weight: 700; color: #fff; margin: 0 0 7px; }
-  .hp-card p  { font-size: 13.5px; line-height: 1.65; color: rgba(255,255,255,0.66); margin: 0; }
-  .hp-card strong { color: #fff; font-weight: 600; }
-  .hp-prose { font-size: 15px; line-height: 1.78; color: rgba(255,255,255,0.7); max-width: 64ch; }
-  .hp-prose p { margin: 0 0 14px; }
-  .hp-prose strong { color: #fff; font-weight: 600; }
-  .hp-prose ul { margin: 0 0 14px; padding-left: 20px; }
-  .hp-prose li { margin-bottom: 7px; }
-  .hp-prose a { color: var(--aqua); text-decoration: underline; text-underline-offset: 2px; }
-  .hp-cta-row { margin-top: 46px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
-  .hp-cta {
-    display: inline-flex; align-items: center; gap: 9px; background: var(--gold); color: var(--navy);
-    font-size: 14.5px; font-weight: 800; padding: 15px 28px; border-radius: 100px; text-decoration: none;
-    transition: transform .18s, box-shadow .18s;
-  }
-  .hp-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(245,158,11,0.3); }
-  .hp-cta-note { font-size: 13px; color: rgba(255,255,255,0.56); }
-  @media (max-width: 640px) {
-    .hp-wrap { padding: 0 20px 70px; }
-    .hp-table th, .hp-table td { padding: 10px 13px; }
-  }
+/* ── A. a travessia (o scroll é o mar) ── */
+.xt{position:relative}
+.xs{position:relative}
+.leg{position:relative;min-height:90svh;display:flex;align-items:flex-end;overflow:hidden;background:var(--deep)}
+.leg>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.leg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(7,17,31,.96) 0%,rgba(7,17,31,.62) 40%,rgba(7,17,31,.2) 100%)}
+.leg1>img{object-position:50% 40%}
+.leg2>img{object-position:45% 50%}
+.leg3>img{object-position:58% 50%}
+.lg-tx{position:relative;z-index:3;padding:130px 22px 56px;max-width:660px}
+.lg-tx .kick{margin-bottom:12px}
+.lg-tx h1,.lg-tx h2{font-family:'Playfair Display',serif;font-weight:900;color:#fff;letter-spacing:-.025em;line-height:1.02;font-size:clamp(36px,9.4vw,76px);margin-bottom:16px}
+.lg-tx h1 em,.lg-tx h2 em{color:var(--gold)}
+.lg-tx p{font-size:15.5px;line-height:1.72;color:rgba(255,255,255,.84)}
+.lg-tx p strong{color:#fff;font-weight:600}
+.lg-tx .lede{font-size:16.5px;margin-bottom:14px}
+.lg-tx .small{font-size:14px;line-height:1.65;color:rgba(255,255,255,.7);padding-top:14px;border-top:1px solid rgba(255,255,255,.2)}
+.cnt,.rt,.xhint{display:none}
+.sc .xt{height:460svh}
+.sc .xs{position:sticky;top:0;height:100svh;overflow:hidden}
+.sc .leg{position:absolute;inset:0;min-height:0;opacity:0;pointer-events:none}
+.sc .leg1{opacity:clamp(0,calc((.3 - var(--p,0)) * 10),1)}
+.sc .leg2{opacity:min(clamp(0,calc((var(--p,0) - .24) * 10),1),clamp(0,calc((.7 - var(--p,0)) * 10),1))}
+.sc .leg3{opacity:clamp(0,calc((var(--p,0) - .62) * 10),1)}
+.sc .leg>img{transform:scale(calc(1.04 + var(--p,0) * .1));will-change:transform}
+.sc .lg-tx{padding-bottom:calc(150px + env(safe-area-inset-bottom))}
+.sc .cnt{display:flex;position:absolute;z-index:4;top:78px;left:18px;align-items:baseline;font-family:'Playfair Display',serif;font-weight:900;font-style:italic;color:#fff;line-height:.86;pointer-events:none}
+.cnt b{display:inline-block;min-width:2ch;text-align:right;font-weight:900;font-size:clamp(108px,32vw,280px);letter-spacing:-.04em;font-variant-numeric:lining-nums}
+.cnt i{color:var(--gold);font-size:clamp(80px,24vw,210px);margin-left:2px}
+.cnt span{align-self:flex-end;margin:0 0 .5em 12px;font-family:'Inter',sans-serif;font-style:normal;font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+.sc .rt{display:grid;position:absolute;z-index:4;left:22px;right:22px;bottom:calc(88px + env(safe-area-inset-bottom));grid-template-columns:auto 1fr auto;gap:14px;align-items:center;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.86)}
+.rt-l{position:relative;height:2px;background:rgba(255,255,255,.3)}
+.rt-f{position:absolute;left:0;top:0;bottom:0;width:100%;background:var(--aqua);transform-origin:left;transform:scaleX(var(--p,0))}
+.rt-b{position:absolute;top:-19px;left:calc(var(--p,0) * 100%);transform:translateX(-50%);line-height:0}
+.rt-b svg{filter:drop-shadow(0 2px 6px rgba(0,0,0,.5))}
+.sc .xhint{display:block;position:absolute;z-index:4;right:22px;top:92px;font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.8);writing-mode:vertical-rl;opacity:clamp(0,calc(1 - var(--p,0) * 10),1)}
+@media(min-width:900px){.lg-tx{padding:140px 8vw 90px;max-width:860px}.lg-tx p{font-size:17px}.sc .lg-tx{padding-bottom:150px}.sc .cnt{top:92px;left:8vw}.sc .rt{left:8vw;right:8vw;bottom:54px}.sc .xhint{right:8vw}}
+/* ── B. enjoo (claro) ── */
+.tp{background:var(--off);color:rgba(7,17,31,.74);padding:84px 22px 88px}
+.tp-in{max-width:1080px;margin:0 auto}
+.tp .h2{color:var(--navy);margin-bottom:6px}
+.tp-sub{font-size:16px;color:rgba(7,17,31,.65);margin-bottom:34px}
+.tp ol{list-style:none;counter-reset:t;display:grid;gap:0}
+.tp li{counter-increment:t;display:grid;grid-template-columns:auto 1fr;gap:6px 18px;align-items:start;padding:22px 0;border-top:1px solid rgba(7,17,31,.14)}
+.tp li::before{content:counter(t);grid-row:1 / span 2;font-family:'Playfair Display',serif;font-weight:900;font-style:italic;font-size:clamp(64px,17vw,104px);line-height:.82;min-width:.62em;color:var(--aqua-ink)}
+.tp h3{font-size:19px;font-weight:800;line-height:1.25;color:var(--navy)}
+.tp li p{font-size:15.5px;line-height:1.7;color:rgba(7,17,31,.76);max-width:46ch}
+@media(min-width:900px){.tp{padding:130px 40px 130px}.tp ol{grid-template-columns:1fr 1fr;column-gap:72px}.tp li{padding:30px 0}.tp h3{font-size:21px}}
+/* ── C. mar mau ── */
+.sa{background:var(--deep);padding:92px 22px 84px;position:relative;overflow:hidden}
+.sa::before{content:'';position:absolute;left:-20%;right:-20%;top:0;height:1px;background:linear-gradient(90deg,transparent,var(--aqua),transparent)}
+.sa-in{max-width:1080px;margin:0 auto}
+.sa .h2{font-size:clamp(32px,8vw,60px);max-width:14ch;margin-bottom:18px}
+.sa-p{font-size:16.5px;line-height:1.7;color:rgba(255,255,255,.84);max-width:52ch;margin-bottom:40px}
+.sa-p strong{color:#fff}
+.sa-g{display:grid;gap:0}
+.sa-f{padding:24px 0;border-top:1px solid rgba(6,182,212,.35)}
+.sa-f b,.sa-f a.n{display:block;font-family:'Playfair Display',serif;font-weight:900;font-style:italic;font-size:clamp(44px,12vw,76px);line-height:1;color:var(--gold);letter-spacing:-.02em;text-decoration:none;margin-bottom:10px}
+.sa-f h3{font-size:15px;font-weight:700;color:#fff;margin-bottom:4px}
+.sa-f p{font-size:14.5px;line-height:1.65;color:rgba(255,255,255,.72);max-width:34ch}
+@media(min-width:900px){.sa{padding:140px 40px 130px}.sa-g{grid-template-columns:repeat(3,1fr);gap:48px}.sa-f{padding-top:30px}.sa-f b,.sa-f a.n{font-size:clamp(48px,5.4vw,84px)}}
+/* ── D. fecho ── */
+.go{position:relative;min-height:90svh;display:flex;align-items:center;overflow:hidden;background:var(--deep)}
+.go>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%}
+.go::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(7,17,31,.95),rgba(7,17,31,.6) 55%,rgba(7,17,31,.45))}
+.go-in{position:relative;z-index:2;padding:96px 22px;max-width:760px;display:flex;flex-direction:column;align-items:flex-start;gap:20px}
+.go .h2{font-size:clamp(38px,10.4vw,92px)}
+.go .h2 em{color:var(--gold)}
+.go p{font-size:16px;line-height:1.7;color:rgba(255,255,255,.84);max-width:46ch}
+.go p a{color:var(--aqua);text-underline-offset:3px}
+@media(min-width:900px){.go-in{padding:120px 8vw}}
 </style>
   <script type="application/ld+json">
   {
@@ -294,70 +218,6 @@
   
   
   
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-  
-  
 
   
   <link rel="alternate" hreflang="pt-PT" href="https://viamar-berlenga.com/travessia.html" >
@@ -367,7 +227,10 @@
   <link rel="alternate" hreflang="x-default" href="https://viamar-berlenga.com/travessia.html" >
 </head>
 <body>
-
+<script>
+// Com movimento permitido, as cenas seguem o scroll; senão (ou sem JS) a página é só leitura normal.
+if(!matchMedia('(prefers-reduced-motion:reduce)').matches)document.documentElement.classList.add('sc');
+</script>
 <div class="grain" aria-hidden="true"></div>
 
 <nav id="nav">
@@ -386,48 +249,70 @@
   </div>
 </nav>
 
-<header class="pg-header">
-  <span class="pg-tag" data-i18n="tr.tag">Peniche → Berlenga · cerca de 45 minutos</span>
-  <h1 class="pg-h1" data-i18n="tr.h1">A travessia para a Berlenga</h1>
-  <p class="pg-sub" data-i18n="tr.lede">Cerca de <strong>45 minutos</strong> de mar aberto entre Peniche e a ilha. Se o balanço o preocupa, aqui fica o que ajuda — e o que fazemos se o mar não deixar sair.</p>
-</header>
-
-<main class="hp-wrap">
-
-  <section class="hp-sec">
-    <h2 data-i18n="tr.s1.h">O que esperar a bordo</h2>
-    <div class="hp-cards" data-i18n="tr.s1.cards">
-      <div class="hp-card"><h3>O barco</h3><p>O <strong>Cabo Avelar Pessoa</strong> faz todas as viagens do dia: 180 lugares, duas casas de banho e lugares próprios para famílias e mobilidade reduzida.</p></div>
-      <div class="hp-card"><h3>O mar</h3><p>É Atlântico, em mar aberto. Em dias calmos mal se nota; em dias de ondulação sente-se o balanço, sobretudo a quem é sensível.</p></div>
-      <div class="hp-card"><h3>A duração</h3><p>Cerca de 45 minutos de ida e outros tantos de volta. Com <strong>5 horas na ilha</strong> entre as duas travessias.</p></div>
+<main>
+<section class="xt" id="xt">
+  <div class="xs">
+    <div class="leg leg1">
+      <img src="/img/v/peniche-800.webp" srcset="/img/v/peniche-800.webp 800w, /img/v/peniche-1400.webp 1400w" sizes="100vw" width="1400" height="939" alt="Vista aérea de Peniche e do porto ao entardecer" data-i18n-attr="tr.alt.peniche:alt" fetchpriority="high" decoding="async">
+      <div class="lg-tx">
+        <span class="kick" data-i18n="tr.tag">Peniche → Berlenga</span>
+        <h1 data-i18n="tr.h1">A travessia para a Berlenga</h1>
+        <p class="lede" data-i18n="tr.lede">Cerca de <strong>45 minutos</strong> de mar aberto entre Peniche e a ilha. O que esperar, o que ajuda a quem enjoa e o que fazemos se o mar não deixar sair.</p>
+        <p class="small" data-i18n="tr.l1.p"><strong>Embarque:</strong> Marina de Peniche, junto à Fortaleza. Procure a bandeira CHECK-IN ou um membro da equipa Viamar uniformizado. Chegue 45 minutos antes (grupos: uma hora).</p>
+      </div>
     </div>
-  </section>
-
-  <section class="hp-sec">
-    <h2 data-i18n="tr.s2.h">Se costuma enjoar</h2>
-    <div class="hp-prose" data-i18n="tr.s2.body">
-      <ul><li><strong>Coma algo leve antes.</strong> Nem de estômago vazio, nem uma refeição pesada; evite álcool na véspera.</li><li><strong>Olhe o horizonte</strong> e fique, se puder, num lugar com ar fresco. Ler ou olhar para o telemóvel durante a viagem piora o enjoo.</li><li><strong>Medicação para o enjoo:</strong> se costuma usar, tome-a antes de embarcar e não depois de se sentir mal. Fale com o seu farmacêutico sobre a opção certa para si.</li><li><strong>Leve água</strong> e um casaco leve: o ar no mar é mais fresco do que em terra.</li><li><strong>Crianças e grávidas:</strong> fale primeiro com o médico se tiver dúvidas.</li></ul>
+    <div class="leg leg2">
+      <img src="/img/v/mar-800.webp" srcset="/img/v/mar-800.webp 800w, /img/v/mar-1400.webp 1400w" sizes="100vw" width="1400" height="939" alt="Ferry Viamar em mar aberto junto à costa da Berlenga" data-i18n-attr="tr.alt.mar:alt" loading="lazy" decoding="async">
+      <div class="lg-tx">
+        <span class="kick" data-i18n="tr.l2.k">Mar aberto</span>
+        <h2 data-i18n="tr.l2.h">É Atlântico.</h2>
+        <p data-i18n="tr.l2.p">Em dias calmos mal se nota; em dias de ondulação sente-se o balanço, sobretudo a quem é sensível. A bordo do <strong>Cabo Avelar Pessoa</strong>, que faz todas as viagens do dia: 180 lugares, duas casas de banho e lugares próprios para famílias e mobilidade reduzida.</p>
+      </div>
     </div>
-  </section>
-
-  <section class="hp-sec">
-    <h2 data-i18n="tr.s3.h">E se o mar não deixar sair?</h2>
-    <div class="hp-prose" data-i18n="tr.s3.body">
-      <p>A segurança vem primeiro. Se a Viamar cancelar a travessia por condições do mar, o <strong>reembolso é total</strong>, incluindo a Taxa de Proteção de Viagem se a tiver comprado.</p><ul><li><strong>Cancelamento gratuito</strong> até 24 horas antes da partida (grupos: 48 horas).</li><li><strong>Taxa de Proteção de Viagem</strong> (+10% na reserva online): permite remarcar ou cancelar até 30 minutos antes. Útil se acordar indisposto ou se a previsão mudar.</li><li><strong>Em dúvida no próprio dia,</strong> ligue para 911 001 099 antes de sair de casa.</li></ul>
+    <div class="leg leg3">
+      <img src="/img/v/chegada-800.webp" srcset="/img/v/chegada-800.webp 800w, /img/v/chegada-1400.webp 1400w" sizes="100vw" width="1400" height="939" alt="Costa da Berlenga ao pôr do sol, vista do mar" data-i18n-attr="tr.alt.chegada:alt" loading="lazy" decoding="async">
+      <div class="lg-tx">
+        <span class="kick" data-i18n="tr.l3.k">Berlenga</span>
+        <h2 data-i18n="tr.l3.h">Cinco horas na ilha.</h2>
+        <p data-i18n="tr.l3.p">A Berlenga, cerca de 45 minutos depois. Fica 5 horas em terra entre as duas travessias, e depois volta a Peniche, outros 45 minutos.</p>
+      </div>
     </div>
-  </section>
+    <div class="cnt" aria-hidden="true"><b id="cn">0</b><i>′</i><span data-i18n="tr.cnt">minutos</span></div>
+    <div class="rt" aria-hidden="true"><span>Peniche</span><div class="rt-l"><i class="rt-f"></i><span class="rt-b"><svg width="34" height="20" viewBox="0 0 34 20" fill="none" aria-hidden="true"><path d="M1 11h32l-4 7H6z" fill="#fff"></path><path d="M9 11V6h11v5M20 11V3h4v8" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"></path></svg></span></div><span>Berlenga</span></div>
+    <div class="xhint" aria-hidden="true" data-i18n="pg.hint">Deslize</div>
+  </div>
+</section>
 
-  <section class="hp-sec">
-    <h2 data-i18n="tr.s4.h">Antes de embarcar</h2>
-    <div class="hp-prose" data-i18n="tr.s4.body">
-      <ul><li><strong>Embarque:</strong> Marina de Peniche, junto à Fortaleza. Procure a bandeira CHECK-IN ou um membro da equipa Viamar uniformizado.</li><li><strong>Chegue 45 minutos antes</strong> da hora de partida (grupos: uma hora).</li><li>Veja os <a href="/horarios.html">horários e preços 2027</a>, desde 19,90 € ida e volta, e o <a href="/grutas.html">passeio às grutas</a> que pode fazer já na ilha.</li></ul>
-    </div>
-    <div class="hp-cta-row">
-      <a class="hp-cta" href="https://fareharbor.com/embeds/book/viamar-berlenga/items/?full-items=yes&amp;flow=738388" data-i18n="tr.cta">Ver datas e reservar →</a>
-      <span class="hp-cta-note" data-i18n="tr.cta_note">Todas as datas da época se reservam online.</span>
-    </div>
-  </section>
+<section class="tp">
+  <div class="tp-in">
+    <h2 class="h2 rv" data-i18n="tr.tips.h">Se costuma enjoar</h2>
+    <p class="tp-sub rv" data-i18n="tr.tips.sub">Cinco coisas que ajudam.</p>
+    <ol><li class="rv"><h3 data-i18n="tr.tip1.h">Coma algo leve antes.</h3><p data-i18n="tr.tip1.p">Nem de estômago vazio, nem uma refeição pesada. Evite álcool na véspera.</p></li><li class="rv"><h3 data-i18n="tr.tip2.h">Olhe o horizonte.</h3><p data-i18n="tr.tip2.p">Fique, se puder, num lugar com ar fresco. Ler ou olhar para o telemóvel durante a viagem piora o enjoo.</p></li><li class="rv"><h3 data-i18n="tr.tip3.h">Medicação, antes.</h3><p data-i18n="tr.tip3.p">Se costuma tomar algo para o enjoo, tome-o antes de embarcar e não depois de se sentir mal. Fale com o seu farmacêutico sobre a opção certa para si.</p></li><li class="rv"><h3 data-i18n="tr.tip4.h">Água e um casaco leve.</h3><p data-i18n="tr.tip4.p">O ar no mar é mais fresco do que em terra.</p></li><li class="rv"><h3 data-i18n="tr.tip5.h">Crianças e grávidas.</h3><p data-i18n="tr.tip5.p">Fale primeiro com o médico se tiver dúvidas.</p></li></ol>
+  </div>
+</section>
 
+<section class="sa">
+  <div class="sa-in">
+    <h2 class="h2 rv" data-i18n="tr.sea.h">E se o mar não deixar sair?</h2>
+    <p class="sa-p rv" data-i18n="tr.sea.p">A segurança vem primeiro. Se a Viamar cancelar a travessia por condições do mar, o <strong>reembolso é total</strong>, incluindo a Taxa de Proteção de Viagem se a tiver comprado.</p>
+    <div class="sa-g">
+      <div class="sa-f rv"><b>24 h</b><h3 data-i18n="tr.sea.f1.h">Cancelamento gratuito</h3><p data-i18n="tr.sea.f1.p">até 24 horas antes da partida (grupos: 48 horas).</p></div>
+      <div class="sa-f rv d1"><b>30 min</b><h3 data-i18n="tr.sea.f2.h">Taxa de Proteção de Viagem</h3><p data-i18n="tr.sea.f2.p">(+10% na reserva online): permite remarcar ou cancelar até 30 minutos antes. Útil se acordar indisposto ou se a previsão mudar.</p></div>
+      <div class="sa-f rv d2"><a class="n" href="tel:+351911001099">911 001 099</a><h3 data-i18n="tr.sea.f3.h">Em dúvida no próprio dia</h3><p data-i18n="tr.sea.f3.p">ligue antes de sair de casa.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="go">
+  <img src="/img/v/farol-800.webp" srcset="/img/v/farol-800.webp 800w, /img/v/farol-1400.webp 1400w" sizes="100vw" width="1400" height="939" alt="" loading="lazy" decoding="async">
+  <div class="go-in">
+    <span class="kick" data-i18n="tr.go.k">Antes de embarcar</span>
+    <h2 class="h2 rv" data-i18n="tr.cta.h">Quarenta e cinco minutos e está lá.</h2>
+    <p data-i18n="tr.go.p">Veja os <a href="/horarios.html">horários e preços 2027</a>, desde 19,90 € ida e volta, e o <a href="/grutas.html">passeio às grutas</a> que pode fazer já na ilha.</p>
+    <a class="btn" href="https://fareharbor.com/embeds/book/viamar-berlenga/items/?full-items=yes&amp;flow=738388" data-i18n="tr.cta">Ver datas e reservar →</a>
+    <span class="btn-note" data-i18n="tr.cta_note">Todas as datas da época se reservam online.</span>
+  </div>
+</section>
 </main>
 
 <footer>
@@ -441,6 +326,24 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  var d=document.documentElement,t=document.getElementById('xt');
+  if(d.classList.contains('sc')&&t){
+    var s=t.firstElementChild,q=0,c=document.getElementById('cn');
+    function f(){q=0;var r=t.getBoundingClientRect(),h=r.height-s.offsetHeight;
+      var p=h>0?Math.min(1,Math.max(0,-r.top/h)):0;
+      t.style.setProperty('--p',p.toFixed(3));if(c)c.textContent=Math.round(p*45);}
+    addEventListener('scroll',function(){if(!q)q=requestAnimationFrame(f)},{passive:true});
+    addEventListener('resize',f);f();
+  }
+  var rv=[].slice.call(document.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window&&d.classList.contains('sc')){
+    var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8%'});
+    rv.forEach(function(n){io.observe(n)});
+  }else rv.forEach(function(n){n.classList.add('in')});
+})();
+</script>
 <script defer src="/i18n/loader.js"></script>
 <script defer src="/_vercel/insights/script.js"></script>
   <script>

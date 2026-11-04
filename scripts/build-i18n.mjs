@@ -19,10 +19,10 @@ import { fileURLToPath } from 'node:url';
 import { parse } from 'node-html-parser';
 
 const ROOT = process.cwd();
-const PAGES = ['index.html', 'pacotes.html', 'horarios.html', 'mergulho.html', 'historia.html', 'ilha.html', 'faqs.html', 'termos.html', 'grutas.html', 'travessia.html'];
+const PAGES = ['index.html', 'pacotes.html', 'horarios.html', 'historia.html', 'ilha.html', 'faqs.html', 'termos.html', 'grutas.html', 'travessia.html'];
 const TARGET_LANGS = ['en', 'es', 'fr']; // PT canonical lives at root
-// Pages still built and reachable by direct link, but kept out of the sitemap
-const SITEMAP_EXCLUDE = new Set([]);
+// Pages built but hidden from the public (vercel.json redirects them unless ?preview=1), kept out of the sitemap
+const SITEMAP_EXCLUDE = new Set(['grutas.html', 'travessia.html']);
 const ALL_LANGS = ['pt', ...TARGET_LANGS];
 const BASE_URL = 'https://viamar-berlenga.com';
 
@@ -30,7 +30,6 @@ const PAGE_META = {
   'index.html':    { prefix: 'meta.index',    priority: '1.0', changefreq: 'weekly'  },
   'pacotes.html':  { prefix: 'meta.pacotes',  priority: '0.9', changefreq: 'weekly'  },
   'horarios.html': { prefix: 'meta.horarios', priority: '0.9', changefreq: 'weekly'  },
-  'mergulho.html': { prefix: 'meta.mergulho', priority: '0.7', changefreq: 'monthly' },
   'ilha.html':     { prefix: 'meta.ilha',     priority: '0.8', changefreq: 'monthly' },
   'historia.html': { prefix: 'meta.historia', priority: '0.8', changefreq: 'monthly' },
   'faqs.html':     { prefix: 'meta.faqs',     priority: '0.7', changefreq: 'monthly' },

@@ -79,6 +79,182 @@
   ],
   "redirects": [
     {
+      "source": "/grutas.html",
+      "missing": [
+        {
+          "type": "query",
+          "key": "preview"
+        }
+      ],
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/grutas/",
+      "missing": [
+        {
+          "type": "query",
+          "key": "preview"
+        }
+      ],
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/en/grutas.html",
+      "missing": [
+        {
+          "type": "query",
+          "key": "preview"
+        }
+      ],
+      "destination": "/en/",
+      "permanent": false
+    },
+    {
+      "source": "/en/grutas/",
+      "missing": [
+        {
+          "type": "query",
+          "key": "preview"
+        }
+      ],
+      "destination": "/en/",
+      "permanent": false
+    },
+    {
+      "source": "/es/grutas.html",
+      "missing": [
+        {
+          "type": "query",
+          "key": "preview"
+        }
+      ],
+      "destination": "/es/",
+      "permanent": false
+    },
+    {
+      "source": "/es/grutas/",
+      "missing": [
+        {
+          "type": "query",
+          "key": "preview"
+        }
+      ],
+      "destination": "/es/",
+      "permanent": false
+    },
+    {
+      "source": "/fr/grutas.html",
+      "missing": [
+        {
+          "type": "query",
+          "key": "preview"
+        }
+      ],
+      "destination": "/fr/",
+      "permanent": false
+    },
+    {
+      "source": "/fr/grutas/",
+      "missing": [
+        {
+          "type": "query",
+          "key": "preview"
+        }
+      ],
+      "destination": "/fr/",
+      "permanent": false
+    },
+    {
+      "source": "/travessia.html",
+      "missing": [
+        {
+          "type": "query",
+          "key": "preview"
+        }
+      ],
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/travessia/",
+      "missing": [
+        {
+          "type": "query",
+          "key": "preview"
+        }
+      ],
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/en/travessia.html",
+      "missing": [
+        {
+          "type": "query",
+          "key": "preview"
+        }
+      ],
+      "destination": "/en/",
+      "permanent": false
+    },
+    {
+      "source": "/en/travessia/",
+      "missing": [
+        {
+          "type": "query",
+          "key": "preview"
+        }
+      ],
+      "destination": "/en/",
+      "permanent": false
+    },
+    {
+      "source": "/es/travessia.html",
+      "missing": [
+        {
+          "type": "query",
+          "key": "preview"
+        }
+      ],
+      "destination": "/es/",
+      "permanent": false
+    },
+    {
+      "source": "/es/travessia/",
+      "missing": [
+        {
+          "type": "query",
+          "key": "preview"
+        }
+      ],
+      "destination": "/es/",
+      "permanent": false
+    },
+    {
+      "source": "/fr/travessia.html",
+      "missing": [
+        {
+          "type": "query",
+          "key": "preview"
+        }
+      ],
+      "destination": "/fr/",
+      "permanent": false
+    },
+    {
+      "source": "/fr/travessia/",
+      "missing": [
+        {
+          "type": "query",
+          "key": "preview"
+        }
+      ],
+      "destination": "/fr/",
+      "permanent": false
+    },
+    {
       "source": "/precos.html",
       "destination": "/pacotes.html",
       "permanent": true
@@ -129,23 +305,43 @@
       "permanent": true
     },
     {
+      "source": "/mergulho.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/en/mergulho.html",
+      "destination": "/en/",
+      "permanent": true
+    },
+    {
+      "source": "/es/mergulho.html",
+      "destination": "/es/",
+      "permanent": true
+    },
+    {
+      "source": "/fr/mergulho.html",
+      "destination": "/fr/",
+      "permanent": true
+    },
+    {
       "source": "/mergulho/",
-      "destination": "/mergulho.html",
+      "destination": "/",
       "permanent": true
     },
     {
       "source": "/en/mergulho/",
-      "destination": "/en/mergulho.html",
+      "destination": "/en/",
       "permanent": true
     },
     {
       "source": "/es/mergulho/",
-      "destination": "/es/mergulho.html",
+      "destination": "/es/",
       "permanent": true
     },
     {
       "source": "/fr/mergulho/",
-      "destination": "/fr/mergulho.html",
+      "destination": "/fr/",
       "permanent": true
     },
     {
@@ -226,46 +422,6 @@
     {
       "source": "/fr/termos/",
       "destination": "/fr/termos.html",
-      "permanent": true
-    },
-    {
-      "source": "/grutas/",
-      "destination": "/grutas.html",
-      "permanent": true
-    },
-    {
-      "source": "/en/grutas/",
-      "destination": "/en/grutas.html",
-      "permanent": true
-    },
-    {
-      "source": "/es/grutas/",
-      "destination": "/es/grutas.html",
-      "permanent": true
-    },
-    {
-      "source": "/fr/grutas/",
-      "destination": "/fr/grutas.html",
-      "permanent": true
-    },
-    {
-      "source": "/travessia/",
-      "destination": "/travessia.html",
-      "permanent": true
-    },
-    {
-      "source": "/en/travessia/",
-      "destination": "/en/travessia.html",
-      "permanent": true
-    },
-    {
-      "source": "/es/travessia/",
-      "destination": "/es/travessia.html",
-      "permanent": true
-    },
-    {
-      "source": "/fr/travessia/",
-      "destination": "/fr/travessia.html",
       "permanent": true
     }
   ]
