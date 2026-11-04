@@ -79,11 +79,6 @@
   ],
   "redirects": [
     {
-      "source": "/horarios",
-      "destination": "/horarios.html",
-      "permanent": true
-    },
-    {
       "source": "/precos.html",
       "destination": "/pacotes.html",
       "permanent": true
@@ -91,6 +86,146 @@
     {
       "source": "/bilhetes.html",
       "destination": "/pacotes.html",
+      "permanent": true
+    },
+    {
+      "source": "/pacotes/",
+      "destination": "/pacotes.html",
+      "permanent": true
+    },
+    {
+      "source": "/en/pacotes/",
+      "destination": "/en/pacotes.html",
+      "permanent": true
+    },
+    {
+      "source": "/es/pacotes/",
+      "destination": "/es/pacotes.html",
+      "permanent": true
+    },
+    {
+      "source": "/fr/pacotes/",
+      "destination": "/fr/pacotes.html",
+      "permanent": true
+    },
+    {
+      "source": "/horarios/",
+      "destination": "/horarios.html",
+      "permanent": true
+    },
+    {
+      "source": "/en/horarios/",
+      "destination": "/en/horarios.html",
+      "permanent": true
+    },
+    {
+      "source": "/es/horarios/",
+      "destination": "/es/horarios.html",
+      "permanent": true
+    },
+    {
+      "source": "/fr/horarios/",
+      "destination": "/fr/horarios.html",
+      "permanent": true
+    },
+    {
+      "source": "/mergulho/",
+      "destination": "/mergulho.html",
+      "permanent": true
+    },
+    {
+      "source": "/en/mergulho/",
+      "destination": "/en/mergulho.html",
+      "permanent": true
+    },
+    {
+      "source": "/es/mergulho/",
+      "destination": "/es/mergulho.html",
+      "permanent": true
+    },
+    {
+      "source": "/fr/mergulho/",
+      "destination": "/fr/mergulho.html",
+      "permanent": true
+    },
+    {
+      "source": "/historia/",
+      "destination": "/historia.html",
+      "permanent": true
+    },
+    {
+      "source": "/en/historia/",
+      "destination": "/en/historia.html",
+      "permanent": true
+    },
+    {
+      "source": "/es/historia/",
+      "destination": "/es/historia.html",
+      "permanent": true
+    },
+    {
+      "source": "/fr/historia/",
+      "destination": "/fr/historia.html",
+      "permanent": true
+    },
+    {
+      "source": "/ilha/",
+      "destination": "/ilha.html",
+      "permanent": true
+    },
+    {
+      "source": "/en/ilha/",
+      "destination": "/en/ilha.html",
+      "permanent": true
+    },
+    {
+      "source": "/es/ilha/",
+      "destination": "/es/ilha.html",
+      "permanent": true
+    },
+    {
+      "source": "/fr/ilha/",
+      "destination": "/fr/ilha.html",
+      "permanent": true
+    },
+    {
+      "source": "/faqs/",
+      "destination": "/faqs.html",
+      "permanent": true
+    },
+    {
+      "source": "/en/faqs/",
+      "destination": "/en/faqs.html",
+      "permanent": true
+    },
+    {
+      "source": "/es/faqs/",
+      "destination": "/es/faqs.html",
+      "permanent": true
+    },
+    {
+      "source": "/fr/faqs/",
+      "destination": "/fr/faqs.html",
+      "permanent": true
+    },
+    {
+      "source": "/termos/",
+      "destination": "/termos.html",
+      "permanent": true
+    },
+    {
+      "source": "/en/termos/",
+      "destination": "/en/termos.html",
+      "permanent": true
+    },
+    {
+      "source": "/es/termos/",
+      "destination": "/es/termos.html",
+      "permanent": true
+    },
+    {
+      "source": "/fr/termos/",
+      "destination": "/fr/termos.html",
       "permanent": true
     }
   ]
