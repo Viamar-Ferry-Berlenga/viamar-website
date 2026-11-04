@@ -2,6 +2,7 @@
 <html lang="pt-PT" data-lang="pt">
 <head>
   <meta charset="UTF-8">
+  <script src="/consent.js"></script>
   
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFZJB37SGK"></script>
   <script>
@@ -22,11 +23,11 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('consent', window.__vConsent || 'revoke');
     fbq('init', '956111340728300');
     fbq('init', '1533625365142697');
     fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=956111340728300&ev=PageView&noscript=1"></noscript>
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" >
@@ -78,6 +79,14 @@
       {
         "@type": "FAQPage",
         "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Quanto custa o ferry para a Berlenga?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O bilhete de ida e volta custa desde 19,90 € por adulto (criança dos 3 aos 11 anos desde 11,90 €) e inclui as 5 horas na ilha. O preço acompanha a procura: 19,90 € de 8 de Maio a 1 de Julho e em Setembro durante a semana, e até 34,90 € nas três semanas de pico do verão (31 de Julho a 22 de Agosto). Todos os preços incluem IVA.A taxa de acesso à Reserva Natural (BerlengasPass, 3 € por adulto por dia) paga-se à parte. Reservar cedo é reservar mais barato: veja todas as datas em horários e preços."
+            }
+          },
           {
             "@type": "Question",
             "name": "O que devo levar para uma viagem à Ilha da Berlenga?",
@@ -555,6 +564,48 @@
   
 
   
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
   <link rel="alternate" hreflang="pt-PT" href="https://viamar-berlenga.com/faqs.html" >
   <link rel="alternate" hreflang="en" href="https://viamar-berlenga.com/en/faqs.html" >
   <link rel="alternate" hreflang="es" href="https://viamar-berlenga.com/es/faqs.html" >
@@ -590,6 +641,14 @@
 
 
 <main class="faq-wrap">
+
+  <div class="faq-item" id="preco">
+    <button class="faq-q" aria-expanded="false" aria-controls="faq-a14" id="faq-q14">
+      <span data-i18n="faq.q14">Quanto custa o ferry para a Berlenga?</span>
+      <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </button>
+    <div class="faq-a" id="faq-a14" role="region" aria-labelledby="faq-q14"><div class="faq-a-inner" data-i18n="faq.a14"><p>O bilhete de ida e volta custa <strong>desde 19,90 € por adulto</strong> (criança dos 3 aos 11 anos desde 11,90 €) e inclui as <strong>5 horas na ilha</strong>. O preço acompanha a procura: 19,90 € de 8 de Maio a 1 de Julho e em Setembro durante a semana, e até 34,90 € nas três semanas de pico do verão (31 de Julho a 22 de Agosto). Todos os preços incluem IVA.</p><p>A taxa de acesso à Reserva Natural (BerlengasPass, 3 € por adulto por dia) paga-se à parte. Reservar cedo é reservar mais barato: veja todas as datas em <a href="/horarios.html">horários e preços</a>.</p></div></div>
+  </div>
 
   <div class="faq-item">
     <button class="faq-q" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">
@@ -702,6 +761,9 @@
   <a href="/" class="f-logo"><img src="/logo-viamar.png" alt="Viamar Ferry Berlenga" width="258" height="84" decoding="async"></a>
   <span class="f-copy" data-i18n="f_copy">© 2026 Viamar — Travessias à Ilha da Berlenga · Peniche</span>
   <div class="f-legal">
+    <a href="/horarios.html" data-i18n="ft.horarios">Horários e preços</a>
+    <a href="/grutas.html" data-i18n="ft.grutas">Grutas</a>
+    <a href="/travessia.html" data-i18n="ft.travessia">A travessia</a>
     <a href="/faqs.html">FAQ's</a>
     <a href="/termos.html" data-i18n="ft.terms">Termos e Condições</a>
   </div>
@@ -710,132 +772,6 @@
 
 <script defer src="/i18n/loader.js"></script>
 <script>
-  const _legacyDict = {
-    pt: {
-      nav_back: "Início", nav_back_full: "← Voltar ao início", "ft.terms": "Termos e Condições",
-      "faq.tag": "Perguntas Frequentes",
-      "faq.h2": "Tudo o que precisa de saber",
-      "faq.q1": "O que devo levar para uma viagem à Ilha da Berlenga?",
-      "faq.a1": "O essencial: protector solar, chapéu, óculos de sol e uma garrafa de água para se manter hidratado. Roupa confortável, um casaco leve (de preferência impermeável), calçado adequado e uma toalha. Uma powerbank para o telemóvel também é aconselhável caso seja grande utilizador (a rede na ilha é bastante fraca ou inexistente).",
-      "faq.q2": "Posso cancelar ou alterar a minha reserva?",
-      "faq.a2": 'Sim! Pedimos que nos informe com pelo menos 24 horas de antecedência (grupos: 48h). Contacte-nos por telefone ou email: 911 001 099 | <a href="mailto:info@viamar.pt">info@viamar.pt</a>.',
-      "faq.q3": "O que posso fazer na Ilha da Berlenga ao adquirir a passagem?",
-      "faq.a3": '<ul><li>Trilhos pedestres e vistas deslumbrantes;</li><li>Visitar o Forte de São João Baptista;</li><li>Praia de águas cristalinas ou almoço no restaurante da ilha; snack e bebida no Castelinho com vista fantástica;</li><li>Observação de aves e flora;</li><li>Opcionalmente: mergulho com garrafa, grutas em barco de fundo de vidro ou snorkeling (ver página "pacotes").</li></ul>',
-      "faq.q4": "Onde fica o local de embarque da VIAMAR para a Ilha da Berlenga?",
-      "faq.a4": '<p>Marina de Peniche, junto à Fortaleza de Peniche.</p><ul><li>Chegue à Zona de embarque de Passageiros e Bagagens (conforme indicado no mapa);</li><li>Identifique o local pela bandeira de CHECK-IN ou por um membro da equipa VIAMAR devidamente uniformizado.</li></ul><p>Aconselha-se a chegada 45 minutos antes da partida (grupos: 1 hora de antecedência).</p><p><strong>Exceções:</strong> os bilhetes de regresso (Berlenga → Peniche) e o passeio às grutas embarcam já na Ilha da Berlenga.</p>',
-      "faq.q5": "Posso comprar bilhete no dia da viagem?",
-      "faq.a5": "Sim, sujeito a disponibilidade. Em julho e agosto (época alta) a procura é muito elevada — recomendamos a reserva antecipada para garantir o seu lugar.",
-      "faq.q6": "Que meios de pagamento são aceites?",
-      "faq.a6": '<p><strong>Online:</strong> Visa, Mastercard, Apple Pay, MB Way, PayPal, Google Pay, Linkpay ou transferência bancária (só grupos).</p><p><strong>Ao balcão:</strong> Visa, Mastercard, Apple Pay, MB Way ou numerário.</p><p>Grupos: enviar comprovativo para <a href="mailto:info@viamar.pt">info@viamar.pt</a> até 48h antes do embarque.</p>',
-      "faq.q7": "Posso levar bagagem a bordo?",
-      "faq.a7": '<p>Sim — mochilas e malas pequenas são bem-vindas. Para volumes de grandes dimensões, contacte previamente: 911 001 099.</p><p>Limite: 2 volumes por pessoa + 1 bagagem de mão.</p>',
-      "faq.q8": "Quanto tempo posso permanecer na Ilha da Berlenga?",
-      "faq.a8": "Sempre 5 horas. Todas as viagens da Viamar dão 5 horas em terra — 11h→17h na época baixa, 10h→16h ou 12h→18h na época alta e nos fins de semana. Não é um máximo: é a estadia de todas as travessias, e é a mais longa da rota.",
-      "faq.q9": "É permitido acampar na Ilha da Berlenga?",
-      "faq.a9": 'O campismo selvagem não é permitido. Existe uma área autorizada no Parque de Campismo da Berlenga, com reserva prévia obrigatória. Para mais informações: <a href="https://www.cm-peniche.pt/visitar/turismo" target="_blank" rel="noopener">Posto de Turismo de Peniche</a>.',
-      "faq.q10": "Quais são as restrições da Reserva Natural da Ilha da Berlenga?",
-      "faq.a10": '<ul><li>Campismo só na área designada com reserva prévia;</li><li>Máximo de 550 visitantes simultâneos;</li><li>Registo obrigatório no BerlengasPass e taxa de acesso (adultos 3€; descontos 6–18 anos e maiores de 65);</li><li>Circular sempre nos trilhos e respeitar a sinalética;</li><li>Depositar o lixo nos locais próprios ou levá-lo consigo;</li><li>Não apanhar plantas nem recolher amostras geológicas;</li><li>Não alimentar os animais;</li><li>Música alta é proibida.</li></ul>',
-      "faq.q11": "Existem casas de banho a bordo?",
-      "faq.a11": "Sim, a embarcação dispõe de 2 casas de banho — simples e práticas. A tripulação assegura que se mantêm limpas e em condições de uso.",
-      "faq.q12": "É seguro viajar com crianças pequenas ou passageiros idosos?",
-      "faq.a12": "Sim, e a nossa embarcação é uma das preferidas por famílias com crianças pequenas e passageiros idosos. O barco foi projectado especificamente para o conforto e a segurança, com lugares próprios para passageiros com dificuldades motoras e bebés de colo. Crianças devem estar sempre acompanhadas pelos responsáveis. Passageiros que necessitem de assistência especial podem informar-nos antecipadamente.",
-      "faq.q13": "O que é a Taxa de Proteção de Viagem (Flex Ticket)?",
-      "faq.a13": '<p>A <strong>Taxa de Proteção de Viagem</strong> é um add-on opcional disponível no momento da reserva online. Com esta opção ativa, pode <strong>remarcar ou cancelar</strong> a sua viagem até <strong>30 minutos antes da hora de partida</strong>, sem penalização no valor do bilhete.</p><p><strong>Importante:</strong> o valor desta taxa <strong>não é reembolsável em qualquer circunstância</strong> — a taxa protege o restante valor da sua reserva, mas não lhe é devolvida. Reservas sem esta opção estão sujeitas à política de cancelamento padrão (24h de antecedência; grupos: 48h).</p><p>Excepção: em caso de cancelamento por iniciativa da Viamar (por razões operacionais ou condições do mar), <strong>o valor total pago, incluindo a taxa, é integralmente reembolsado</strong>.</p><p>Dúvidas? <a href="tel:+351911001099">911 001 099</a> | <a href="mailto:info@viamar.pt">info@viamar.pt</a>.</p>'
-    },
-    en: {
-      nav_back: "Home", nav_back_full: "← Back to home", "ft.terms": "Terms & Conditions",
-      "faq.tag": "FAQ",
-      "faq.h2": "Everything you need to know",
-      "faq.q1": "What should I bring for a trip to Berlenga Island?",
-      "faq.a1": "The essentials: sunscreen, a hat, sunglasses and a water bottle to stay hydrated. Comfortable clothing, a light jacket (preferably waterproof), appropriate footwear and a towel. A power bank is also handy since mobile network coverage on the island is very weak or non-existent.",
-      "faq.q2": "Can I cancel or change my booking?",
-      "faq.a2": 'Yes! Please let us know at least 24 hours before boarding (groups: 48h). Contact us by phone or email: 911 001 099 | <a href="mailto:info@viamar.pt">info@viamar.pt</a>.',
-      "faq.q3": "What can I do on Berlenga Island with my ferry ticket?",
-      "faq.a3": '<ul><li>Hiking trails with stunning views;</li><li>Visit the historic Fort of São João Baptista;</li><li>Crystal-clear beach swimming or lunch at the island restaurant; snacks at Castelinho with panoramic views;</li><li>Birdwatching and flora exploration;</li><li>Optional add-ons: scuba diving, glass-bottom boat cave tour or snorkelling (see "packages" page).</li></ul>',
-      "faq.q4": "Where is the VIAMAR boarding point for Berlenga Island?",
-      "faq.a4": '<p>Peniche Marina, next to the Peniche Fortress.</p><ul><li>Drive to the Passenger & Luggage Boarding Zone (as shown on the map);</li><li>Look for the CHECK-IN flag or a VIAMAR crew member in uniform.</li></ul><p>We recommend arriving at least 45 minutes before departure (groups: 1 hour).</p><p><strong>Exceptions:</strong> return tickets (Berlenga → Peniche) and the caves tour board on Berlenga Island itself.</p>',
-      "faq.q5": "Can I buy a ticket on the day of travel?",
-      "faq.a5": "Yes, subject to availability. In July and August demand is very high — we strongly recommend booking in advance to secure your spot.",
-      "faq.q6": "What payment methods are accepted?",
-      "faq.a6": '<p><strong>Online:</strong> Visa, Mastercard, Apple Pay, MB Way, PayPal, Google Pay, Linkpay or bank transfer (groups only).</p><p><strong>At the counter:</strong> Visa, Mastercard, Apple Pay, MB Way or cash.</p><p>Groups: send proof of payment to <a href="mailto:info@viamar.pt">info@viamar.pt</a> at least 48h before boarding.</p>',
-      "faq.q7": "Can I bring luggage on board?",
-      "faq.a7": '<p>Yes — backpacks and small bags are welcome. For larger items please contact us in advance: 911 001 099.</p><p>Limit: 2 pieces of luggage per person + 1 small carry-on.</p>',
-      "faq.q8": "How long can I stay on Berlenga Island?",
-      "faq.a8": "Always 5 hours. Every Viamar sailing gives you 5 hours ashore — 11am→5pm in low season, 10am→4pm or 12pm→6pm in high season and at weekends. It is not a maximum: it is the stay on every crossing, and the longest on the route.",
-      "faq.q9": "Is camping allowed on Berlenga Island?",
-      "faq.a9": 'Wild camping is not permitted. There is an authorised campsite (Parque de Campismo da Berlenga) which requires advance booking. For more information: <a href="https://www.cm-peniche.pt/visitar/turismo" target="_blank" rel="noopener">Peniche Tourism Office</a>.',
-      "faq.q10": "What are the restrictions in the Berlenga Nature Reserve?",
-      "faq.a10": '<ul><li>Camping only in the designated area with prior reservation;</li><li>Maximum of 550 simultaneous visitors;</li><li>Mandatory registration on BerlengasPass and access fee (adults €3; discounts for ages 6–18 and over 65);</li><li>Stay on marked trails and respect signage;</li><li>Dispose of waste in designated areas or take it with you;</li><li>Do not pick plants or collect geological samples;</li><li>Do not feed the animals;</li><li>Loud music is prohibited.</li></ul>',
-      "faq.q11": "Are there toilets on board?",
-      "faq.a11": "Yes, the vessel has 2 on-board toilets — simple but practical. Our crew ensures they are kept clean and in good condition.",
-      "faq.q12": "Is it safe to travel with young children or elderly passengers?",
-      "faq.a12": "Absolutely — our vessel is one of the most popular choices for families with young children and elderly passengers. The boat was designed specifically for the Berlenga crossing with safety and comfort as priorities. Children must always be accompanied by a responsible adult. Passengers requiring special assistance are welcome to let us know in advance.",
-      "faq.q13": "What is the Trip Protection Fee (Flex Ticket)?",
-      "faq.a13": '<p>The <strong>Trip Protection Fee</strong> is an optional add-on available at the time of online booking. With this option active, you can <strong>reschedule or cancel</strong> your trip up to <strong>30 minutes before departure</strong> without penalty on the ticket value.</p><p><strong>Important:</strong> this fee is <strong>non-refundable under any circumstances</strong> — it protects the remaining value of your booking but is not returned to you. Bookings without this option are subject to the standard cancellation policy (24h in advance; groups: 48h).</p><p>Exception: if the trip is cancelled by Viamar (due to operational issues or sea conditions), <strong>the full amount paid, including this fee, is fully refunded</strong>.</p><p>Questions? <a href="tel:+351911001099">911 001 099</a> | <a href="mailto:info@viamar.pt">info@viamar.pt</a>.</p>'
-    },
-    es: {
-      nav_back: "Inicio", nav_back_full: "← Volver al inicio", "ft.terms": "Términos y Condiciones",
-      "faq.tag": "Preguntas Frecuentes",
-      "faq.h2": "Todo lo que necesita saber",
-      "faq.q1": "¿Qué debo llevar para un viaje a la Isla Berlenga?",
-      "faq.a1": "Lo esencial: protector solar, sombrero, gafas de sol y una botella de agua. Ropa cómoda, una chaqueta ligera (preferiblemente impermeable), calzado adecuado y una toalla. Un cargador portátil también es recomendable, ya que la cobertura en la isla es muy débil o inexistente.",
-      "faq.q2": "¿Puedo cancelar o cambiar mi reserva?",
-      "faq.a2": '¡Sí! Por favor, infórmanos con al menos 24 horas de antelación (grupos: 48h). Contáctanos: 911 001 099 | <a href="mailto:info@viamar.pt">info@viamar.pt</a>.',
-      "faq.q3": "¿Qué puedo hacer en la Isla Berlenga con mi billete de ferry?",
-      "faq.a3": '<ul><li>Rutas de senderismo con vistas impresionantes;</li><li>Visitar el Forte de São João Baptista;</li><li>Playa de aguas cristalinas o almuerzo en el restaurante de la isla; snack en el Castelinho con vistas panorámicas;</li><li>Avistamiento de aves y flora;</li><li>Opciones adicionales: buceo, grutas en barco de fondo de cristal o snorkel (ver página "paquetes").</li></ul>',
-      "faq.q4": "¿Dónde está el punto de embarque de VIAMAR para la Isla Berlenga?",
-      "faq.a4": '<p>Marina de Peniche, junto a la Fortaleza de Peniche.</p><ul><li>Diríjase a la Zona de embarque de Pasajeros y Equipaje (según el mapa);</li><li>Localice el lugar por la bandera de CHECK-IN o por un miembro del equipo VIAMAR uniformado.</li></ul><p>Recomendamos llegar al menos 45 minutos antes de la salida (grupos: 1 hora).</p><p><strong>Excepciones:</strong> los billetes de regreso (Berlenga → Peniche) y el paseo a las grutas embarcan en la propia Isla Berlenga.</p>',
-      "faq.q5": "¿Puedo comprar el billete el día del viaje?",
-      "faq.a5": "Sí, sujeto a disponibilidad. En julio y agosto la demanda es muy alta — recomendamos reservar con antelación para asegurar su plaza.",
-      "faq.q6": "¿Qué métodos de pago se aceptan?",
-      "faq.a6": '<p><strong>Online:</strong> Visa, Mastercard, Apple Pay, MB Way, PayPal, Google Pay, Linkpay o transferencia bancaria (solo grupos).</p><p><strong>En mostrador:</strong> Visa, Mastercard, Apple Pay, MB Way o efectivo.</p><p>Grupos: justificante a <a href="mailto:info@viamar.pt">info@viamar.pt</a> hasta 48h antes del embarque.</p>',
-      "faq.q7": "¿Puedo llevar equipaje a bordo?",
-      "faq.a7": '<p>Sí — mochilas y bolsas pequeñas son bienvenidas. Para volúmenes grandes, contáctenos previamente: 911 001 099.</p><p>Límite: 2 bultos por persona + 1 bolso de mano.</p>',
-      "faq.q8": "¿Cuánto tiempo puedo permanecer en la Isla Berlenga?",
-      "faq.a8": "Siempre 5 horas. Todas las travesías de Viamar dan 5 horas en tierra — 11h→17h en temporada baja, 10h→16h o 12h→18h en temporada alta y fines de semana. No es un máximo: es la estancia de todas las travesías, y la más larga de la ruta.",
-      "faq.q9": "¿Está permitido acampar en la Isla Berlenga?",
-      "faq.a9": 'El camping salvaje no está permitido. Existe un área autorizada en el Parque de Camping de Berlenga, con reserva previa obligatoria. Más información: <a href="https://www.cm-peniche.pt/visitar/turismo" target="_blank" rel="noopener">Oficina de Turismo de Peniche</a>.',
-      "faq.q10": "¿Cuáles son las restricciones de la Reserva Natural de la Isla Berlenga?",
-      "faq.a10": '<ul><li>Camping solo en el área designada con reserva previa;</li><li>Máximo de 550 visitantes simultáneos;</li><li>Registro obligatorio en BerlengasPass y tasa de acceso (adultos 3€; descuentos 6–18 años y mayores de 65);</li><li>Circular siempre por los senderos y respeitar la señalización;</li><li>Depositar residuos en los lugares apropiados o llevárselos;</li><li>No recoger plantas ni muestras geológicas;</li><li>No alimentar a los animales;</li><li>La música alta está prohibida.</li></ul>',
-      "faq.q11": "¿Hay aseos a bordo?",
-      "faq.a11": "Sí, la embarcación dispone de 2 aseos a bordo — sencillos y funcionales. La tripulación se asegura de mantenerlos limpios.",
-      "faq.q12": "¿Es seguro viajar con niños pequeños o pasajeros mayores?",
-      "faq.a12": "Sí, y nuestra embarcación es una de las preferidas por familias y personas mayores. El barco fue diseñado específicamente para este trayecto con la seguridad y el confort como prioridades. Los niños deben ir siempre acompañados de un adulto responsable. Los pasajeros que necesiten asistencia especial pueden informarnos con antelación.",
-      "faq.q13": "¿Qué es la Tasa de Protección de Viaje (Flex Ticket)?",
-      "faq.a13": '<p>La <strong>Tasa de Protección de Viaje</strong> es un complemento opcional disponible en el momento de la reserva online. Con esta opción activa, puedes <strong>reprogramar o cancelar</strong> tu viaje hasta <strong>30 minutos antes de la salida</strong>, sin penalización sobre el valor del billete.</p><p><strong>Importante:</strong> el importe de esta tasa <strong>no es reembolsable bajo ninguna circunstancia</strong> — protege el valor restante de tu reserva, pero no te es devuelta. Las reservas sin esta opción están sujetas a la política de cancelación estándar (24h de antelación; grupos: 48h).</p><p>Excepción: si el viaje es cancelado por Viamar (por razones operativas o condiciones del mar), <strong>el importe total pagado, incluida la tasa, es íntegramente reembolsado</strong>.</p><p>¿Dudas? <a href="tel:+351911001099">911 001 099</a> | <a href="mailto:info@viamar.pt">info@viamar.pt</a>.</p>'
-    },
-    fr: {
-      nav_back: "Accueil", nav_back_full: "← Retour à l'accueil", "ft.terms": "Conditions Générales",
-      "faq.tag": "Questions Fréquentes",
-      "faq.h2": "Tout ce que vous devez savoir",
-      "faq.q1": "Que dois-je apporter pour un voyage à l'Île Berlenga ?",
-      "faq.a1": "L\'essentiel : crème solaire, chapeau, lunettes de soleil et une bouteille d\'eau. Des vêtements confortables, une veste légère (de préférence imperméable), des chaussures adaptées et une serviette. Une batterie externe est conseillée car le réseau mobile sur l\'île est très faible ou inexistant.",
-      "faq.q2": "Puis-je annuler ou modifier ma réservation ?",
-      "faq.a2": 'Oui ! Merci de nous informer au moins 24 heures avant l\'embarquement (groupes : 48h). Contactez-nous : 911 001 099 | <a href="mailto:info@viamar.pt">info@viamar.pt</a>.',
-      "faq.q3": "Que puis-je faire sur l'Île Berlenga avec mon billet de ferry ?",
-      "faq.a3": '<ul><li>Randonnées pédestres avec des vues à couper le souffle ;</li><li>Visiter le Fort São João Baptista ;</li><li>Plages aux eaux cristallines ou déjeuner au restaurant de l\'île ; snack au Castelinho avec vue panoramique ;</li><li>Observation des oiseaux et de la flore ;</li><li>Options supplémentaires : plongée, grottes en bateau à fond de verre ou snorkeling (voir page "forfaits").</li></ul>',
-      "faq.q4": "Où se trouve le point d'embarquement VIAMAR pour l'Île Berlenga ?",
-      "faq.a4": '<p>Marina de Peniche, à côté de la Forteresse de Peniche.</p><ul><li>Rejoignez la Zone d\'embarquement Passagers et Bagages (voir la carte) ;</li><li>Repérez le drapeau CHECK-IN ou un membre de l\'équipe VIAMAR en uniforme.</li></ul><p>Nous recommandons d\'arriver au moins 45 minutes avant le départ (groupes : 1 heure).</p><p><strong>Exceptions :</strong> les billets retour (Berlenga → Peniche) et la visite des grottes embarquent directement sur l\'Île Berlenga.</p>',
-      "faq.q5": "Puis-je acheter un billet le jour du voyage ?",
-      "faq.a5": "Oui, sous réserve de disponibilité. En juillet et août, la demande est très élevée — nous vous recommandons de réserver à l\'avance pour garantir votre place.",
-      "faq.q6": "Quels modes de paiement sont acceptés ?",
-      "faq.a6": '<p><strong>En ligne :</strong> Visa, Mastercard, Apple Pay, MB Way, PayPal, Google Pay, Linkpay ou virement bancaire (groupes uniquement).</p><p><strong>Au guichet :</strong> Visa, Mastercard, Apple Pay, MB Way ou espèces.</p><p>Groupes : justificatif à <a href="mailto:info@viamar.pt">info@viamar.pt</a> au moins 48h avant l\'embarquement.</p>',
-      "faq.q7": "Puis-je apporter des bagages à bord ?",
-      "faq.a7": '<p>Oui — sacs à dos et petits bagages sont les bienvenus. Pour les volumes importants, contactez-nous à l\'avance : 911 001 099.</p><p>Limite : 2 bagages par personne + 1 petit bagage à main.</p>',
-      "faq.q8": "Combien de temps puis-je rester sur l'Île Berlenga ?",
-      "faq.a8": "Toujours 5 heures. Chaque traversée Viamar donne 5 heures à terre — 11h→17h en basse saison, 10h→16h ou 12h→18h en haute saison et le week-end. Ce n\'est pas un maximum : c\'est le séjour de toutes les traversées, et le plus long de la liaison.",
-      "faq.q9": "Le camping est-il autorisé sur l'Île Berlenga ?",
-      "faq.a9": 'Le camping sauvage n\'est pas autorisé. Il existe une zone autorisée au Camping de Berlenga, avec réservation préalable obligatoire. Plus d\'informations : <a href="https://www.cm-peniche.pt/visitar/turismo" target="_blank" rel="noopener">Office du Tourisme de Peniche</a>.',
-      "faq.q10": "Quelles sont les restrictions de la Réserve Naturelle de l'Île Berlenga ?",
-      "faq.a10": '<ul><li>Camping uniquement dans la zone désignée avec réservation préalable ;</li><li>Maximum de 550 visiteurs simultanés ;</li><li>Inscription obligatoire sur BerlengasPass et taxe d\'accès (adultes 3€ ; réductions 6–18 ans et 68 ans) ;</li><li>Circuler uniquement sur les sentiers balisés ;</li><li>Déposer ses déchets aux endroits prévus ou les remporter ;</li><li>Ne pas cueillir de plantes ni collecter d\'échantillons géologiques ;</li><li>Ne pas nourrir les animaux ;</li><li>La musique forte est interdite.</li></ul>',
-      "faq.q11": "Y a-t-il des toilettes à bord ?",
-      "faq.a11": "Oui, l\'embarcation dispose de 2 toilettes à bord — simples et pratiques. L\'équipage s\'assure qu\'elles restent propres et en bon état.",
-      "faq.q12": "Est-il sûr de voyager avec de jeunes enfants ou des passagers âgés ?",
-      "faq.a12": "Oui, notre embarcation est l\'une des préférées des familles et des personnes âgées. Le bateau a été conçu spécifiquement pour cette traversée avec la sécurité et le confort comme priorités. Les enfants doivent toujours être accompagnés d\'un adulte. Les passagers nécessitant une assistance particulière peuvent nous en informer à l\'avance.",
-      "faq.q13": "Qu\'est-ce que la Taxe de Protection Voyage (Flex Ticket) ?",
-      "faq.a13": '<p>La <strong>Taxe de Protection Voyage</strong> est un supplément optionnel disponible lors de la réservation en ligne. Avec cette option active, vous pouvez <strong>reprogrammer ou annuler</strong> votre voyage jusqu\'à <strong>30 minutes avant le départ</strong>, sans pénalité sur la valeur du billet.</p><p><strong>Important :</strong> le montant de cette taxe est <strong>non remboursable en toutes circonstances</strong> — il protège la valeur restante de votre réservation mais ne vous est pas restitué. Les réservations sans cette option sont soumises à la politique d\'annulation standard (24h à l\'avance ; groupes : 48h).</p><p>Exception : si le voyage est annulé par Viamar (pour des raisons opérationnelles ou des conditions météorologiques), <strong>le montant total payé, y compris la taxe, est intégralement remboursé</strong>.</p><p>Des questions ? <a href="tel:+351911001099">911 001 099</a> | <a href="mailto:info@viamar.pt">info@viamar.pt</a>.</p>'
-    }
-  };
 
   // setLang + lang detection + switcher wiring handled by /i18n/loader.js
   // accordion
@@ -863,5 +799,29 @@
 
 <script defer src="/_vercel/insights/script.js"></script>
 
+  <script>
+    // Google Ads + Meta — mousedown+capture dispara antes de o FareHarbor
+    // interceptar o clique com o autolightframe (mesmo padrão das outras páginas).
+    document.addEventListener('mousedown', function (e) {
+      if (e.target.closest('a[href*="fareharbor.com/embeds/book"]')) {
+        if (typeof gtag === 'function') gtag('event', 'conversion', { send_to: 'AW-10891382542/sIVNCPq6ifIaEI6etcko' });
+        if (typeof fbq === 'function') {
+          fbq('track', 'InitiateCheckout');
+          fbq('track', 'Lead', { content_name: 'FareHarbor CTA Click', content_category: 'booking_intent' });
+        }
+      }
+    }, true);
+  </script>
+  <script>
+    // FareHarbor booking confirmation → Meta Pixel Purchase
+    window.addEventListener('message', function (e) {
+      if (!e.origin || e.origin.indexOf('fareharbor.com') === -1) return;
+      var d = e.data; if (!d) return;
+      var ok = d.type === 'fh:book' || d.type === 'booking' || d.type === 'lightframe:book' || d.action === 'booking_created' || d.event === 'booking_created';
+      if (ok && typeof fbq === 'function') fbq('track', 'Purchase', { currency: 'EUR', value: d.total_amount || d.amount || d.value || 0, content_type: 'product', content_name: 'Ferry Berlenga' });
+    }, false);
+  </script>
+  <script defer src="https://fareharbor.com/embeds/api/v1/?autolightframe=yes"></script>
+  <script defer src="/mobile-cta.js"></script>
 </body>
 </html>

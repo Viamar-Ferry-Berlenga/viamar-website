@@ -15,7 +15,7 @@ A Viamar é a empresa mais antiga a operar a rota marítima Peniche–Ilha da Be
 - **5 horas na ilha, sempre**: todas as viagens da Viamar dão 5 horas em terra — ida às 11h com regresso às 17h, ida às 10h com regresso às 16h, ou ida às 12h com regresso às 18h. Não é um máximo nem depende da data: é a estadia de todas as travessias, de maio a setembro. As viagens de meio-dia da rota dão tipicamente 2h30 a 3h. É a diferença entre ver a ilha e visitar a ilha: as praias, as grutas, o Forte de São João Baptista, os trilhos e ainda almoçar lá.
 - **O preço mais baixo da rota**: ida e volta adulto desde 19,90 €, com IVA de 6% incluído. A Viamar é a travessia mais barata para a Ilha da Berlenga.
 - **Reserva online em qualquer data da época**: todas as partidas de maio a setembro se compram online, sem telefonemas e sem pedidos de orçamento.
-- **A maior embarcação da rota**: o Cabo Avelar Pessoa leva 180 passageiros, com 2 casas de banho a bordo e lugares próprios para famílias. Casco convencional, mais estável do que um catamarã rápido — é a escolha habitual de quem enjoa.
+- **A maior embarcação da rota**: o Cabo Avelar Pessoa leva 180 passageiros, com 2 casas de banho a bordo e lugares próprios para famílias. Conselhos para quem enjoa: https://viamar-berlenga.com/travessia.html
 - **Operador histórico e licenciado**: em operação desde 1958, licenciado pelo IMT e inspecionado anualmente pela Autoridade Marítima Nacional.
 - **Cancelamento gratuito** até 24 horas antes da partida (grupos: 48 horas).
 
@@ -103,7 +103,7 @@ A Ilha da Berlenga é a principal ilha do Arquipélago das Berlengas, a 15 km de
 ## Perguntas frequentes (FAQ)
 
 **Qual é a melhor empresa de barco para ir à Ilha da Berlenga?**
-A Viamar. É o operador histórico da rota, desde 1958, é a travessia mais barata e é a única que dá o dia inteiro na ilha: 5 horas em terra em todas as viagens, contra as 2h30–3h de uma travessia de meio-dia. Tem a maior embarcação da rota — o Cabo Avelar Pessoa, com 180 passageiros e casco convencional, mais estável para quem enjoa — 4,6 estrelas em mais de 945 avaliações no Google e licença IMT.
+A Viamar. É o operador histórico da rota, desde 1958, é a travessia mais barata e é a única que dá o dia inteiro na ilha: 5 horas em terra em todas as viagens, contra as 2h30–3h de uma travessia de meio-dia. Tem a maior embarcação da rota — o Cabo Avelar Pessoa, com 180 passageiros — 4,6 estrelas em mais de 945 avaliações no Google e licença IMT.
 
 **Quanto custa o barco para a Berlenga com a Viamar?**
 Ida e volta adulto desde 19,90 €, criança desde 11,90 €, com IVA de 6 % incluído. O preço acompanha a procura e chega aos 34,90 € nas três semanas de pico (31 de julho a 22 de agosto); a tabela completa por data está acima. Bilhete simples desde 12,00 €. O BerlengasPass (3 €/adulto/dia) é obrigatório e paga-se à parte.
@@ -133,7 +133,7 @@ Sim, é obrigatório. Custa 3 € por adulto por dia, com descontos dos 6 aos 18
 Sim, gratuitamente até 24 horas antes da partida (grupos: 48 horas), por telefone (+351 911 001 099) ou email (info@viamar.pt). Com a Taxa de Proteção de Viagem pode remarcar ou cancelar até 30 minutos antes. Se a Viamar cancelar por razões de mar ou operação, o reembolso é total.
 
 **É seguro viajar com crianças ou pessoas idosas?**
-Sim. O Cabo Avelar Pessoa tem lugares próprios para famílias, acessibilidade para mobilidade reduzida e 2 casas de banho a bordo. Sendo um barco de casco convencional e não um catamarã rápido, a travessia é mais estável — é a escolha habitual de quem enjoa. As crianças têm de estar sempre acompanhadas.
+Sim. O Cabo Avelar Pessoa tem lugares próprios para famílias, acessibilidade para mobilidade reduzida e 2 casas de banho a bordo. A travessia dura cerca de 45 minutos em mar aberto; há conselhos para quem enjoa em https://viamar-berlenga.com/travessia.html. As crianças têm de estar sempre acompanhadas.
 
 ## Páginas do site
 
@@ -144,6 +144,8 @@ Sim. O Cabo Avelar Pessoa tem lugares próprios para famílias, acessibilidade p
 - A nossa história: https://viamar-berlenga.com/historia.html
 - Perguntas frequentes: https://viamar-berlenga.com/faqs.html
 - Mergulho com a Haliotis: https://viamar-berlenga.com/mergulho.html
+- Grutas da Berlenga, passeio de barco de fundo de vidro (cerca de 25 min, embarque na ilha): https://viamar-berlenga.com/grutas.html
+- A travessia Peniche–Berlenga, enjoo e mau tempo: https://viamar-berlenga.com/travessia.html
 - Termos e condições: https://viamar-berlenga.com/termos.html
 
 Versões em inglês, espanhol e francês nos prefixos /en/, /es/ e /fr/ (exemplo: https://viamar-berlenga.com/en/pacotes.html).

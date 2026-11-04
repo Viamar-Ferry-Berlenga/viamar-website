@@ -133,6 +133,50 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://viamar-berlenga.com/horarios.html" />
   </url>
   <url>
+    <loc>https://viamar-berlenga.com/mergulho.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://viamar-berlenga.com/mergulho.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://viamar-berlenga.com/en/mergulho.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://viamar-berlenga.com/es/mergulho.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://viamar-berlenga.com/fr/mergulho.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://viamar-berlenga.com/mergulho.html" />
+  </url>
+  <url>
+    <loc>https://viamar-berlenga.com/en/mergulho.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://viamar-berlenga.com/mergulho.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://viamar-berlenga.com/en/mergulho.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://viamar-berlenga.com/es/mergulho.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://viamar-berlenga.com/fr/mergulho.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://viamar-berlenga.com/mergulho.html" />
+  </url>
+  <url>
+    <loc>https://viamar-berlenga.com/es/mergulho.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://viamar-berlenga.com/mergulho.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://viamar-berlenga.com/en/mergulho.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://viamar-berlenga.com/es/mergulho.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://viamar-berlenga.com/fr/mergulho.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://viamar-berlenga.com/mergulho.html" />
+  </url>
+  <url>
+    <loc>https://viamar-berlenga.com/fr/mergulho.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://viamar-berlenga.com/mergulho.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://viamar-berlenga.com/en/mergulho.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://viamar-berlenga.com/es/mergulho.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://viamar-berlenga.com/fr/mergulho.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://viamar-berlenga.com/mergulho.html" />
+  </url>
+  <url>
     <loc>https://viamar-berlenga.com/historia.html</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
@@ -307,5 +351,93 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://viamar-berlenga.com/es/termos.html" />
     <xhtml:link rel="alternate" hreflang="fr" href="https://viamar-berlenga.com/fr/termos.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://viamar-berlenga.com/termos.html" />
+  </url>
+  <url>
+    <loc>https://viamar-berlenga.com/grutas.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://viamar-berlenga.com/grutas.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://viamar-berlenga.com/en/grutas.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://viamar-berlenga.com/es/grutas.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://viamar-berlenga.com/fr/grutas.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://viamar-berlenga.com/grutas.html" />
+  </url>
+  <url>
+    <loc>https://viamar-berlenga.com/en/grutas.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://viamar-berlenga.com/grutas.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://viamar-berlenga.com/en/grutas.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://viamar-berlenga.com/es/grutas.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://viamar-berlenga.com/fr/grutas.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://viamar-berlenga.com/grutas.html" />
+  </url>
+  <url>
+    <loc>https://viamar-berlenga.com/es/grutas.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://viamar-berlenga.com/grutas.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://viamar-berlenga.com/en/grutas.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://viamar-berlenga.com/es/grutas.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://viamar-berlenga.com/fr/grutas.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://viamar-berlenga.com/grutas.html" />
+  </url>
+  <url>
+    <loc>https://viamar-berlenga.com/fr/grutas.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://viamar-berlenga.com/grutas.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://viamar-berlenga.com/en/grutas.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://viamar-berlenga.com/es/grutas.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://viamar-berlenga.com/fr/grutas.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://viamar-berlenga.com/grutas.html" />
+  </url>
+  <url>
+    <loc>https://viamar-berlenga.com/travessia.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://viamar-berlenga.com/travessia.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://viamar-berlenga.com/en/travessia.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://viamar-berlenga.com/es/travessia.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://viamar-berlenga.com/fr/travessia.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://viamar-berlenga.com/travessia.html" />
+  </url>
+  <url>
+    <loc>https://viamar-berlenga.com/en/travessia.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://viamar-berlenga.com/travessia.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://viamar-berlenga.com/en/travessia.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://viamar-berlenga.com/es/travessia.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://viamar-berlenga.com/fr/travessia.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://viamar-berlenga.com/travessia.html" />
+  </url>
+  <url>
+    <loc>https://viamar-berlenga.com/es/travessia.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://viamar-berlenga.com/travessia.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://viamar-berlenga.com/en/travessia.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://viamar-berlenga.com/es/travessia.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://viamar-berlenga.com/fr/travessia.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://viamar-berlenga.com/travessia.html" />
+  </url>
+  <url>
+    <loc>https://viamar-berlenga.com/fr/travessia.html</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://viamar-berlenga.com/travessia.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://viamar-berlenga.com/en/travessia.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://viamar-berlenga.com/es/travessia.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://viamar-berlenga.com/fr/travessia.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://viamar-berlenga.com/travessia.html" />
   </url>
 </urlset>

@@ -2,6 +2,7 @@
 <html lang="pt-PT" data-lang="pt">
 <head>
   <meta charset="UTF-8">
+  <script src="/consent.js"></script>
   
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFZJB37SGK"></script>
   <script>
@@ -22,12 +23,12 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('consent', window.__vConsent || 'revoke');
     fbq('init', '956111340728300');
     fbq('init', '1533625365142697');
     fbq('track', 'PageView');
     fbq('track', 'ViewContent', { content_name: 'Ilha da Berlenga', content_category: 'destination_info' });
   </script>
-  <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=956111340728300&ev=PageView&noscript=1"></noscript>
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" >
@@ -837,6 +838,48 @@
   
 
   
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
   <link rel="alternate" hreflang="pt-PT" href="https://viamar-berlenga.com/ilha.html" >
   <link rel="alternate" hreflang="en" href="https://viamar-berlenga.com/en/ilha.html" >
   <link rel="alternate" hreflang="es" href="https://viamar-berlenga.com/es/ilha.html" >
@@ -1192,6 +1235,9 @@
   <a href="/" class="f-logo"><img src="/logo-viamar.png" alt="Viamar Ferry Berlenga" width="258" height="84" decoding="async"></a>
   <span class="f-copy" data-i18n="f_copy">© 2026 Viamar — Travessias à Ilha da Berlenga · Peniche</span>
   <div class="f-legal">
+    <a href="/horarios.html" data-i18n="ft.horarios">Horários e preços</a>
+    <a href="/grutas.html" data-i18n="ft.grutas">Grutas</a>
+    <a href="/travessia.html" data-i18n="ft.travessia">A travessia</a>
     <a href="/faqs.html" data-i18n="ft.faqs">FAQ's</a>
     <a href="/termos.html" data-i18n="ft.terms">Termos e Condições</a>
   </div>
@@ -1200,269 +1246,6 @@
 
 <script defer src="/i18n/loader.js"></script>
 <script>
-  // === legacy dict — replaced by /i18n/*.json — kept only inside this dead block ===
-  const _legacyDict = {
-    pt: {
-      nav_back: 'Início',
-      'ft.faqs': "FAQ's", 'ft.terms': 'Termos e Condições',
-      'ilha.tag': 'A Ilha da Berlenga',
-      'ilha.h1': 'Um mundo à parte,<br>a 45 minutos de Peniche',
-      'ilha.sub': 'Reserva da Biosfera da UNESCO. Águas turquesa, falésias dramáticas, grutas marinhas e uma biodiversidade única em Portugal.',
-      'ilha.f1': 'travessia desde Peniche',
-      'ilha.f2': 'visitantes em simultâneo',
-      'ilha.f3': 'Reserva da Biosfera UNESCO',
-      'ilha.f4': 'de ilha para explorar',
-      'ilha.art.tag': 'Berlenga em Aguarela',
-      'ilha.art.h2': 'A ilha que inspira',
-      'ilha.art.sub': 'Seis momentos eternizados em aguarela — a praia, a chegada, o cais, a enseada, a gruta e o Forte ao entardecer.',
-      'ilha.art.p1.label': '01 · A Praia', 'ilha.art.p1.title': 'Carreiro do <em>Mosteiro</em>',
-      'ilha.art.p2.label': '02 · A Chegada', 'ilha.art.p2.title': 'O ferry <em>aproxima-se</em>',
-      'ilha.art.p5.label': '03 · O Cais', 'ilha.art.p5.title': 'Barcos à <em>ancoragem</em>',
-      'ilha.art.p3.label': '04 · A Enseada', 'ilha.art.p3.title': 'Águas <em>turquesa</em>',
-      'ilha.art.p6.label': '05 · A Gruta', 'ilha.art.p6.title': 'A gruta <em>azul</em>',
-      'ilha.art.p4.label': '06 · O Forte', 'ilha.art.p4.title': 'São João Baptista <em>ao entardecer</em>',
-      'ilha.s1.tag': 'Acesso',
-      'ilha.s1.title': 'Como chegar a Peniche',
-      'ilha.s1.sub': 'O ponto de partida para a Berlenga é a Marina de Peniche. Confira as opções de transporte — após chegada a Peniche, a travessia com a Viamar leva-o à ilha em 45 minutos.',
-      'ilha.car.title': 'De carro',
-      'ilha.car.body': '<strong>De Lisboa:</strong> ~1h30 via A8 → IC1 (saída Peniche).<br><strong>Do Porto:</strong> ~3h via A1 → A8 → IC1.<br><strong>De Espanha:</strong> ~2h30 de Badajoz via A6 → A8.',
-      'ilha.car.gps': 'GPS: Marina de Peniche — Viamar Ferry Berlenga. Parque de estacionamento disponível nas imediações.',
-      'ilha.car.mapsbtn': 'Calcular rota →',
-      'ilha.bus.title': 'De autocarro',
-      'ilha.bus.body': '<strong>Rede Expressos</strong> e <strong>FlixBus</strong> operam ligações diárias entre Lisboa e Peniche com várias partidas ao longo do dia. Duração aproximada: 2 horas.',
-      'ilha.bus.note': 'A paragem de Peniche fica a ~15 min a pé da marina de embarque.',
-      'ilha.s2.tag': 'Na ilha',
-      'ilha.s2.title': 'Alojamento e restauração',
-      'ilha.s2.sub': 'A Berlenga tem o essencial para tornar a visita inesquecível — sem o supérfluo. Os serviços disponíveis são deliberadamente limitados para proteger a reserva natural.',
-      'ilha.penso.label': 'Alojamento &amp; Restaurante',
-      'ilha.penso.name': 'Mesa da Ilha',
-      'ilha.penso.desc': 'O principal espaço de alojamento e restauração da ilha. Quartos simples com vista para o mar e um restaurante com peixe e marisco frescos — adormecer ao som das ondas e acordar com a ilha para si só. Abertura sazonal (Junho a Setembro).',
-      'ilha.penso.note': 'Reservas via Câmara Municipal de Peniche: <a href="https://www.cm-peniche.pt" target="_blank" rel="noopener">cm-peniche.pt</a>',
-      'ilha.rest.label': 'Alojamento Histórico',
-      'ilha.rest.name': 'Forte de São João Baptista',
-      'ilha.rest.desc': 'A Pensão da AABerlenga funciona dentro do histórico Forte de São João Baptista, construído no século XVII. Uma experiência única — dormir entre muralhas seculares com o oceano Atlântico a toda a volta. Abertura sazonal.',
-      'ilha.rest.note': 'Reservas e informações via Câmara Municipal de Peniche: <a href="https://www.cm-peniche.pt" target="_blank" rel="noopener">cm-peniche.pt</a>',
-      'ilha.snack.label': 'Snack Bar',
-      'ilha.snack.name': 'Castelinho Snack Bar',
-      'ilha.snack.desc': 'Refeições leves, sandes, gelados, bebidas e sumos frescos numa das localizações mais fotogénicas da ilha — com vista directa para a Fortaleza de São João Baptista. O sítio perfeito para uma pausa a meio da exploração.',
-      'ilha.snack.note': 'Esplanada exterior com vistas panorâmicas. Abertura sazonal.',
-      'ilha.camp.label': 'Campismo',
-      'ilha.camp.name': 'Parque de Campismo',
-      'ilha.camp.desc': 'A única área de campismo autorizada da ilha. Experiência minimalista sob o céu estrelado da reserva natural. É também possível alugar socalcos — terraços rochosos sobranceiros ao mar — para uma vivência ainda mais próxima da ilha.',
-      'ilha.camp.note': 'Reservas de socalcos e campismo via Posto de Turismo de Peniche: <a href="https://www.cm-peniche.pt" target="_blank" rel="noopener">cm-peniche.pt</a>',
-      'ilha.s3.tag': 'Reserva Natural',
-      'ilha.s3.title': 'Código de conduta da ilha',
-      'ilha.s3.sub': 'A Berlenga é um ecossistema frágil. O seu cuidado é responsabilidade de todos os que a visitam — incluindo-o a si.',
-      'ilha.s3.intro': 'A Ilha da Berlenga é uma Reserva Natural com regras de acesso e comportamento estritamente definidas. O seu respeito é condição para a preservação deste ecossistema único e para a continuidade das visitas. O incumprimento pode resultar na exclusão de futuras viagens com a Viamar.',
-      'ilha.rule1': '<strong>BerlengasPass obrigatório</strong> — adquirido separadamente em berlengaspass.icnf.pt (até 3 € por pessoa).',
-      'ilha.rule2': '<strong>Proibido deixar lixo</strong> — deposite nos locais próprios ou leve-o consigo.',
-      'ilha.rule3': '<strong>Circular apenas nos trilhos marcados</strong> — respeite a sinalização de protecção da flora.',
-      'ilha.rule4': '<strong>Proibido acampar fora da área designada</strong> — campismo selvagem é ilegal na reserva.',
-      'ilha.rule5': '<strong>Máx. 550 visitantes simultâneos</strong> — limite imposto pela autoridade competente para proteger o ecossistema.',
-      'ilha.rule6': '<strong>Proibido alimentar os animais</strong> — inclui gaivotas e outras aves nidificantes.',
-      'ilha.rule7': '<strong>Respeite a fauna e flora</strong> — não apanhe plantas nem recolha amostras geológicas ou minerais.',
-      'ilha.rule8': '<strong>Música alta proibida</strong> — preserve o ambiente natural e o bem-estar de todos os visitantes.',
-      'ilha.cta.tag': 'Pronto para embarcar?',
-      'ilha.cta.h2': 'Reserve a sua travessia<br>para a Berlenga',
-      'ilha.cta.sub': 'Reservas 2027 já abertas. Escolha o seu dia de verão antes de todos.',
-      'ilha.cta.btn': 'Reservar agora →'
-    },
-    en: {
-      nav_back: 'Home',
-      'ft.faqs': "FAQ's", 'ft.terms': 'Terms & Conditions',
-      'ilha.tag': 'Berlenga Island',
-      'ilha.h1': 'A world apart,<br>45 minutes from Peniche',
-      'ilha.sub': 'UNESCO Biosphere Reserve. Turquoise waters, dramatic cliffs, sea caves and unique biodiversity found nowhere else in Portugal.',
-      'ilha.f1': 'boat ride from Peniche',
-      'ilha.f2': 'max. simultaneous visitors',
-      'ilha.f3': 'UNESCO Biosphere Reserve since',
-      'ilha.f4': 'of island to explore',
-      'ilha.art.tag': 'Berlenga in Watercolour',
-      'ilha.art.h2': 'The island that inspires',
-      'ilha.art.sub': 'Six moments captured in watercolour — the beach, the arrival, the harbour, the cove, the cave, and the Fort at dusk.',
-      'ilha.art.p1.label': '01 · The Beach', 'ilha.art.p1.title': 'Carreiro do <em>Mosteiro</em>',
-      'ilha.art.p2.label': '02 · The Arrival', 'ilha.art.p2.title': 'The ferry <em>draws near</em>',
-      'ilha.art.p5.label': '03 · The Harbour', 'ilha.art.p5.title': 'Boats at <em>anchor</em>',
-      'ilha.art.p3.label': '04 · The Cove', 'ilha.art.p3.title': 'Turquoise <em>waters</em>',
-      'ilha.art.p6.label': '05 · The Cave', 'ilha.art.p6.title': 'The blue <em>grotto</em>',
-      'ilha.art.p4.label': '06 · The Fort', 'ilha.art.p4.title': 'São João Baptista <em>at dusk</em>',
-      'ilha.s1.tag': 'Getting here',
-      'ilha.s1.title': 'How to reach Peniche',
-      'ilha.s1.sub': 'The gateway to Berlenga is the Marina de Peniche. Once you arrive in Peniche, the Viamar crossing takes you to the island in 45 minutes.',
-      'ilha.car.title': 'By car',
-      'ilha.car.body': '<strong>From Lisbon:</strong> ~1h30 via A8 → IC1 (Peniche exit).<br><strong>From Porto:</strong> ~3h via A1 → A8 → IC1.<br><strong>From Spain:</strong> ~2h30 from Badajoz via A6 → A8.',
-      'ilha.car.gps': 'GPS: Marina de Peniche — Viamar Ferry Berlenga. Parking available nearby.',
-      'ilha.car.mapsbtn': 'Get directions →',
-      'ilha.bus.title': 'By bus',
-      'ilha.bus.body': '<strong>Rede Expressos</strong> and <strong>FlixBus</strong> run daily coach services from Lisbon to Peniche, with several departures throughout the day. Journey time: approx. 2 hours.',
-      'ilha.bus.note': 'The Peniche bus stop is ~15 min walk from the boarding marina.',
-      'ilha.s2.tag': 'On the island',
-      'ilha.s2.title': 'Accommodation & dining',
-      'ilha.s2.sub': 'Berlenga has everything you need for an unforgettable visit — and nothing more. Services are deliberately limited to protect the nature reserve.',
-      'ilha.penso.label': 'Accommodation &amp; Restaurant',
-      'ilha.penso.name': 'Mesa da Ilha',
-      'ilha.penso.desc': "The island's main accommodation and dining venue. Simple sea-view rooms and a restaurant serving fresh fish and seafood — fall asleep to the sound of the waves and wake up with the island all to yourself. Seasonal opening (June to September).",
-      'ilha.penso.note': 'Bookings via Câmara Municipal de Peniche: <a href="https://www.cm-peniche.pt" target="_blank" rel="noopener">cm-peniche.pt</a>',
-      'ilha.rest.label': 'Historic Accommodation',
-      'ilha.rest.name': 'Forte de São João Baptista',
-      'ilha.rest.desc': 'The AABerlenga Guesthouse operates inside the historic Forte de São João Baptista, built in the 17th century. A unique experience — sleeping within centuries-old walls surrounded by the Atlantic Ocean. Seasonal opening.',
-      'ilha.rest.note': 'Bookings and info via Câmara Municipal de Peniche: <a href="https://www.cm-peniche.pt" target="_blank" rel="noopener">cm-peniche.pt</a>',
-      'ilha.snack.label': 'Snack Bar',
-      'ilha.snack.name': 'Castelinho Snack Bar',
-      'ilha.snack.desc': 'Light meals, sandwiches, ice cream, drinks and fresh juices at one of the most photogenic spots on the island — with a direct view of the historic São João Baptista Fortress. The perfect stop mid-exploration.',
-      'ilha.snack.note': 'Outdoor terrace with panoramic views. Seasonal opening.',
-      'ilha.camp.label': 'Camping',
-      'ilha.camp.name': 'Campsite',
-      'ilha.camp.desc': "The island's only authorised camping area. A minimalist experience under the stars of the nature reserve. It is also possible to rent socalcos — rocky terraces overlooking the sea — for an even more immersive island experience.",
-      'ilha.camp.note': 'Socalco and campsite bookings via the Peniche Tourist Office: <a href="https://www.cm-peniche.pt" target="_blank" rel="noopener">cm-peniche.pt</a>',
-      'ilha.s3.tag': 'Nature Reserve',
-      'ilha.s3.title': 'Island code of conduct',
-      'ilha.s3.sub': 'Berlenga is a fragile ecosystem. Protecting it is the responsibility of every visitor — including you.',
-      'ilha.s3.intro': "Berlenga Island is a Nature Reserve with strictly defined access and behaviour rules. Respecting them is a condition for preserving this unique ecosystem and ensuring visits can continue. Non-compliance may result in exclusion from future trips with Viamar.",
-      'ilha.rule1': '<strong>BerlengasPass required</strong> — purchased separately at berlengaspass.icnf.pt (up to €3 per person).',
-      'ilha.rule2': '<strong>No littering</strong> — use the designated bins or take your waste with you.',
-      'ilha.rule3': '<strong>Stay on marked trails only</strong> — respect all flora protection signage.',
-      'ilha.rule4': "<strong>No wild camping</strong> — camping outside the designated area is illegal in the reserve.",
-      'ilha.rule5': '<strong>Max. 550 simultaneous visitors</strong> — a limit set by the competent authority to protect the ecosystem.',
-      'ilha.rule6': '<strong>Do not feed the animals</strong> — including seagulls and other nesting birds.',
-      'ilha.rule7': '<strong>Respect fauna and flora</strong> — do not pick plants or collect geological or mineral samples.',
-      'ilha.rule8': '<strong>No loud music</strong> — preserve the natural environment and the well-being of all visitors.',
-      'ilha.cta.tag': 'Ready to set sail?',
-      'ilha.cta.h2': 'Book your crossing<br>to Berlenga',
-      'ilha.cta.sub': '2027 bookings are open. Pick your summer day before everyone else.',
-      'ilha.cta.btn': 'Book now →'
-    },
-    es: {
-      nav_back: 'Inicio',
-      'ft.faqs': "FAQ's", 'ft.terms': 'Términos y Condiciones',
-      'ilha.tag': 'La Isla Berlenga',
-      'ilha.h1': 'Un mundo aparte,<br>a 45 minutos de Peniche',
-      'ilha.sub': 'Reserva de la Biosfera UNESCO. Aguas turquesas, acantilados dramáticos, grutas marinas y una biodiversidad única en Portugal.',
-      'ilha.f1': 'travesía desde Peniche',
-      'ilha.f2': 'visitantes simultáneos máx.',
-      'ilha.f3': 'Reserva de la Biosfera UNESCO',
-      'ilha.f4': 'de isla para explorar',
-      'ilha.art.tag': 'Berlenga en Acuarela',
-      'ilha.art.h2': 'La isla que inspira',
-      'ilha.art.sub': 'Seis momentos eternizados en acuarela — la playa, la llegada, el muelle, la ensenada, la gruta y el Fuerte al atardecer.',
-      'ilha.art.p1.label': '01 · La Playa', 'ilha.art.p1.title': 'Carreiro do <em>Mosteiro</em>',
-      'ilha.art.p2.label': '02 · La Llegada', 'ilha.art.p2.title': 'El ferry <em>se acerca</em>',
-      'ilha.art.p5.label': '03 · El Muelle', 'ilha.art.p5.title': 'Barcos en <em>ancla</em>',
-      'ilha.art.p3.label': '04 · La Ensenada', 'ilha.art.p3.title': 'Aguas <em>turquesas</em>',
-      'ilha.art.p6.label': '05 · La Gruta', 'ilha.art.p6.title': 'La gruta <em>azul</em>',
-      'ilha.art.p4.label': '06 · El Fuerte', 'ilha.art.p4.title': 'São João Baptista <em>al atardecer</em>',
-      'ilha.s1.tag': 'Cómo llegar',
-      'ilha.s1.title': 'Cómo llegar a Peniche',
-      'ilha.s1.sub': 'El punto de partida hacia Berlenga es la Marina de Peniche. Una vez en Peniche, la travesía con Viamar le lleva a la isla en 45 minutos.',
-      'ilha.car.title': 'En coche',
-      'ilha.car.body': '<strong>Desde Lisboa:</strong> ~1h30 por A8 → IC1 (salida Peniche).<br><strong>Desde Oporto:</strong> ~3h por A1 → A8 → IC1.<br><strong>Desde España:</strong> ~2h30 desde Badajoz por A6 → A8.',
-      'ilha.car.gps': 'GPS: Marina de Peniche — Viamar Ferry Berlenga. Aparcamiento disponible en las inmediaciones.',
-      'ilha.car.mapsbtn': 'Cómo llegar →',
-      'ilha.bus.title': 'En autobús',
-      'ilha.bus.body': '<strong>Rede Expressos</strong> y <strong>FlixBus</strong> operan servicios de autocar diarios desde Lisboa a Peniche, con varias salidas a lo largo del día. Duración aproximada: 2 horas.',
-      'ilha.bus.note': 'La parada de Peniche está a ~15 min a pie de la marina de embarque.',
-      'ilha.s2.tag': 'En la isla',
-      'ilha.s2.title': 'Alojamiento y restauración',
-      'ilha.s2.sub': 'Berlenga tiene lo esencial para hacer la visita inolvidable — sin superfluidades. Los servicios son deliberadamente limitados para proteger la reserva natural.',
-      'ilha.penso.label': 'Alojamiento &amp; Restaurante',
-      'ilha.penso.name': 'Mesa da Ilha',
-      'ilha.penso.desc': 'El principal espacio de alojamiento y restauración de la isla. Habitaciones sencillas con vistas al mar y un restaurante con pescado y marisco frescos — dormirse al son de las olas y despertar con la isla para uno solo. Apertura estacional (junio a septiembre).',
-      'ilha.penso.note': 'Reservas a través del Ayuntamiento de Peniche: <a href="https://www.cm-peniche.pt" target="_blank" rel="noopener">cm-peniche.pt</a>',
-      'ilha.rest.label': 'Alojamiento Histórico',
-      'ilha.rest.name': 'Forte de São João Baptista',
-      'ilha.rest.desc': 'La Pensão da AABerlenga funciona dentro del histórico Forte de São João Baptista, construido en el siglo XVII. Una experiencia única — dormir entre murallas seculares rodeado por el océano Atlántico. Apertura estacional.',
-      'ilha.rest.note': 'Reservas e información a través del Ayuntamiento de Peniche: <a href="https://www.cm-peniche.pt" target="_blank" rel="noopener">cm-peniche.pt</a>',
-      'ilha.snack.label': 'Snack Bar',
-      'ilha.snack.name': 'Castelinho Snack Bar',
-      'ilha.snack.desc': 'Comidas ligeras, bocadillos, helados, bebidas y zumos frescos en uno de los lugares más fotogénicos de la isla — con vista directa a la Fortaleza de São João Baptista. El sitio perfecto para una pausa a mitad de la exploración.',
-      'ilha.snack.note': 'Terraza exterior con vistas panorámicas. Apertura estacional.',
-      'ilha.camp.label': 'Camping',
-      'ilha.camp.name': 'Parque de Camping',
-      'ilha.camp.desc': 'La única zona de camping autorizada de la isla. Experiencia minimalista bajo el cielo estrellado de la reserva natural. También es posible alquilar socalcos — terrazas rocosas frente al mar — para una vivencia aún más cercana a la isla.',
-      'ilha.camp.note': 'Reservas de socalcos y camping en la Oficina de Turismo de Peniche: <a href="https://www.cm-peniche.pt" target="_blank" rel="noopener">cm-peniche.pt</a>',
-      'ilha.s3.tag': 'Reserva Natural',
-      'ilha.s3.title': 'Código de conducta de la isla',
-      'ilha.s3.sub': 'Berlenga es un ecosistema frágil. Su cuidado es responsabilidad de todos los que la visitan — también de usted.',
-      'ilha.s3.intro': 'La Isla Berlenga es una Reserva Natural con normas de acceso y comportamiento estrictamente definidas. Su respeto es condición para la preservación de este ecosistema único y para la continuidad de las visitas. El incumplimiento puede resultar en la exclusión de futuros viajes con Viamar.',
-      'ilha.rule1': '<strong>BerlengasPass obligatorio</strong> — adquirido por separado en berlengaspass.icnf.pt (hasta 3 € por persona).',
-      'ilha.rule2': '<strong>Prohibido dejar basura</strong> — deposítela en los lugares habilitados o llévesela consigo.',
-      'ilha.rule3': '<strong>Circular solo por senderos señalizados</strong> — respete la señalización de protección de la flora.',
-      'ilha.rule4': '<strong>Prohibido acampar fuera de la zona designada</strong> — el camping salvaje es ilegal en la reserva.',
-      'ilha.rule5': '<strong>Máx. 550 visitantes simultáneos</strong> — límite impuesto por la autoridad competente para proteger el ecosistema.',
-      'ilha.rule6': '<strong>Prohibido alimentar a los animales</strong> — incluidas gaviotas y otras aves nidificantes.',
-      'ilha.rule7': '<strong>Respete la fauna y flora</strong> — no recoja plantas ni muestras geológicas o minerales.',
-      'ilha.rule8': '<strong>Música alta prohibida</strong> — preserve el entorno natural y el bienestar de todos los visitantes.',
-      'ilha.cta.tag': '¿Listo para embarcar?',
-      'ilha.cta.h2': 'Reserve su travesía<br>a Berlenga',
-      'ilha.cta.sub': 'Reservas 2027 ya abiertas. Elige tu día de verano antes que nadie.',
-      'ilha.cta.btn': 'Reservar ahora →'
-    },
-    fr: {
-      nav_back: 'Accueil',
-      'ft.faqs': "FAQ's", 'ft.terms': 'Conditions Générales',
-      'ilha.tag': "L'Île Berlenga",
-      'ilha.h1': 'Un monde à part,<br>à 45 minutes de Peniche',
-      'ilha.sub': "Réserve de biosphère UNESCO. Eaux turquoises, falaises dramatiques, grottes marines et une biodiversité unique au Portugal.",
-      'ilha.f1': 'traversée depuis Peniche',
-      'ilha.f2': 'visiteurs simultanés max.',
-      'ilha.f3': 'Réserve de biosphère UNESCO',
-      'ilha.f4': "d'île à explorer",
-      'ilha.art.tag': 'Berlenga en Aquarelle',
-      'ilha.art.h2': "L'île qui inspire",
-      'ilha.art.sub': "Six moments immortalisés en aquarelle — la plage, l'arrivée, le port, la crique, la grotte et le Fort au crépuscule.",
-      'ilha.art.p1.label': '01 · La Plage', 'ilha.art.p1.title': 'Carreiro do <em>Mosteiro</em>',
-      'ilha.art.p2.label': "02 · L'Arrivée", 'ilha.art.p2.title': 'Le ferry <em>s\'approche</em>',
-      'ilha.art.p5.label': '03 · Le Port', 'ilha.art.p5.title': 'Bateaux à <em>l\'ancre</em>',
-      'ilha.art.p3.label': '04 · La Crique', 'ilha.art.p3.title': 'Eaux <em>turquoise</em>',
-      'ilha.art.p6.label': '05 · La Grotte', 'ilha.art.p6.title': 'La grotte <em>bleue</em>',
-      'ilha.art.p4.label': '06 · Le Fort', 'ilha.art.p4.title': 'São João Baptista <em>au crépuscule</em>',
-      'ilha.s1.tag': 'Accès',
-      'ilha.s1.title': 'Comment rejoindre Peniche',
-      'ilha.s1.sub': "Le point de départ vers Berlenga est la Marina de Peniche. Une fois à Peniche, la traversée avec Viamar vous amène à l'île en 45 minutes.",
-      'ilha.car.title': 'En voiture',
-      'ilha.car.body': "<strong>Depuis Lisbonne :</strong> ~1h30 via A8 → IC1 (sortie Peniche).<br><strong>Depuis Porto :</strong> ~3h via A1 → A8 → IC1.<br><strong>Depuis l'Espagne :</strong> ~2h30 depuis Badajoz via A6 → A8.",
-      'ilha.car.gps': "GPS : Marina de Peniche — Viamar Ferry Berlenga. Parking disponible à proximité.",
-      'ilha.car.mapsbtn': "Calculer l'itinéraire →",
-      'ilha.bus.title': 'En bus',
-      'ilha.bus.body': "<strong>Rede Expressos</strong> et <strong>FlixBus</strong> assurent des liaisons quotidiennes en autocar depuis Lisbonne jusqu'à Peniche, avec plusieurs départs dans la journée. Durée approximative : 2 heures.",
-      'ilha.bus.note': "L'arrêt de Peniche est à ~15 min à pied de la marina d'embarquement.",
-      'ilha.s2.tag': "Sur l'île",
-      'ilha.s2.title': 'Hébergement et restauration',
-      'ilha.s2.sub': "Berlenga a tout le nécessaire pour une visite inoubliable — sans le superflu. Les services sont délibérément limités pour protéger la réserve naturelle.",
-      'ilha.penso.label': 'Hébergement &amp; Restaurant',
-      'ilha.penso.name': 'Mesa da Ilha',
-      'ilha.penso.desc': "Le principal espace d'hébergement et de restauration de l'île. Chambres simples avec vue sur la mer et un restaurant proposant poissons et fruits de mer frais — s'endormir au son des vagues et se réveiller avec l'île pour soi. Ouverture saisonnière (juin à septembre).",
-      'ilha.penso.note': 'Réservations via la Mairie de Peniche : <a href="https://www.cm-peniche.pt" target="_blank" rel="noopener">cm-peniche.pt</a>',
-      'ilha.rest.label': 'Hébergement Historique',
-      'ilha.rest.name': 'Forte de São João Baptista',
-      'ilha.rest.desc': "La Pensão da AABerlenga fonctionne à l'intérieur de l'historique Forte de São João Baptista, construit au XVIIe siècle. Une expérience unique — dormir entre des murailles séculaires entourées par l'océan Atlantique. Ouverture saisonnière.",
-      'ilha.rest.note': 'Réservations et informations via la Mairie de Peniche : <a href="https://www.cm-peniche.pt" target="_blank" rel="noopener">cm-peniche.pt</a>',
-      'ilha.snack.label': 'Snack Bar',
-      'ilha.snack.name': 'Castelinho Snack Bar',
-      'ilha.snack.desc': "Repas légers, sandwichs, glaces, boissons et jus frais dans l'un des endroits les plus photogéniques de l'île — avec vue directe sur la Forteresse São João Baptista. L'arrêt idéal à mi-exploration.",
-      'ilha.snack.note': 'Terrasse extérieure avec vue panoramique. Ouverture saisonnière.',
-      'ilha.camp.label': 'Camping',
-      'ilha.camp.name': 'Camping',
-      'ilha.camp.desc': "La seule zone de camping autorisée de l'île. Expérience minimaliste sous le ciel étoilé de la réserve naturelle. Il est également possible de louer des socalcos — terrasses rocheuses surplombant la mer — pour une immersion encore plus profonde dans l'île.",
-      'ilha.camp.note': 'Réservations de socalcos et camping via l\'Office de Tourisme de Peniche : <a href="https://www.cm-peniche.pt" target="_blank" rel="noopener">cm-peniche.pt</a>',
-      'ilha.s3.tag': 'Réserve Naturelle',
-      'ilha.s3.title': "Code de conduite de l'île",
-      'ilha.s3.sub': "Berlenga est un écosystème fragile. Sa préservation est la responsabilité de chaque visiteur — y compris vous.",
-      'ilha.s3.intro': "L'île Berlenga est une Réserve Naturelle avec des règles d'accès et de comportement strictement définies. Leur respect est une condition pour préserver cet écosystème unique et assurer la continuité des visites. Le non-respect peut entraîner l'exclusion des futurs voyages avec Viamar.",
-      'ilha.rule1': '<strong>BerlengasPass obligatoire</strong> — à acquérir séparément sur berlengaspass.icnf.pt (jusqu\'à 3 € par personne).',
-      'ilha.rule2': "<strong>Interdiction de jeter des déchets</strong> — utilisez les poubelles désignées ou remportez vos déchets.",
-      'ilha.rule3': "<strong>Circuler uniquement sur les sentiers balisés</strong> — respectez la signalisation de protection de la flore.",
-      'ilha.rule4': "<strong>Camping sauvage interdit</strong> — le camping en dehors de la zone désignée est illégal dans la réserve.",
-      'ilha.rule5': "<strong>Max. 550 visiteurs simultanés</strong> — limite imposée par l'autorité compétente pour protéger l'écosystème.",
-      'ilha.rule6': "<strong>Ne pas nourrir les animaux</strong> — y compris les mouettes et autres oiseaux nicheurs.",
-      'ilha.rule7': "<strong>Respecter la faune et la flore</strong> — ne pas cueillir de plantes ni collecter d'échantillons géologiques ou minéraux.",
-      'ilha.rule8': "<strong>Musique forte interdite</strong> — préservez l'environnement naturel et le bien-être de tous les visiteurs.",
-      'ilha.cta.tag': 'Prêt à embarquer ?',
-      'ilha.cta.h2': 'Réservez votre traversée<br>vers Berlenga',
-      'ilha.cta.sub': 'Réservations 2027 ouvertes. Choisissez votre jour d\'été avant tout le monde.',
-      'ilha.cta.btn': 'Réserver maintenant →'
-    }
-  };
 
   // setLang + lang detection + switcher wiring handled by /i18n/loader.js
   // FareHarbor link language sync
@@ -1570,5 +1353,6 @@
 <script defer src="/_vercel/insights/script.js"></script>
 
 <script defer src="https://fareharbor.com/embeds/api/v1/?autolightframe=yes"></script>
+  <script defer src="/mobile-cta.js"></script>
 </body>
 </html>

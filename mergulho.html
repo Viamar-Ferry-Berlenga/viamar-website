@@ -2,6 +2,7 @@
 <html lang="pt-PT" data-lang="pt">
 <head>
   <meta charset="UTF-8">
+  <script src="/consent.js"></script>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFZJB37SGK"></script>
   <script>
@@ -21,12 +22,12 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('consent', window.__vConsent || 'revoke');
     fbq('init', '956111340728300');
     fbq('init', '1533625365142697');
     fbq('track', 'PageView');
     fbq('track', 'ViewContent', { content_name: 'Experiência de Mergulho', content_category: 'product_detail' });
   </script>
-  <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=956111340728300&ev=PageView&noscript=1"></noscript>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" >
   <title>Experiência de Mergulho na Berlenga | Viamar × Haliotis</title>
@@ -570,6 +571,48 @@
   
 
   
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
   <link rel="alternate" hreflang="pt-PT" href="https://viamar-berlenga.com/mergulho.html" >
   <link rel="alternate" hreflang="en" href="https://viamar-berlenga.com/en/mergulho.html" >
   <link rel="alternate" hreflang="es" href="https://viamar-berlenga.com/es/mergulho.html" >
@@ -601,7 +644,7 @@
       </div>
       <a href="https://fareharbor.com/embeds/book/viamar-berlenga/items/?full-items=yes&flow=738388" class="nav-cta" data-i18n="nav_book">Reservar agora →</a>
       <div class="nav-lang-drop" id="langDrop">
-        <button class="lang-drop-btn" id="langDropBtn" aria-label="Idioma">
+        <button class="lang-drop-btn" id="langDropBtn" title="Idioma">
           <span id="langDropLabel">PT</span>
           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
@@ -770,6 +813,10 @@
         <a href="/historia.html" data-i18n="nav_hist">História</a>
         <a href="/#horarios" data-i18n="nav_schedules">Horários</a>
         <a href="https://berlengaspass.icnf.pt" target="_blank" rel="noopener" data-i18n="nav.berlengaspass">BerlengasPass</a>
+        <a href="/horarios.html" data-i18n="ft.horarios">Horários e preços</a>
+        <a href="/grutas.html" data-i18n="ft.grutas">Grutas</a>
+        <a href="/travessia.html" data-i18n="ft.travessia">A travessia</a>
+        <a href="/mergulho.html" data-i18n="ft.mergulho">Mergulho</a>
       </div>
       <div class="ft-col">
         <span class="ft-col-label" data-i18n="ft.contact_label">Contacto</span>
@@ -856,5 +903,6 @@
 
   <script defer src="/_vercel/insights/script.js"></script>
   <script defer src="https://fareharbor.com/embeds/api/v1/?autolightframe=yes"></script>
+  <script defer src="/mobile-cta.js"></script>
 </body>
 </html>

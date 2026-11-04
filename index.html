@@ -2,6 +2,7 @@
 <html lang="pt-PT" data-lang="pt">
 <head>
   <meta charset="UTF-8">
+  <script src="/consent.js"></script>
   
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFZJB37SGK"></script>
   <script>
@@ -22,11 +23,11 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('consent', window.__vConsent || 'revoke');
     fbq('init', '956111340728300');
     fbq('init', '1533625365142697');
     fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=956111340728300&ev=PageView&noscript=1"></noscript>
   
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" >
@@ -1760,6 +1761,48 @@
   
 
   
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
   <link rel="alternate" hreflang="pt-PT" href="https://viamar-berlenga.com/" >
   <link rel="alternate" hreflang="en" href="https://viamar-berlenga.com/en/" >
   <link rel="alternate" hreflang="es" href="https://viamar-berlenga.com/es/" >
@@ -1770,9 +1813,9 @@
 
   
   <div class="ann-bar">
-    <span data-i18n="ann_main">Obrigado por 2026! <strong>Reservas 2027 já abertas.</strong></span>
+    <span data-i18n="ann_main">Reservas 2027 abertas · <strong>desde 19,90 €</strong></span>
     <span class="sep">·</span>
-    <a href="https://fareharbor.com/embeds/book/viamar-berlenga/items/?full-items=yes&flow=738388" data-i18n="ann_cta" style="color:var(--navy);font-weight:800;text-decoration:underline;text-underline-offset:2px;margin-left:4px;">Garante já o teu lugar!</a>
+    <a href="https://fareharbor.com/embeds/book/viamar-berlenga/items/?full-items=yes&flow=738388" data-i18n="ann_cta" style="color:var(--navy);font-weight:800;text-decoration:underline;text-underline-offset:2px;margin-left:4px;">Reservar agora</a>
   </div>
 
   
@@ -1808,7 +1851,7 @@
         </a>
       </div>
       <div class="nav-lang-drop" id="langDrop">
-        <button class="lang-drop-btn" id="langDropBtn" aria-label="Idioma">
+        <button class="lang-drop-btn" id="langDropBtn" title="Idioma">
           <span id="langDropLabel">PT</span>
           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
@@ -1938,8 +1981,8 @@
       <div class="tb-item">
         <svg class="tb-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
         <div class="tb-text">
-          <strong data-i18n="tb2t">45 min de travessia</strong>
-          <span data-i18n="tb2s">Marina de Peniche</span>
+          <strong data-i18n="tb2t">5 horas na ilha</strong>
+          <span data-i18n="tb2s">Em todas as viagens</span>
         </div>
       </div>
       <button type="button" class="tb-item tb-item--btn" id="flex-trigger" aria-haspopup="dialog" aria-controls="flex-modal" aria-expanded="false">
@@ -2261,7 +2304,7 @@
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
         <span data-i18n="sched.note">As horas indicadas são horas de partida. A travessia dura aproximadamente 45 minutos.</span>
       </p>
-      <p style="margin-top:14px"><a href="/horarios.html" style="color:var(--aqua);font-weight:700;text-decoration:underline;text-underline-offset:3px;font-size:14px" data-i18n="sched.all">Ver todos os horários e preços, data a data →</a></p>
+      <p style="margin-top:14px"><a href="/horarios.html" style="color:var(--aqua-ink);font-weight:700;text-decoration:underline;text-underline-offset:3px;font-size:14px" data-i18n="sched.all">Ver todos os horários e preços, data a data →</a></p>
     </div>
   </section>
 
@@ -2326,6 +2369,10 @@
         <a href="/ilha.html" data-i18n="nav_island">A Ilha</a>
         <a href="#horarios" data-i18n="nav_schedules">Horários</a>
         <a href="https://berlengaspass.icnf.pt" target="_blank" rel="noopener" data-i18n="nav.berlengaspass">BerlengasPass</a>
+        <a href="/horarios.html" data-i18n="ft.horarios">Horários e preços</a>
+        <a href="/grutas.html" data-i18n="ft.grutas">Grutas</a>
+        <a href="/travessia.html" data-i18n="ft.travessia">A travessia</a>
+        <a href="/mergulho.html" data-i18n="ft.mergulho">Mergulho</a>
       </div>
       <div class="ft-col">
         <span class="ft-col-label" data-i18n="ft.contact_label">Contacto</span>
@@ -2349,16 +2396,6 @@
   </footer>
 
   
-  <div class="cookie-banner" id="cookieBanner">
-    <div class="cookie-text">
-      <strong data-i18n="ck_title">Privacidade e Cookies</strong>
-      <p data-i18n="ck_txt">Utilizamos cookies essenciais para o funcionamento do site e cookies analíticos para melhorar a experiência. Consulte a nossa <a href="/termos.html">política de privacidade</a>.</p>
-    </div>
-    <div class="cookie-actions">
-      <button class="cookie-accept" onclick="setCookieChoice('all')" data-i18n="ck_accept">Aceitar tudo</button>
-      <button class="cookie-reject" onclick="setCookieChoice('essential')" data-i18n="ck_reject">Só essenciais</button>
-    </div>
-  </div>
 
 
   <div class="cta-sticky" id="ctaSticky">
@@ -2395,336 +2432,6 @@
 
   <script defer src="/i18n/loader.js"></script>
   <script>
-    // === LEGACY INLINE DICT — REMOVED in i18n refactor. See /i18n/*.json ===
-    const _legacyDict = {
-      pt: {
-        ann_main: "Obrigado por 2026! <strong>Reservas 2027 já abertas.</strong>",
-        ann_season: "Época 2027 abre a 8 de Maio —",
-        ann_cta: "Garante já o teu lugar!",
-        nav_schedules: "Horários", nav_packages: "Bilhetes", nav_island: "A Ilha",
-        nav_book: "Reservar agora →",
-        badge: "Época 2026 encerrada",
-        construction_label: "Website em construção",
-        h1_line1: "Obrigado por tudo.",
-        h1_line2: "Até 202<span class=\"yr-roll\"><span class=\"yr-track\" aria-hidden=\"true\"><span>6</span><span>7</span></span><span class=\"yr-sr\">7</span></span>!",
-        hero_sub: "Obrigado a quem embarcou connosco. O próximo verão já se reserva.",
-        hero_price: "19,90 €", stat1: "passageiros/ano", stat2: "Google Reviews", stat3: "anos de travessias", stat4: "desde",
-        cta_book: "Reservar para 2027", cta_island: "Obter BerlengasPass",
-        overlay_soon: "Em Breve",
-        card_title: "Reservar travessia", card_sub: "Escolhe data · Confirma · Embarca",
-        avail_txt: "Disponível para reserva", spots: "Poucos lugares",
-        select_date: "Seleciona data no próximo passo →", select_type: "Ida e Volta (recomendado)",
-        adults: "Adultos", children: "Crianças",
-        price_detail: "2 Adultos × 19,90€", total: "Total",
-        btn_confirm: "Confirmar reserva",
-        bc_footer: "Pagamento seguro · Cancelamento gratuito 24h antes",
-        wa_text: "Fale connosco",
-        "pkg.tag": "O que queres fazer?", "pkg.h2": "Escolhe a tua experiência", "pkg.sub": "Desde a travessia simples até atividades na ilha — temos algo para cada aventureiro.",
-        "rev.tag": "Avaliações reais", "rev.h2": "O que dizem os nossos passageiros", "rev.sub": "Mais de 900 avaliações no Google. Escrito por famílias, casais e grupos que fizeram a travessia connosco.",
-        nav_pack: "Bilhetes", nav_hist: "História", menu_terms: "Termos e Condições",
-        tb1t: "Operador Licenciado IMT", tb1s: "Autoridade Marítima Nacional",
-        tb2t: "45 min de travessia", tb2s: "Marina de Peniche",
-        tb3s: "Trip Protection",
-        tb4t: "Cancelamento Gratuito", tb4s: "Até 24h antes da partida",
-        isl_pill: "Reserva Natural",
-        isl_h2: 'Uma ilha que <em>não se esquece</em>',
-        isl_desc: "A Berlenga é a única ilha habitada do arquipélago das Berlengas — Reserva da Biosfera da UNESCO desde 2011. Águas turquesa, falésias dramáticas, grutas marinhas e uma biodiversidade única em Portugal.",
-        isl_f1: "de travessia desde Peniche", isl_f2: "de ilha para explorar", isl_f3: "Reserva da Biosfera", isl_f4: "Fortaleza histórica",
-        isl_cta: "Reservar agora →",
-        gal1: "Farol de Peniche", gal2: "Vista panorâmica", gal3: "A bordo", gal4: "Partida de Peniche", gal5: "Praia da Berlenga",
-        r_label: "945 avaliações", r_google: "Google Reviews",
-        ck_title: "Privacidade e Cookies",
-        ck_txt: 'Utilizamos cookies essenciais para o funcionamento do site e cookies analíticos para melhorar a experiência. Consulte a nossa <a href="/termos.html">política de privacidade</a>.',
-        ck_accept: "Aceitar tudo", ck_reject: "Só essenciais",
-        ft_copy: '© 2026 Viamar. Todos os direitos reservados. · Powered by <a href="https://atlas-web.pt" target="_blank" rel="noopener" class="ft-atlas">ATLAS</a>',
-        "bw.island": "Visita à Ilha", "bw.oneway": "Só Ida", "bw.return_trip": "Regresso",
-        "bw.date": "Data da viagem", "bw.departure_time": "Horário de partida",
-        "sched.tag": "Horários 2027", "sched.h2": "Saídas regulares de Peniche",
-        "sched.sub": "Os fins-de-semana de verão esgotam semanas antes. Reserva com antecedência.",
-        "sched.d1": "8 Maio — 4 Junho 2027", "sched.d2": "5 Junho — 10 Julho 2027",
-        "sched.d3": "11 Julho — 6 Setembro 2027", "sched.d4": "7 — 30 Setembro 2027",
-        "sched.s_low": "Época Baixa", "sched.s_mid": "Época Média", "sched.s_high": "Época Alta",
-        "sched.daily": "Todos os dias",
-        "sched.weekday_row": "Dias de semana<span>Seg — Sex</span>",
-        "sched.weekend_row": "Fim de semana<span>Sáb + Dom</span>",
-        "sched.oneway_row": "Só ida<span>ou pernoita</span>", "sched.oneway_we": "Só ida<span>Sáb + Dom</span>", "sched.legend_mid": "Época Média — 3 saídas ao fim de semana", "sched.legend_high": "Época Alta — 3 saídas/dia",
-        "dep.tag": "Ponto de partida", "dep.h2": "Partimos de Peniche, cidade à beira-mar",
-        "dep.desc": "Embarque na Marina de Peniche, junto à Fortaleza. Aconselhamos chegar 45 minutos antes da partida. Bilhetes de regresso e passeio às grutas embarcam na Berlenga. Existe parque de estacionamento nas imediações.",
-        "dep.addr": "Marina de Peniche — 39°21′N 9°22′W",
-        "dep.book": "Reservar travessia →",
-        "faq.tag": "Perguntas Frequentes",
-        "faq.h2": "Tudo o que precisa de saber",
-        "faq.q1": "O que devo levar para uma viagem à Ilha da Berlenga?",
-        "faq.a1": "O essencial: protector solar, chapéu, óculos de sol e uma garrafa de água para se manter hidratado. Roupa confortável, um casaco leve (de preferência impermeável), calçado adequado e uma toalha. Uma powerbank para o telemóvel também é aconselhável caso seja grande utilizador (a rede na ilha é bastante fraca ou inexistente).",
-        "faq.q2": "Posso cancelar ou alterar a minha reserva?",
-        "faq.a2": 'Sim! Pedimos que nos informe com pelo menos 72 horas de antecedência. Contacte-nos por telefone ou email: 911 001 099 | <a href="mailto:info@viamar.pt">info@viamar.pt</a>.',
-        "faq.q3": "O que posso fazer na Ilha da Berlenga ao adquirir a passagem?",
-        "faq.a3": '<ul><li>Trilhos pedestres e vistas deslumbrantes;</li><li>Visitar o Forte de São João Baptista;</li><li>Praia de águas cristalinas ou almoço no restaurante da ilha; snack e bebida no Castelinho com vista fantástica;</li><li>Observação de aves e flora;</li><li>Opcionalmente: mergulho com garrafa, grutas em barco de fundo de vidro ou snorkeling (ver página "pacotes").</li></ul>',
-        "faq.q4": "Onde fica o local de embarque da VIAMAR para a Ilha da Berlenga?",
-        "faq.a4": '<p>Marina de Peniche, junto à Fortaleza de Peniche.</p><ul><li>Chegue à Zona de embarque de Passageiros e Bagagens (conforme indicado no mapa);</li><li>Identifique o local pela bandeira de CHECK-IN ou por um membro da equipa VIAMAR devidamente uniformizado.</li></ul><p>Aconselha-se a chegada 45 minutos antes da partida (grupos: 1 hora de antecedência).</p><p><strong>Exceções:</strong> os bilhetes de regresso (Berlenga → Peniche) e o passeio às grutas embarcam já na Ilha da Berlenga.</p>',
-        "faq.q5": "Posso comprar bilhete no dia da viagem?",
-        "faq.a5": "Sim, sujeito a disponibilidade. Em julho e agosto (época alta) a procura é muito elevada — recomendamos a reserva antecipada para garantir o seu lugar.",
-        "faq.q6": "Que meios de pagamento são aceites?",
-        "faq.a6": '<p><strong>Online:</strong> Visa, Mastercard, Apple Pay, MB Way, PayPal, Google Pay, Linkpay ou transferência bancária (só grupos).</p><p><strong>Ao balcão:</strong> Visa, Mastercard, Apple Pay, MB Way ou numerário.</p><p>Grupos: enviar comprovativo para <a href="mailto:info@viamar.pt">info@viamar.pt</a> até 48h antes do embarque.</p>',
-        "faq.q7": "Posso levar bagagem a bordo?",
-        "faq.a7": '<p>Sim — mochilas e malas pequenas são bem-vindas. Para volumes de grandes dimensões, contacte previamente: 911 001 099.</p><p>Limite: 2 volumes por pessoa + 1 bagagem de mão.</p>',
-        "faq.q8": "Quanto tempo posso permanecer na Ilha da Berlenga?",
-        "faq.a8": "Sempre 5 horas. Todas as viagens da Viamar dão 5 horas em terra — 11h→17h na época baixa, 10h→16h ou 12h→18h na época alta e nos fins de semana. Não é um máximo: é a estadia de todas as travessias, e é a mais longa da rota.",
-        "faq.q9": "É permitido acampar na Ilha da Berlenga?",
-        "faq.a9": 'O campismo selvagem não é permitido. Existe uma área autorizada no Parque de Campismo da Berlenga, com reserva prévia obrigatória. Para mais informações: <a href="https://www.cm-peniche.pt/visitar/turismo" target="_blank" rel="noopener">Posto de Turismo de Peniche</a>.',
-        "faq.q10": "Quais são as restrições da Reserva Natural da Ilha da Berlenga?",
-        "faq.a10": '<ul><li>Campismo só na área designada com reserva prévia;</li><li>Máximo de 550 visitantes simultâneos;</li><li>Registo obrigatório no BerlengasPass e taxa de acesso (adultos 3€; descontos 6–18 anos e maiores de 65);</li><li>Circular sempre nos trilhos e respeitar a sinalética;</li><li>Depositar o lixo nos locais próprios ou levá-lo consigo;</li><li>Não apanhar plantas nem recolher amostras geológicas;</li><li>Não alimentar os animais;</li><li>Música alta é proibida.</li></ul>',
-        "faq.q11": "Existem casas de banho a bordo?",
-        "faq.a11": "Sim, a embarcação dispõe de 2 casas de banho — simples e práticas. A tripulação assegura que se mantêm limpas e em condições de uso.",
-        "faq.q12": "É seguro viajar com crianças pequenas ou passageiros idosos?",
-        "faq.a12": "Sim, e a nossa embarcação é uma das preferidas por famílias com crianças pequenas e passageiros idosos. O barco foi projectado especificamente para o conforto e a segurança, com lugares próprios para passageiros com dificuldades motoras e bebés de colo. Crianças devem estar sempre acompanhadas pelos responsáveis.",
-      },
-      es: {
-        ann_main: "¡Gracias por 2026! <strong>Reservas 2027 ya abiertas.</strong>", ann_season: "La temporada 2027 abre el 8 de mayo —", ann_cta: "¡Reserva tu plaza!",
-        nav_book: "Reservar →", badge: "Temporada 2026 cerrada",
-        h1_line1: "Gracias por todo.", h1_line2: "¡Hasta 202<span class=\"yr-roll\"><span class=\"yr-track\" aria-hidden=\"true\"><span>6</span><span>7</span></span><span class=\"yr-sr\">7</span></span>!",
-        hero_sub: "Gracias a todos los que navegaron con nosotros. El próximo verano ya se puede reservar.",
-        hero_price: "19,90 €", stat1: "pasajeros/año", stat2: "Google Reviews", stat3: "años de travesías", stat4: "desde",
-        cta_book: "Reservar para 2027", cta_island: "Obtener BerlengasPass", overlay_soon: "Próximamente",
-        card_title: "Reservar travesía", card_sub: "Elige fecha · Confirma · Embarca",
-        avail_txt: "Disponible para reserva", spots: "Pocas plazas",
-        select_date: "Selecciona fecha en el siguiente paso →", select_type: "Ida y vuelta (recomendado)",
-        adults: "Adultos", children: "Niños", price_detail: "2 Adultos × 19,90€", total: "Total",
-        btn_confirm: "Confirmar reserva", bc_footer: "Pago seguro · Cancelación gratuita 24h antes",
-        wa_text: "Hablemos",
-        "pkg.tag": "¿Qué quieres hacer?", "pkg.h2": "Elige tu experiencia", "pkg.sub": "Desde una travesía simple hasta actividades en la isla — tenemos algo para cada aventurero.",
-        "rev.tag": "Opiniones reales", "rev.h2": "Lo que dicen nuestros pasajeros", "rev.sub": "Más de 900 opiniones en Google. Escritas por familias, parejas y grupos que cruzaron con nosotros.",
-        nav_pack: "Billetes", nav_hist: "Historia", nav_island: "La Isla", menu_terms: "Términos y Condiciones",
-        tb1t: "Operador Autorizado IMT", tb1s: "Autoridad Marítima Nacional",
-        tb2t: "45 min de travesía", tb2s: "Marina de Peniche",
-        tb3s: "Trip Protection", tb4t: "Cancelación Gratuita", tb4s: "Hasta 24h antes de la salida",
-        isl_pill: "Reserva Natural", isl_h2: 'Una isla que <em>no se olvida</em>',
-        isl_desc: "Berlenga es la única isla habitada del archipiélago — Reserva de la Biosfera UNESCO desde 2011. Aguas turquesas, acantilados dramáticos, cuevas marinas y una biodiversidad única en Portugal.",
-        isl_f1: "de travesía desde Peniche", isl_f2: "de isla para explorar", isl_f3: "Reserva de la Biosfera", isl_f4: "Fortaleza histórica",
-        isl_cta: "Reservar →",
-        gal1: "Faro de Peniche", gal2: "Vista panorámica", gal3: "A bordo", gal4: "Salida de Peniche", gal5: "Playa de Berlenga",
-        r_label: "945 opiniones", r_google: "Google Reviews",
-        ck_title: "Privacidad y Cookies", ck_txt: 'Utilizamos cookies esenciales para el funcionamiento del sitio y cookies analíticas para mejorar la experiencia. Consulta nuestra <a href="/termos.html">política de privacidad</a>.',
-        ck_accept: "Aceptar todo", ck_reject: "Solo esenciales",
-        ft_copy: '© 2026 Viamar. Todos los derechos reservados. · Powered by <a href="https://atlas-web.pt" target="_blank" rel="noopener" class="ft-atlas">ATLAS</a>',
-        construction_label: "Sitio web en construcción",
-        "bw.island": "Visita a la Isla", "bw.oneway": "Solo Ida", "bw.return_trip": "Regreso",
-        "bw.date": "Fecha del viaje", "bw.departure_time": "Horario de salida",
-        "sched.tag": "Horarios 2027", "sched.h2": "Salidas regulares desde Peniche",
-        "sched.sub": "Los fines de semana de verano se agotan semanas antes. Reserva con antelación.",
-        "sched.d1": "8 Mayo — 4 Junio 2027", "sched.d2": "5 Junio — 10 Julio 2027",
-        "sched.d3": "11 Julio — 6 Septiembre 2027", "sched.d4": "7 — 30 Septiembre 2027",
-        "sched.s_low": "Temporada Baja", "sched.s_mid": "Temporada Media", "sched.s_high": "Temporada Alta",
-        "sched.daily": "Todos los días",
-        "sched.weekday_row": "Días de semana<span>Lun — Vie</span>",
-        "sched.weekend_row": "Fin de semana<span>Sáb + Dom</span>",
-        "sched.oneway_row": "Solo ida<span>o pernocta</span>", "sched.oneway_we": "Solo ida<span>Sáb + Dom</span>", "sched.legend_mid": "Temporada Media — 3 salidas los fines de semana", "sched.legend_high": "Temporada Alta — 3 salidas/día",
-        "dep.tag": "Punto de salida", "dep.h2": "Salimos desde Peniche, ciudad frente al mar",
-        "dep.desc": "Embarque en la Marina de Peniche, junto a la Fortaleza. Recomendamos llegar 45 minutos antes de la salida. Los billetes de regreso y el paseo a las grutas embarcan en la Berlenga. Hay aparcamiento disponible en las inmediaciones.",
-        "dep.addr": "Marina de Peniche — 39°21′N 9°22′O",
-        "dep.book": "Reservar travesía →",
-        "faq.tag": "Preguntas Frecuentes",
-        "faq.h2": "Todo lo que necesita saber",
-        "faq.q1": "¿Qué debo llevar para un viaje a la Isla Berlenga?",
-        "faq.a1": "Lo esencial: protector solar, sombrero, gafas de sol y una botella de agua. Ropa cómoda, una chaqueta ligera (preferiblemente impermeable), calzado adecuado y una toalla. Un cargador portátil también es recomendable, ya que la cobertura en la isla es muy débil o inexistente.",
-        "faq.q2": "¿Puedo cancelar o cambiar mi reserva?",
-        "faq.a2": '¡Sí! Por favor, infórmenos con al menos 72 horas de antelación. Contacte con nosotros: 911 001 099 | <a href="mailto:info@viamar.pt">info@viamar.pt</a>.',
-        "faq.q3": "¿Qué puedo hacer en la Isla Berlenga con mi billete de ferry?",
-        "faq.a3": '<ul><li>Rutas de senderismo con vistas impresionantes;</li><li>Visitar el Forte de São João Baptista;</li><li>Playa de aguas cristalinas o almuerzo en el restaurante de la isla; snack en el Castelinho con vistas panorámicas;</li><li>Avistamiento de aves y flora;</li><li>Opciones adicionales: buceo, grutas en barco de fondo de cristal o snorkel (ver página "paquetes").</li></ul>',
-        "faq.q4": "¿Dónde está el punto de embarque de VIAMAR para la Isla Berlenga?",
-        "faq.a4": '<p>Marina de Peniche, junto a la Fortaleza de Peniche.</p><ul><li>Diríjase a la Zona de embarque de Pasajeros y Equipaje (según el mapa);</li><li>Localice el lugar por la bandera de CHECK-IN o por un miembro del equipo VIAMAR uniformado.</li></ul><p>Recomendamos llegar al menos 45 minutos antes de la salida (grupos: 1 hora).</p><p><strong>Excepciones:</strong> los billetes de regreso (Berlenga → Peniche) y el paseo a las grutas embarcan en la propia Isla Berlenga.</p>',
-        "faq.q5": "¿Puedo comprar el billete el día del viaje?",
-        "faq.a5": "Sí, sujeto a disponibilidad. En julio y agosto la demanda es muy alta — recomendamos reservar con antelación para asegurar su plaza.",
-        "faq.q6": "¿Qué métodos de pago se aceptan?",
-        "faq.a6": '<p><strong>Online:</strong> Visa, Mastercard, Apple Pay, MB Way, PayPal, Google Pay, Linkpay o transferencia bancaria (solo grupos).</p><p><strong>En mostrador:</strong> Visa, Mastercard, Apple Pay, MB Way o efectivo.</p><p>Grupos: justificante a <a href="mailto:info@viamar.pt">info@viamar.pt</a> hasta 48h antes del embarque.</p>',
-        "faq.q7": "¿Puedo llevar equipaje a bordo?",
-        "faq.a7": '<p>Sí — mochilas y bolsas pequeñas son bienvenidas. Para volúmenes grandes, contáctenos previamente: 911 001 099.</p><p>Límite: 2 bultos por persona + 1 bolso de mano.</p>',
-        "faq.q8": "¿Cuánto tiempo puedo permanecer en la Isla Berlenga?",
-        "faq.a8": "Siempre 5 horas. Todas las travesías de Viamar dan 5 horas en tierra — 11h→17h en temporada baja, 10h→16h o 12h→18h en temporada alta y fines de semana. No es un máximo: es la estancia de todas las travesías, y la más larga de la ruta.",
-        "faq.q9": "¿Está permitido acampar en la Isla Berlenga?",
-        "faq.a9": 'El camping salvaje no está permitido. Existe un área autorizada en el Parque de Camping de Berlenga, con reserva previa obligatoria. Más información: <a href="https://www.cm-peniche.pt/visitar/turismo" target="_blank" rel="noopener">Oficina de Turismo de Peniche</a>.',
-        "faq.q10": "¿Cuáles son las restricciones de la Reserva Natural de la Isla Berlenga?",
-        "faq.a10": '<ul><li>Camping solo en el área designada con reserva previa;</li><li>Máximo de 550 visitantes simultáneos;</li><li>Registro obligatorio en BerlengasPass y tasa de acceso (adultos 3€; descuentos 6–18 años y mayores de 65);</li><li>Circular siempre por los senderos y respetar la señalización;</li><li>Depositar residuos en los lugares apropiados o llevárselos;</li><li>No recoger plantas ni muestras geológicas;</li><li>No alimentar a los animales;</li><li>La música alta está prohibida.</li></ul>',
-        "faq.q11": "¿Hay aseos a bordo?",
-        "faq.a11": "Sí, la embarcación dispone de 2 aseos a bordo — sencillos y funcionales. La tripulación se asegura de mantenerlos limpios.",
-        "faq.q12": "¿Es seguro viajar con niños pequeños o pasajeros mayores?",
-        "faq.a12": "Sí, y nuestra embarcación es una de las preferidas por familias y personas mayores. El barco fue diseñado específicamente para este trayecto con la seguridad y el confort como prioridades. Los niños deben ir siempre acompañados de un adulto responsable. Los pasajeros que necesiten asistencia especial pueden informarnos con antelación.",
-      },
-      fr: {
-        ann_main: "Merci pour 2026 ! <strong>Réservations 2027 ouvertes.</strong>", ann_season: "Saison 2027 ouverte le 8 mai —", ann_cta: "Réservez votre place !",
-        nav_book: "Réserver →", badge: "Saison 2026 terminée",
-        h1_line1: "Merci pour tout.", h1_line2: "À bientôt en 202<span class=\"yr-roll\"><span class=\"yr-track\" aria-hidden=\"true\"><span>6</span><span>7</span></span><span class=\"yr-sr\">7</span></span>&nbsp;!",
-        hero_sub: "Merci à tous ceux qui ont embarqué avec nous. L'été prochain est déjà réservable.",
-        hero_price: "19,90 €", stat1: "passagers/an", stat2: "Google Reviews", stat3: "ans de traversées", stat4: "à partir de",
-        cta_book: "Réserver pour 2027", cta_island: "Obtenir BerlengasPass", overlay_soon: "Bientôt",
-        card_title: "Réserver la traversée", card_sub: "Choisissez · Confirmez · Embarquez",
-        avail_txt: "Disponible à la réservation", spots: "Peu de places",
-        select_date: "Sélectionnez la date à l'étape suivante →", select_type: "Aller-retour (recommandé)",
-        adults: "Adultes", children: "Enfants", price_detail: "2 Adultes × 19,90€", total: "Total",
-        btn_confirm: "Confirmer la réservation", bc_footer: "Paiement sécurisé · Annulation gratuite 24h avant",
-        wa_text: "Contactez-nous",
-        "pkg.tag": "Que souhaitez-vous faire ?", "pkg.h2": "Choisissez votre expérience", "pkg.sub": "De la simple traversée aux activités sur l'île — nous avons quelque chose pour chaque aventurier.",
-        "rev.tag": "Avis authentiques", "rev.h2": "Ce que disent nos passagers", "rev.sub": "Plus de 900 avis sur Google. Rédigés par des familles, des couples et des groupes ayant traversé avec nous.",
-        nav_pack: "Billets", nav_hist: "Histoire", nav_island: "L'Île", menu_terms: "Conditions générales",
-        tb1t: "Opérateur agréé IMT", tb1s: "Autorité Maritime Nationale",
-        tb2t: "45 min de traversée", tb2s: "Marina de Peniche",
-        tb3s: "Trip Protection", tb4t: "Annulation gratuite", tb4s: "Jusqu'à 24h avant le départ",
-        isl_pill: "Réserve Naturelle", isl_h2: "Une île qu'on <em>n'oublie jamais</em>",
-        isl_desc: "Berlenga est la seule île habitée de l'archipel des Berlengas — Réserve de biosphère UNESCO depuis 2011. Eaux turquoise, falaises spectaculaires, grottes marines et une biodiversité unique au Portugal.",
-        isl_f1: "de traversée depuis Peniche", isl_f2: "d'île à explorer", isl_f3: "Réserve de biosphère", isl_f4: "Forteresse historique",
-        isl_cta: "Réserver →",
-        gal1: "Phare de Peniche", gal2: "Vue panoramique", gal3: "À bord", gal4: "Départ de Peniche", gal5: "Plage de Berlenga",
-        r_label: "945 avis", r_google: "Google Reviews",
-        ck_title: "Confidentialité & Cookies", ck_txt: 'Nous utilisons des cookies essentiels au fonctionnement du site et des cookies analytiques pour améliorer votre expérience. Consultez notre <a href="/termos.html">politique de confidentialité</a>.',
-        ck_accept: "Tout accepter", ck_reject: "Essentiels uniquement",
-        ft_copy: '© 2026 Viamar. Tous droits réservés. · Powered by <a href="https://atlas-web.pt" target="_blank" rel="noopener" class="ft-atlas">ATLAS</a>',
-        construction_label: "Site en construction",
-        "bw.island": "Visite de l'Île", "bw.oneway": "Aller simple", "bw.return_trip": "Retour",
-        "bw.date": "Date du voyage", "bw.departure_time": "Horaire de départ",
-        "sched.tag": "Horaires 2027", "sched.h2": "Départs réguliers depuis Peniche",
-        "sched.sub": "Les week-ends d'été se réservent des semaines à l'avance. Réservez tôt.",
-        "sched.d1": "8 Mai — 4 Juin 2027", "sched.d2": "5 Juin — 10 Juillet 2027",
-        "sched.d3": "11 Juillet — 6 Septembre 2027", "sched.d4": "7 — 30 Septembre 2027",
-        "sched.s_low": "Basse Saison", "sched.s_mid": "Saison Intermédiaire", "sched.s_high": "Haute Saison",
-        "sched.daily": "Tous les jours",
-        "sched.weekday_row": "Jours de semaine<span>Lun — Ven</span>",
-        "sched.weekend_row": "Week-end<span>Sam + Dim</span>",
-        "sched.oneway_row": "Aller simple<span>ou nuitée</span>", "sched.oneway_we": "Aller simple<span>Sam + Dim</span>", "sched.legend_mid": "Moyenne Saison — 3 départs le week-end", "sched.legend_high": "Haute Saison — 3 départs/jour",
-        "dep.tag": "Point de départ", "dep.h2": "Nous partons de Peniche, ville en bord de mer",
-        "dep.desc": "Embarquement à la Marina de Peniche, près de la Forteresse. Nous recommandons d'arriver 45 minutes avant le départ. Les billets retour et la visite des grottes embarquent sur la Berlenga. Un parking est disponible à proximité.",
-        "dep.addr": "Marina de Peniche — 39°21′N 9°22′O",
-        "dep.book": "Réserver la traversée →",
-        "faq.tag": "Questions Fréquentes",
-        "faq.h2": "Tout ce que vous devez savoir",
-        "faq.q1": "Que dois-je apporter pour un voyage à l'Île Berlenga ?",
-        "faq.a1": "L\'essentiel : crème solaire, chapeau, lunettes de soleil et une bouteille d\'eau. Des vêtements confortables, une veste légère (de préférence imperméable), des chaussures adaptées et une serviette. Une batterie externe est conseillée car le réseau mobile sur l\'île est très faible ou inexistant.",
-        "faq.q2": "Puis-je annuler ou modifier ma réservation ?",
-        "faq.a2": 'Oui ! Merci de nous informer au moins 72 heures avant l\'embarquement. Contactez-nous par téléphone ou email : 911 001 099 | <a href="mailto:info@viamar.pt">info@viamar.pt</a>.',
-        "faq.q3": "Que puis-je faire sur l'Île Berlenga avec mon billet de ferry ?",
-        "faq.a3": '<ul><li>Randonnées pédestres avec des vues à couper le souffle ;</li><li>Visiter le Fort São João Baptista ;</li><li>Plages aux eaux cristallines ou déjeuner au restaurant de l\'île ; snack au Castelinho avec vue panoramique ;</li><li>Observation des oiseaux et de la flore ;</li><li>Options supplémentaires : plongée, grottes en bateau à fond de verre ou snorkeling (voir page "forfaits").</li></ul>',
-        "faq.q4": "Où se trouve le point d'embarquement VIAMAR pour l'Île Berlenga ?",
-        "faq.a4": '<p>Marina de Peniche, à côté de la Forteresse de Peniche.</p><ul><li>Rejoignez la Zone d\'embarquement Passagers et Bagages (voir la carte) ;</li><li>Repérez le drapeau CHECK-IN ou un membre de l\'équipe VIAMAR en uniforme.</li></ul><p>Nous recommandons d\'arriver au moins 45 minutes avant le départ (groupes : 1 heure).</p><p><strong>Exceptions :</strong> les billets retour (Berlenga → Peniche) et la visite des grottes embarquent directement sur l\'Île Berlenga.</p>',
-        "faq.q5": "Puis-je acheter un billet le jour du voyage ?",
-        "faq.a5": "Oui, sous réserve de disponibilité. En juillet et août, la demande est très élevée — nous vous recommandons de réserver à l\'avance pour garantir votre place.",
-        "faq.q6": "Quels modes de paiement sont acceptés ?",
-        "faq.a6": '<p><strong>En ligne :</strong> Visa, Mastercard, Apple Pay, MB Way, PayPal, Google Pay, Linkpay ou virement bancaire (groupes uniquement).</p><p><strong>Au guichet :</strong> Visa, Mastercard, Apple Pay, MB Way ou espèces.</p><p>Groupes : justificatif à <a href="mailto:info@viamar.pt">info@viamar.pt</a> au moins 48h avant l\'embarquement.</p>',
-        "faq.q7": "Puis-je apporter des bagages à bord ?",
-        "faq.a7": '<p>Oui — sacs à dos et petits bagages sont les bienvenus. Pour les volumes importants, contactez-nous à l\'avance : 911 001 099.</p><p>Limite : 2 bagages par personne + 1 petit bagage à main.</p>',
-        "faq.q8": "Combien de temps puis-je rester sur l'Île Berlenga ?",
-        "faq.a8": "Toujours 5 heures. Chaque traversée Viamar donne 5 heures à terre — 11h→17h en basse saison, 10h→16h ou 12h→18h en haute saison et le week-end. Ce n\'est pas un maximum : c\'est le séjour de toutes les traversées, et le plus long de la liaison.",
-        "faq.q9": "Le camping est-il autorisé sur l'Île Berlenga ?",
-        "faq.a9": 'Le camping sauvage n\'est pas autorisé. Il existe une zone autorisée au Camping de Berlenga, avec réservation préalable obligatoire. Plus d\'informations : <a href="https://www.cm-peniche.pt/visitar/turismo" target="_blank" rel="noopener">Office du Tourisme de Peniche</a>.',
-        "faq.q10": "Quelles sont les restrictions de la Réserve Naturelle de l'Île Berlenga ?",
-        "faq.a10": '<ul><li>Camping uniquement dans la zone désignée avec réservation préalable ;</li><li>Maximum de 550 visiteurs simultanés ;</li><li>Inscription obligatoire sur BerlengasPass et taxe d\'accès (adultes 3€ ; réductions 6–18 ans et 68 ans) ;</li><li>Circuler uniquement sur les sentiers balisés ;</li><li>Déposer ses déchets aux endroits prévus ou les remporter ;</li><li>Ne pas cueillir de plantes ni collecter d\'échantillons géologiques ;</li><li>Ne pas nourrir les animaux ;</li><li>La musique forte est interdite.</li></ul>',
-        "faq.q11": "Y a-t-il des toilettes à bord ?",
-        "faq.a11": "Oui, l\'embarcation dispose de 2 toilettes à bord — simples et pratiques. L\'équipage s\'assure qu\'elles restent propres et en bon état.",
-        "faq.q12": "Est-il sûr de voyager avec de jeunes enfants ou des passagers âgés ?",
-        "faq.a12": "Oui, notre embarcation est l\'une des préférées des familles et des personnes âgées. Le bateau a été conçu spécifiquement pour cette traversée avec la sécurité et le confort comme priorités. Les enfants doivent toujours être accompagnés d\'un adulte. Les passagers nécessitant une assistance particulière peuvent nous en informer à l\'avance.",
-      },
-      en: {
-        ann_main: "Thank you for 2026! <strong>2027 bookings now open.</strong>",
-        ann_season: "2027 season opens 8 May —",
-        ann_cta: "Secure your spot now!",
-        nav_schedules: "Schedules", nav_packages: "Packages", nav_island: "The Island",
-        nav_book: "Book now →",
-        badge: "2026 season closed",
-        construction_label: "Website under construction",
-        h1_line1: "Thank you for everything.",
-        h1_line2: "See you in 202<span class=\"yr-roll\"><span class=\"yr-track\" aria-hidden=\"true\"><span>6</span><span>7</span></span><span class=\"yr-sr\">7</span></span>!",
-        hero_sub: "Thank you to everyone who sailed with us. Next summer is already open for booking.",
-        hero_price: "€19.90", stat1: "passengers/year", stat2: "Google Reviews", stat3: "years of crossings", stat4: "from",
-        cta_book: "Book for 2027", cta_island: "Get BerlengasPass",
-        overlay_soon: "Coming Soon",
-        card_title: "Book crossing", card_sub: "Pick date · Confirm · Aboard",
-        avail_txt: "Available for booking", spots: "Few spots left",
-        select_date: "Select date in next step →", select_type: "Return trip (recommended)",
-        adults: "Adults", children: "Children",
-        price_detail: "2 Adults × €19.90", total: "Total",
-        btn_confirm: "Confirm booking",
-        bc_footer: "Secure payment · Free cancellation 24h before",
-        wa_text: "Chat with us",
-        "pkg.tag": "What do you want to do?", "pkg.h2": "Choose your experience", "pkg.sub": "From a simple crossing to island activities — we have something for every adventurer.",
-        "rev.tag": "Real reviews", "rev.h2": "What our passengers say", "rev.sub": "Over 900 Google reviews. Written by families, couples and groups who crossed with us.",
-        nav_pack: "Tickets", nav_hist: "History", menu_terms: "Terms & Conditions",
-        tb1t: "IMT Licensed Operator", tb1s: "National Maritime Authority",
-        tb2t: "45-min crossing", tb2s: "Marina de Peniche",
-        tb3s: "Trip Protection",
-        tb4t: "Free Cancellation", tb4s: "Up to 24h before departure",
-        isl_pill: "Nature Reserve",
-        isl_h2: 'An island you <em>never forget</em>',
-        isl_desc: "Berlenga is the only inhabited island in the Berlengas archipelago — a UNESCO Biosphere Reserve since 2011. Turquoise waters, dramatic cliffs, sea caves and unique biodiversity found nowhere else in Portugal.",
-        isl_f1: "crossing from Peniche", isl_f2: "of island to explore", isl_f3: "Biosphere Reserve", isl_f4: "historic Fortress",
-        isl_cta: "Book now →",
-        gal1: "Peniche Lighthouse", gal2: "Panoramic view", gal3: "On board", gal4: "Departing Peniche", gal5: "Berlenga Beach",
-        r_label: "945 reviews on Google", r_google: "Google Reviews",
-        ck_title: "Privacy & Cookies",
-        ck_txt: 'We use essential cookies to make the site work and analytics cookies to improve your experience. See our <a href="/termos.html">privacy policy</a>.',
-        ck_accept: "Accept all", ck_reject: "Essential only",
-        ft_copy: '© 2026 Viamar. All rights reserved. · Powered by <a href="https://atlas-web.pt" target="_blank" rel="noopener" class="ft-atlas">ATLAS</a>',
-        "bw.island": "Island Visit", "bw.oneway": "One Way", "bw.return_trip": "Return",
-        "bw.date": "Travel date", "bw.departure_time": "Departure time",
-        "sched.tag": "Schedules 2027", "sched.h2": "Regular departures from Peniche",
-        "sched.sub": "Summer weekends sell out weeks in advance. Book ahead.",
-        "sched.d1": "8 May — 4 June 2027", "sched.d2": "5 June — 10 July 2027",
-        "sched.d3": "11 July — 6 September 2027", "sched.d4": "7 — 30 September 2027",
-        "sched.s_low": "Low Season", "sched.s_mid": "Mid Season", "sched.s_high": "High Season",
-        "sched.daily": "Every day",
-        "sched.weekday_row": "Weekdays<span>Mon — Fri</span>",
-        "sched.weekend_row": "Weekend<span>Sat + Sun</span>",
-        "sched.oneway_row": "One-way<span>or overnight</span>", "sched.oneway_we": "One-way<span>Sat + Sun</span>", "sched.legend_mid": "Mid Season — 3 departures on weekends", "sched.legend_high": "High Season — 3 departures/day",
-        "dep.tag": "Departure point", "dep.h2": "We depart from Peniche, a seaside city",
-        "dep.desc": "Board at Peniche Marina, next to the Fortress. We recommend arriving 45 minutes before departure. Return tickets and the caves tour board on Berlenga. Parking is available nearby.",
-        "dep.addr": "Marina de Peniche — 39°21′N 9°22′W",
-        "dep.book": "Book your crossing →",
-        "faq.tag": "FAQ",
-        "faq.h2": "Everything you need to know",
-        "faq.q1": "What should I bring for a trip to Berlenga Island?",
-        "faq.a1": "The essentials: sunscreen, a hat, sunglasses and a water bottle to stay hydrated. Comfortable clothing, a light jacket (preferably waterproof), appropriate footwear and a towel. A power bank is also handy since mobile network coverage on the island is very weak or non-existent.",
-        "faq.q2": "Can I cancel or change my booking?",
-        "faq.a2": 'Yes! Please let us know at least 72 hours before boarding. Contact us by phone or email: 911 001 099 | <a href="mailto:info@viamar.pt">info@viamar.pt</a>.',
-        "faq.q3": "What can I do on Berlenga Island with my ferry ticket?",
-        "faq.a3": '<ul><li>Hiking trails with stunning views;</li><li>Visit the historic Fort of São João Baptista;</li><li>Crystal-clear beach swimming or lunch at the island restaurant; snacks at Castelinho with panoramic views;</li><li>Birdwatching and flora exploration;</li><li>Optional add-ons: scuba diving, glass-bottom boat cave tour or snorkelling (see "packages" page).</li></ul>',
-        "faq.q4": "Where is the VIAMAR boarding point for Berlenga Island?",
-        "faq.a4": '<p>Peniche Marina, next to the Peniche Fortress.</p><ul><li>Drive to the Passenger & Luggage Boarding Zone (as shown on the map);</li><li>Look for the CHECK-IN flag or a VIAMAR crew member in uniform.</li></ul><p>We recommend arriving at least 45 minutes before departure (groups: 1 hour).</p><p><strong>Exceptions:</strong> return tickets (Berlenga → Peniche) and the caves tour board on Berlenga Island itself.</p>',
-        "faq.q5": "Can I buy a ticket on the day of travel?",
-        "faq.a5": "Yes, subject to availability. In July and August demand is very high — we strongly recommend booking in advance to secure your spot.",
-        "faq.q6": "What payment methods are accepted?",
-        "faq.a6": '<p><strong>Online:</strong> Visa, Mastercard, Apple Pay, MB Way, PayPal, Google Pay, Linkpay or bank transfer (groups only).</p><p><strong>At the counter:</strong> Visa, Mastercard, Apple Pay, MB Way or cash.</p><p>Groups: send proof of payment to <a href="mailto:info@viamar.pt">info@viamar.pt</a> at least 48h before boarding.</p>',
-        "faq.q7": "Can I bring luggage on board?",
-        "faq.a7": '<p>Yes — backpacks and small bags are welcome. For larger items please contact us in advance: 911 001 099.</p><p>Limit: 2 pieces of luggage per person + 1 small carry-on.</p>',
-        "faq.q8": "How long can I stay on Berlenga Island?",
-        "faq.a8": "Always 5 hours. Every Viamar sailing gives you 5 hours ashore — 11am→5pm in low season, 10am→4pm or 12pm→6pm in high season and at weekends. It is not a maximum: it is the stay on every crossing, and the longest on the route.",
-        "faq.q9": "Is camping allowed on Berlenga Island?",
-        "faq.a9": 'Wild camping is not permitted. There is an authorised campsite (Parque de Campismo da Berlenga) which requires advance booking. For more information: <a href="https://www.cm-peniche.pt/visitar/turismo" target="_blank" rel="noopener">Peniche Tourism Office</a>.',
-        "faq.q10": "What are the restrictions in the Berlenga Nature Reserve?",
-        "faq.a10": '<ul><li>Camping only in the designated area with prior reservation;</li><li>Maximum of 550 simultaneous visitors;</li><li>Mandatory registration on BerlengasPass and access fee (adults €3; discounts for ages 6–18 and over 65);</li><li>Stay on marked trails and respect signage;</li><li>Dispose of waste in designated areas or take it with you;</li><li>Do not pick plants or collect geological samples;</li><li>Do not feed the animals;</li><li>Loud music is prohibited.</li></ul>',
-        "faq.q11": "Are there toilets on board?",
-        "faq.a11": "Yes, the vessel has 2 on-board toilets — simple but practical. Our crew ensures they are kept clean and in good condition.",
-        "faq.q12": "Is it safe to travel with young children or elderly passengers?",
-        "faq.a12": "Absolutely — our vessel is one of the most popular choices for families with young children and elderly passengers. The boat was designed specifically for the Berlenga crossing with safety and comfort as priorities. Children must always be accompanied by a responsible adult. Passengers requiring special assistance are welcome to let us know in advance.",
-      }
-    };
-
-    // Lang detection, persistence, dict apply and switcher wiring are now
-    // handled by /i18n/loader.js. The legacy dict above is kept ONLY as a
-    // safety fallback in case the JSON fetch fails — wire it up below.
-    function _legacyApply(lang) {
-      const dict = _legacyDict[lang] || _legacyDict.pt;
-      document.documentElement.setAttribute('data-lang', lang);
-      document.documentElement.lang = lang === 'pt' ? 'pt-PT' : lang;
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.dataset.i18n;
-        if (dict[key] !== undefined) el.innerHTML = dict[key];
-      });
-    }
-    // If loader hasn't fired yet after 600ms, paint legacy dict to avoid PT flash.
-    setTimeout(() => {
-      if (!window.viamarLang) {
-        const nav = (navigator.language || '').slice(0,2);
-        const safe = ['pt','en','es','fr'].includes(nav) ? nav : 'en';
-        _legacyApply(safe);
-      }
-    }, 600);
 
     // ─── PRODUCTS ─────────────────────────────────────────────────────────────
     const BADGE_STYLES = {
@@ -3072,15 +2779,7 @@
     }
 
     // Cookie banner
-    function setCookieChoice(choice) {
-      localStorage.setItem('viamar_cookie', choice);
-      document.getElementById('cookieBanner').classList.add('hidden');
-    }
-    if (!localStorage.getItem('viamar_cookie')) {
-      document.getElementById('cookieBanner').classList.remove('hidden');
-    } else {
-      document.getElementById('cookieBanner').classList.add('hidden');
-    }
+
 
     // Gallery lightbox
     (function() {
@@ -3280,94 +2979,13 @@
 
 
   
-  <style>
-  /* ─────────── popup fim de época · a peça 1:1 ─────────── */
-  .obg{
-    border:0; padding:0; box-sizing:border-box;
-    position:fixed; inset:0; margin:auto;              /* centrado nos dois eixos */
-    width:min(620px, calc(100vw - 32px)); max-width:none;
-    height:max-content; max-height:calc(100dvh - 32px); overflow:auto;
-    background:#050b14; color:#f2ede3; border-radius:18px; overflow:hidden;
-    box-shadow:0 40px 100px rgba(0,0,0,.65);
-    font-family:'Inter',system-ui,sans-serif;
-  }
-  .obg::backdrop{ background:rgba(5,11,20,.74); backdrop-filter:blur(6px); }
-  .obg[open]{ animation:obg-in .5s cubic-bezier(.16,.84,.34,1) both; }
-  @keyframes obg-in{ from{ opacity:0; transform:scale(.965) } to{ opacity:1; transform:none } }
-
-  /* a peça, em proporção exacta */
-  .obg picture{ display:block; }
-  .obg-art{ display:block; width:100%; height:auto; aspect-ratio:1/1; object-fit:cover; background:#050b14; }
-
-  .obg-body{ padding:24px 30px 28px; text-align:center; }
-  .obg-body p{ margin:0 0 20px; font-size:15px; line-height:1.62; color:#93a7bd; }
-  .obg-body strong{ color:#f2ede3; font-weight:600; }
-  .obg-cta{ display:inline-block; background:#f59e0b; color:#07111f; text-decoration:none;
-    font-weight:800; font-size:14.5px; letter-spacing:.01em; padding:14px 32px; border-radius:999px;
-    transition:background .15s, transform .15s; }
-  .obg-cta:hover{ background:#d97706; transform:translateY(-1px); }
-  .obg-cta:focus-visible{ outline:2px solid #f2ede3; outline-offset:3px; }
-
-  .obg-x{ position:absolute; top:14px; right:14px; width:36px; height:36px; z-index:3;
-    display:grid; place-items:center; border:0; border-radius:50%; cursor:pointer;
-    background:rgba(5,11,20,.5); color:#f2ede3; font-size:20px; line-height:1;
-    -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); transition:background .15s; }
-  .obg-x:hover{ background:rgba(5,11,20,.85); }
-  .obg-x:focus{ outline:none; }
-  .obg-x:focus-visible{ outline:2px solid #f59e0b; outline-offset:2px; }
-
-  @media (max-width:480px){
-    .obg-body{ padding:20px 22px 24px; }
-    .obg-body p{ font-size:14px; margin-bottom:18px; }
-  }
-  @media (prefers-reduced-motion:reduce){ .obg[open]{ animation:none } }
-  </style>
 
 
-  <dialog class="obg" id="obg-modal" aria-label="Fim da época 2026">
-    <button class="obg-x" type="button" data-obg-close
-            aria-label="Fechar" data-i18n-attr="obg_close:aria-label">&times;</button>
-
-    <picture>
-      <source srcset="/img/epoca-2026-tiras.webp" type="image/webp">
-      <img class="obg-art" src="/img/epoca-2026-tiras.jpg" width="1000" height="1000"
-           data-i18n-attr="obg_alt:alt"
-           alt="A época de 2026 na Berlenga em tiras verticais, de Maio a Setembro. Cinco meses, uma só imagem." loading="lazy" decoding="async">
-    </picture>
-
-    <div class="obg-body">
-      <p data-i18n="obg_body">A época de 2026 chegou ao fim. Obrigado a quem atravessou connosco.<br>
-         A próxima começa em <strong>Maio de 2027</strong>.</p>
-      <a class="obg-cta" data-i18n="cta_book"
-         href="https://fareharbor.com/embeds/book/viamar-berlenga/items/?full-items=yes&flow=738388">Reservar para 2027</a>
-    </div>
-  </dialog>
 
 
-  <script>
-  (function () {
-    var OBG_KEY = 'viamar_obrigado_2026';   /* mudar a chave volta a mostrar a quem já fechou */
-    var d = document.getElementById('obg-modal');
-    if (!d || !d.showModal) return;
-    try { if (sessionStorage.getItem(OBG_KEY)) return; } catch (e) {}
 
-    function close() {
-      try { sessionStorage.setItem(OBG_KEY, '1'); } catch (e) {}
-      if (d.open) d.close();
-    }
-    d.addEventListener('click', function (e) {
-      if (e.target.closest('.obg-cta')) {     /* o CTA segue para a reserva */
-        try { sessionStorage.setItem(OBG_KEY, '1'); } catch (err) {}
-        return;
-      }
-      if (e.target.closest('[data-obg-close]')) { e.preventDefault(); close(); return; }
-      if (e.target === d) close();            /* clique fora fecha */
-    });
-    d.addEventListener('close', close);
 
-    setTimeout(function () { if (!d.open) d.showModal(); }, 900);
-  })();
-  </script>
+
   
 
   <script>

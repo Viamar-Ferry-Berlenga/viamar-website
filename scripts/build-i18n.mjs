@@ -19,10 +19,10 @@ import { fileURLToPath } from 'node:url';
 import { parse } from 'node-html-parser';
 
 const ROOT = process.cwd();
-const PAGES = ['index.html', 'pacotes.html', 'horarios.html', 'mergulho.html', 'historia.html', 'ilha.html', 'faqs.html', 'termos.html'];
+const PAGES = ['index.html', 'pacotes.html', 'horarios.html', 'mergulho.html', 'historia.html', 'ilha.html', 'faqs.html', 'termos.html', 'grutas.html', 'travessia.html'];
 const TARGET_LANGS = ['en', 'es', 'fr']; // PT canonical lives at root
 // Pages still built and reachable by direct link, but kept out of the sitemap
-const SITEMAP_EXCLUDE = new Set(['mergulho.html']);
+const SITEMAP_EXCLUDE = new Set([]);
 const ALL_LANGS = ['pt', ...TARGET_LANGS];
 const BASE_URL = 'https://viamar-berlenga.com';
 
@@ -35,6 +35,8 @@ const PAGE_META = {
   'historia.html': { prefix: 'meta.historia', priority: '0.8', changefreq: 'monthly' },
   'faqs.html':     { prefix: 'meta.faqs',     priority: '0.7', changefreq: 'monthly' },
   'termos.html':   { prefix: 'meta.termos',   priority: '0.5', changefreq: 'yearly'  },
+  'grutas.html':   { prefix: 'meta.grutas',   priority: '0.8', changefreq: 'monthly' },
+  'travessia.html':{ prefix: 'meta.travessia',priority: '0.8', changefreq: 'monthly' },
 };
 
 const FH_LANG = { pt: 'pt-pt', en: 'en-us', es: 'es-es', fr: 'fr-fr' };
@@ -373,6 +375,7 @@ function localizeJsonLd(root, lang, page) {
         if (out.length) obj.mainEntity = out;
       }
 
+      if (obj['@type'] === 'ListItem' && obj.name === 'Início' && dict.nav_back) obj.name = stripHtml(dict.nav_back);
       if (typeof obj.inLanguage === 'string') obj.inLanguage = LANG_TAG[lang];
       if (obj['@type'] === 'WebPage' || obj['@type'] === 'FAQPage') obj.inLanguage = LANG_TAG[lang];
 

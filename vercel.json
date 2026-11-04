@@ -227,6 +227,46 @@
       "source": "/fr/termos/",
       "destination": "/fr/termos.html",
       "permanent": true
+    },
+    {
+      "source": "/grutas/",
+      "destination": "/grutas.html",
+      "permanent": true
+    },
+    {
+      "source": "/en/grutas/",
+      "destination": "/en/grutas.html",
+      "permanent": true
+    },
+    {
+      "source": "/es/grutas/",
+      "destination": "/es/grutas.html",
+      "permanent": true
+    },
+    {
+      "source": "/fr/grutas/",
+      "destination": "/fr/grutas.html",
+      "permanent": true
+    },
+    {
+      "source": "/travessia/",
+      "destination": "/travessia.html",
+      "permanent": true
+    },
+    {
+      "source": "/en/travessia/",
+      "destination": "/en/travessia.html",
+      "permanent": true
+    },
+    {
+      "source": "/es/travessia/",
+      "destination": "/es/travessia.html",
+      "permanent": true
+    },
+    {
+      "source": "/fr/travessia/",
+      "destination": "/fr/travessia.html",
+      "permanent": true
     }
   ]
 }
